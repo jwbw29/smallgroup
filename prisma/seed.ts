@@ -119,25 +119,162 @@ async function main() {
   console.log(allEnneagrams);
 
   // ADULT
-  // await prisma.adult.deleteMany({});
-  // await prisma.adult.createMany({
-  //   data: [
-  //     {
-  //       first_name: "",
-  //       email: "",
-  //       phone: "",
-
-  //     }
-  //   ]
-  // })
+  await prisma.adult.deleteMany({});
+  await prisma.adult.createMany({
+    data: [
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      }
+    ]
+  })
 
   // CHILD
-  //   await prisma.event.deleteMany({});
-  // await prisma.event.createMany({});
+    await prisma.event.deleteMany({});
+  await prisma.event.createMany({
+    data: [
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      },
+      {
+        first_name: "",
+        birth_date: "",
+        familyId: ,
+      }
+
+    ]
+  });
 
   // ADDRESS
-  //   await prisma.event.deleteMany({});
-  // await prisma.event.createMany({});
+    await prisma.event.deleteMany({});
+  await prisma.event.createMany({
+    data: [
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+        familyId: ,
+      },
+    ]
+  });
 
   // EVENT
   // CST = UTC-6 Standard
