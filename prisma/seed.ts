@@ -21,7 +21,7 @@ async function main() {
   await prisma.user.deleteMany({});
   await prisma.user.create({
     data: {
-      username: "jwbw29",
+      username: "test_user",
       email: "justinbyrd7@gmail.com",
       password: "Test123!",
     },
