@@ -1,0 +1,283 @@
+[
+  {
+    "agenda": "Girls Dinner @ 7:30pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-03-06",
+    "location": "TBD",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Second half of Session 4 (video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-03-10",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "FAMILY - St. Patrick's Day Party",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-03-17",
+    "location": "Byrds",
+    "group": "Social"
+  },
+  {
+    "agenda": "First half of Session 5 (pg. 109-126, no video)",
+    "year": "2024-03-24",
+    "semester": "Spring",
+    "date": "2024-",
+    "location": "Shepherds",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Guys Dinner @ 7:30pm",
+    "year": "2024-03-27",
+    "semester": "Spring",
+    "date": "2024-03-27",
+    "location": "TBD",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Second half of Session 5 (video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-03-31",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "Girls Dinner @ 5:30pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-03",
+    "location": "TBD",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Boys Night Out, Girls Night In",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-07",
+    "location": "Byrds/TBD",
+    "group": "Social"
+  },
+  {
+    "agenda": "First half of Session 6 (pg 141-159, no video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-14",
+    "location": "Turners",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Second half of Session 6 (video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-21",
+    "location": "Byrds",
+    "group": "All"
+  },
+  {
+    "agenda": "Food Tour Downtown Como - 5:30pm-8:00pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-24",
+    "location": "TBD",
+    "group": "All"
+  },
+  {
+    "agenda": "First half of Session 7 (pg 173-189, no video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-04-28",
+    "location": "Shepherds",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Girls Dinner @ 7:30pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-05-01",
+    "location": "TBD",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Second half of Session 7 (video)",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-05-05",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "Mother's Day",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-05-12",
+    "location": "OFF",
+    "group": "OFF"
+  },
+  {
+    "agenda": "Wrap up/going into summer plans",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-05-19",
+    "location": "Byrds",
+    "group": "All"
+  },
+  {
+    "agenda": "Guys Dinner @ 5:30pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-05-29",
+    "location": "TBD",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Girls Dinner @ 5:30pm",
+    "year": "2024",
+    "semester": "Spring",
+    "date": "2024-06-05",
+    "location": "TBD",
+    "group": "Girls"
+  },
+
+  {
+    "agenda": "ALL Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-09-10",
+    "location": "Byrds",
+    "group": "All"
+  },
+  {
+    "agenda": "Guys Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-09-17",
+    "location": "Rutledges",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Girls Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-09-24",
+    "location": "Kelsey's",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Social",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-10-01",
+    "location": "TBD",
+    "group": "Social"
+  },
+  {
+    "agenda": "ALL Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-10-08",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "Guys Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-10-15",
+    "location": "Byrds",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Girls Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-10-22",
+    "location": "Rutledges",
+    "group": "Girls"
+  },
+  {
+    "agenda": "Social - Halloween Party",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-10-29",
+    "location": "Byrds",
+    "group": "Social"
+  },
+  {
+    "agenda": "All Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-11-05",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "Guys Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-11-12",
+    "location": "Byrds",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Girls Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-11-19",
+    "location": "Kelsey's",
+    "group": "Girls"
+  },
+  {
+    "agenda": "OFF",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-11-26",
+    "location": "OFF",
+    "group": "OFF"
+  },
+  {
+    "agenda": "Guys Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-12-03",
+    "location": "Rutledges",
+    "group": "Guys"
+  },
+  {
+    "agenda": "Girls Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-12-10",
+    "location": "Kelsey's",
+    "group": "Girls"
+  },
+  {
+    "agenda": "ALL Meeting",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-12-17",
+    "location": "Turners",
+    "group": "All"
+  },
+  {
+    "agenda": "OFF - CHRISTMAS",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-12-24",
+    "location": "OFF",
+    "group": "OFF"
+  },
+  {
+    "agenda": "OFF - NEW YEARS",
+    "year": "2023",
+    "semester": "Fall",
+    "date": "2023-12-31",
+    "location": "OFF",
+    "group": "OFF"
+  }
+]
