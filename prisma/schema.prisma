@@ -34,7 +34,7 @@ model Family {
 
 model Enneagram {
   id          Int       @id @default(autoincrement())
-  number      Int
+  type        String
   name        String
   url         String
   adults      Adult[]
@@ -70,23 +70,24 @@ model Address {
 }
 
 enum Semester {
-  SPRING
-  SUMMER 
-  FALL
-  WINTER
+  Spring
+  Summer 
+  Fall
+  Winter
 }
 
 enum GroupType {
-  STUDY
-  SOCIAL
-  SPORT
-  VOLUNTEER
+  Girls
+  Guys
+  All
+  Social
+  Off
 }
 
 model Event {
   id          Int       @id @default(autoincrement())
   name        String
-  year        Int
+  year        String
   semester    Semester
   date        DateTime
   location    String
