@@ -128,13 +128,112 @@ async function main() {
         phone: "",
         familyId: ,
         enneagramId: ,
-      }
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+      {
+        first_name: "",
+        email: "",
+        phone: "",
+        familyId: ,
+        enneagramId: ,
+      },
+
     ]
   })
 
   // CHILD
-    await prisma.event.deleteMany({});
-  await prisma.event.createMany({
+    await prisma.child.deleteMany({});
+  await prisma.child.createMany({
     data: [
       {
         first_name: "",
@@ -221,8 +320,8 @@ async function main() {
   });
 
   // ADDRESS
-    await prisma.event.deleteMany({});
-  await prisma.event.createMany({
+    await prisma.address.deleteMany({});
+  await prisma.address.createMany({
     data: [
       {
         street: "",
