@@ -1,41 +1,28 @@
-// ** might be able to use client side rendering since we're not displaying data on this page
+// ** use server side rendering to get data from the server
 
 import Nav from "@/ui/nav";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { EventDetails } from "@/ui/event";
 
-const links = [
-  { name: "Fall 2023", href: "/schedule/fall23" },
-  { name: "Spring 2024", href: "/schedule/spring24" },
-];
+import eventData from "@/public/data/eventData.json";
 
-export default function Schedule() {
+export default function Home() {
+  const filteredEvents = eventData.filter((event) => {
+    return event.year === "2024" && event.semester === "Spring";
+  });
+
   return (
     <main className="flex flex-col min-h-screen p-2">
-      <Nav />
-      <div className="flex flex-col flex-1 testBorder p-4">
-        {/* TODO Not MVP */}
-        {/* <div className="flex justify-end testBorder m-4">
-          <button className="testBorder rounded-md py-2 px-4 shadow-lg">
-            New Event
-          </button>
-        </div> */}
-        <div className="flex flex-col testBorder items-center">
-          {links.map((link) => {
-            return (
-              <Link key={link.name} href={link.href} className="customLink">
-                <h2>{link.name}</h2>
-              </Link>
-            );
-          })}
+      <Nav />{" "}
+      <div className="flex flex-col flex-1 testBorder items-center ">
+        <h1 className="text-3xl testBorder text-center my-6">
+          {"Spring '24 Schedule"}
+        </h1>{" "}
+        <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
+          {filteredEvents.map((event, i) => (
+            <EventDetails key={i} event={event} />
+          ))}
         </div>
       </div>
     </main>
   );
 }
-// <Link href="/schedule/fall23" className="testBorder">
-//   <h2>Fall 2023</h2>
-// </Link>
-// <Link href="/schedule/spring24" className="testBorder">
-//   <h2>Spring 2024</h2>
-// </Link>
