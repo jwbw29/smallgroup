@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Small Group Project
 
-## Getting Started
+A website for small groups to use to easily access each other's information and event dates.
 
-First, run the development server:
+## Challenges
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### General
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- I may have gotten too eager to learn NextJS
+  - Being fairly fresh out of my coding bootcamp where we were introduced to React and Redux on the front-end and Node, Express, and Knex on the back-end, I jumped in to a world that I didn't realize flipped everything upside down. Having to translate stuff that was still fresh and not fully understood into a new way of doing things caused the learning process to be a bit slower than I had hoped.
+  - However, I think it also sped up my learning ability, problem-solving, and language translation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Backend
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Before this project my only experience with databases was using SQLite, Knex, and Express.
+- I wanted to build a fullstack project using NextJS but was unfamiliar with PostgreSQL and Vercel Postgres.
+- I followed tutorials to build and seed my database. There was tons of trial and error. Eventually I decided to install Knex and realized it helped make then process a lot easier to understand; especially with the addition of migrations and rollbacks.
 
-## Learn More
+## Theme
 
-To learn more about Next.js, take a look at the following resources:
+### Colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#F72585
+#B5179E
+#7209B7
+#560BAD
+#480CA8
+#3A0CA3
+#3F37C9
+#4361EE
+#4895EF
+#4CC9F0
