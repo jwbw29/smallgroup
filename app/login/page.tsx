@@ -1,19 +1,14 @@
-import Link from "next/link";
-import Nav from "@/ui/nav";
+import Image from "next/image";
+import logo from "@/public/sg_logo.png";
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-screen p-2">
-      <Nav />
-      <div className="flex flex-1 items-center testBorder">
-        <div className="flex flex-col min-h-fit h-60 p-6 w-full testBorder items-center justify-center gap-4">
-          <input
-            type="password"
-            placeholder="Password"
-            className="testBorder p-2"
-          />
-          <button className="testBorder w-fit px-12 py-2">Enter</button>
-        </div>
+    <main className="flex flex-col min-h-screen p-2 items-center justify-center">
+      <div className="flex flex-col items-center testBorder gap-12">
+        <Image src={logo} width={200} height={200} alt="Small Group Logo" />
+        <a href="/api/auth/login">
+          <button className="testBorder w-fit px-12 py-2">Log In</button>
+        </a>
       </div>
     </main>
   );
