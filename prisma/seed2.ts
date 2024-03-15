@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import familyData from "@/public/data/familyData.json";
 import eventData from "@/public/data/eventData.json";
+import enneagramData from "@/public/data/enneagramData.json";
 
 const prisma = new PrismaClient();
 
