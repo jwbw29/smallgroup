@@ -15,3 +15,18 @@ A website for small groups to use to easily access each other's information and 
 - Before this project my only experience with databases was using SQLite, Knex, and Express.
 - I wanted to build a fullstack project using NextJS but was unfamiliar with PostgreSQL and Vercel Postgres.
 - I followed tutorials to build and seed my database. There was tons of trial and error. Eventually I decided to install Knex and realized it helped make then process a lot easier to understand; especially with the addition of migrations and rollbacks.
+
+## Theme
+
+### Colors
+
+#F72585
+#B5179E
+#7209B7
+#560BAD
+#480CA8
+#3A0CA3
+#3F37C9
+#4361EE
+#4895EF
+#4CC9F0
