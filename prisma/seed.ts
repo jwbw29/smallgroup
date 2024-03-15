@@ -64,7 +64,6 @@ async function main() {
 
   // ENNEAGRAM
   await prisma.enneagram.deleteMany({});
-
   await prisma.enneagram.createMany({
     data: [
       {
