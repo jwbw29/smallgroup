@@ -4,6 +4,14 @@ const prisma = new PrismaClient();
 
 async function main() {
   // ... you will write your Prisma Client queries here
+  await prisma.event.deleteMany({});
+  await prisma.address.deleteMany({});
+  await prisma.child.deleteMany({});
+  await prisma.adult.deleteMany({});
+  await prisma.enneagram.deleteMany({});
+  await prisma.family.deleteMany({});
+  await prisma.user.deleteMany({});
+
   const sequences = [
     "Family_id_seq",
     "Enneagram_id_seq",
@@ -18,7 +26,6 @@ async function main() {
   }
 
   // USERS
-  await prisma.user.deleteMany({});
   await prisma.user.create({
     data: {
       username: "test_user",
@@ -31,7 +38,6 @@ async function main() {
   console.log(allUsers);
 
   // FAMILY
-  await prisma.family.deleteMany({});
   await prisma.family.createMany({
     data: [
       {
@@ -62,7 +68,6 @@ async function main() {
   console.log(allFamily);
 
   // ENNEAGRAM
-  await prisma.enneagram.deleteMany({});
   await prisma.enneagram.createMany({
     data: [
       {
@@ -110,6 +115,11 @@ async function main() {
         name: "The Peacemaker",
         url: "https://www.enneagraminstitute.com/type-9/",
       },
+      {
+        type: "0",
+        name: "Unknown",
+        url: "https://www.enneagraminstitute.com",
+      },
     ],
   });
 
@@ -117,7 +127,6 @@ async function main() {
   console.log(allEnneagrams);
 
   // ADULT
-  await prisma.adult.deleteMany({});
   await prisma.adult.createMany({
     data: [
       {
@@ -126,13 +135,12 @@ async function main() {
         phone: "5734764400",
         birth_date: "1989-03-07T00:00:00-06:00",
         familyId: 1,
-        enneagramId: 0,
+        enneagramId: 10,
       },
     ],
   });
 
   // CHILD
-  await prisma.child.deleteMany({});
   await prisma.child.createMany({
     data: [
       {
@@ -154,7 +162,6 @@ async function main() {
   });
 
   // ADDRESS
-  await prisma.address.deleteMany({});
   await prisma.address.createMany({
     data: [
       {
@@ -170,7 +177,6 @@ async function main() {
   // EVENT
   // CST = UTC-6 Standard
   // CDT = UTC-5 DST
-  await prisma.event.deleteMany({});
   await prisma.event.createMany({
     data: [
       {
