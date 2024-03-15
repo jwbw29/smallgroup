@@ -11,7 +11,7 @@ export default function ProfileClient() {
   return (
     user && (
       <div>
-        <Image src={user.picture} width={100} height={100} alt={user.name} />
+        {/* <Image src={user.picture} width={100} height={100} alt={user.name} /> */}
         <h2>{user.name}</h2>
         <p>{user.email}</p>
       </div>
