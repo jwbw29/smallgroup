@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import logo from "@/public/sg_logo.png";
 import { useUser } from "@auth0/nextjs-auth0/client";

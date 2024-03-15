@@ -1,5 +1,3 @@
-"use client";
-
 import Nav from "@/ui/nav";
 import ProfileClient from "@/ui/user";
 
