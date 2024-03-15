@@ -1,14 +1,12 @@
 import Nav from "@/ui/nav";
-import ProfileClient from "@/ui/user";
 
-export default function Home() {
+export default function Page() {
   return (
     // TODO need to route to /login if not logged in
     <main className="flex flex-col min-h-screen p-2">
       <Nav />
       <div className="flex flex-1 testBorder justify-center">
         <div className="flex flex-col testBorder h-96 w-3/4 gap-8 mt-28 ">
-          <ProfileClient />
           <h1 className="text-3xl testBorder text-center">Next Event</h1>{" "}
           <div className="flex flex-col border-4 rounded-xl flex-1 justify-around">
             <div className="flex flex-col items-center">

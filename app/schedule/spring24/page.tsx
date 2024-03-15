@@ -5,7 +5,7 @@ import { EventDetails } from "@/ui/event";
 
 import eventData from "@/public/data/eventData.json";
 
-export default function Home() {
+export default function Page() {
   const filteredEvents = eventData.filter((event) => {
     return event.year === "2024" && event.semester === "Spring";
   });

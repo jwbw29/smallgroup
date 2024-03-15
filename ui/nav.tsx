@@ -8,9 +8,10 @@ const links = [
   { name: "Home", href: "/" },
   { name: "Schedule", href: "/schedule" },
   { name: "Roster", href: "/roster" },
+  { name: "Profile", href: "/profile" },
 ];
 
-export default function Nav() {
+export default function Page() {
   const pathname = usePathname();
 
   return (

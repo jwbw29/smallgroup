@@ -9,7 +9,7 @@ const links = [
   { name: "Spring 2024", href: "/schedule/spring24" },
 ];
 
-export default function Schedule() {
+export default function Page() {
   return (
     <main className="flex flex-col min-h-screen p-2">
       <Nav />
