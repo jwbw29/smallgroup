@@ -5,9 +5,9 @@
       "firstName": "Kelsey",
       "phone": "5734764400",
       "email": "siscok@health.missouri.edu",
-      "dob": "03071989",
+      "dob": "1989-03-07T00:00:00-06:00",
       "enneagram": {
-        "primary": "2 - The Helper",
+        "primary": "2",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-2/"
       }
@@ -21,15 +21,15 @@
     "children": [
       {
         "firstName": "Jace",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Jett",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Jaelyn",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
@@ -39,9 +39,9 @@
       "firstName": "Justin",
       "phone": "5733019718",
       "email": "justin.byrd7@gmail.com",
-      "dob": "09101989",
+      "dob": "1989-09-10T00:00:00-06:00",
       "enneagram": {
-        "primary": "9 - The Peacemaker",
+        "primary": "9",
         "wing": "1 - The Reformer",
         "url": "https://www.enneagraminstitute.com/type-9/"
       }
@@ -50,10 +50,10 @@
       "firstName": "Jacqueline",
       "phone": "5734897960",
       "email": "jacquelinepbyrd@gmail.com",
-      "dob": "09061990",
+      "dob": "1990-09-06T00:00:00-06:00",
       "enneagram": {
-        "primary": "2 - The Helper",
-        "wing": "3 - The Achiever",
+        "primary": "2",
+        "wing": "3",
         "url": "https://www.enneagraminstitute.com/type-2/"
       }
     },
@@ -66,15 +66,15 @@
     "children": [
       {
         "firstName": "Henry",
-        "dob": "10222019"
+        "dob": "2019-10-22T00:00:00-06:00"
       },
       {
         "firstName": "Landry",
-        "dob": "01212021"
+        "dob": "2021-01-21T00:00:00-06:00"
       },
       {
         "firstName": "Millie",
-        "dob": "08022023"
+        "dob": "2023-08-02T00:00:00-06:00"
       }
     ]
   },
@@ -86,7 +86,7 @@
       "email": "padenkleinhesselink@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "9 - The Peacemaker",
+        "primary": "9",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-9/"
       }
@@ -111,7 +111,7 @@
     "children": [
       {
         "firstName": "Scottie",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
@@ -123,8 +123,8 @@
       "email": "kyleloethen@me.com",
       "dob": "",
       "enneagram": {
-        "primary": "3 - The Achiever",
-        "wing": "2 - The Helper",
+        "primary": "3",
+        "wing": "2",
         "url": "https://www.enneagraminstitute.com/type-3/"
       }
     },
@@ -134,7 +134,7 @@
       "email": "madisonloethen@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "5 - The Investigator",
+        "primary": "5",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-5/"
       }
@@ -148,11 +148,11 @@
     "children": [
       {
         "firstName": "Reese",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Everly",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
@@ -164,7 +164,7 @@
       "email": "calebarutledge@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "8 - The Challenger",
+        "primary": "8",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-8/"
       }
@@ -175,7 +175,7 @@
       "email": "josiehalen@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "9 - The Peacemaker",
+        "primary": "9",
         "wing": "1 - The Reformer",
         "url": "https://www.enneagraminstitute.com/type-9/"
       }
@@ -189,11 +189,11 @@
     "children": [
       {
         "firstName": "Evangeline",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Odette",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
@@ -205,7 +205,7 @@
       "email": "kaelob.shepherd@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "3 - The Achiever",
+        "primary": "3",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-3/"
       }
@@ -216,7 +216,7 @@
       "email": "ashepherd908@gmail.com",
       "dob": "",
       "enneagram": {
-        "primary": "2 - The Helper",
+        "primary": "2",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-2/"
       }
@@ -230,11 +230,11 @@
     "children": [
       {
         "firstName": "Luke",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Liam",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
@@ -246,8 +246,8 @@
       "email": "Samuel.turner@turneragsolutions.com",
       "dob": "",
       "enneagram": {
-        "primary": "3 - The Achiever",
-        "wing": "2 - The Helper",
+        "primary": "3",
+        "wing": "2",
         "url": "https://www.enneagraminstitute.com/type-3/"
       }
     },
@@ -257,7 +257,7 @@
       "email": "shgibson@live.com",
       "dob": "",
       "enneagram": {
-        "primary": "6 - The Loyalist",
+        "primary": "6",
         "wing": "",
         "url": "https://www.enneagraminstitute.com/type-6/"
       }
@@ -271,15 +271,15 @@
     "children": [
       {
         "firstName": "Sterling",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Sutton",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       },
       {
         "firstName": "Baby Turner",
-        "dob": ""
+        "dob": "1900-01-01T00:00:00-06:00"
       }
     ]
   }

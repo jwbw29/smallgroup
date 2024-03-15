@@ -45,6 +45,7 @@ model Adult {
   first_name  String
   email       String
   phone       String
+  birth_date  DateTime
   familyId    Int
   family      Family      @relation(fields: [familyId], references: [id])
   enneagramId Int

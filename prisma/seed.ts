@@ -32,7 +32,6 @@ async function main() {
 
   // FAMILY
   await prisma.family.deleteMany({});
-
   await prisma.family.createMany({
     data: [
       {
@@ -122,256 +121,50 @@ async function main() {
   await prisma.adult.createMany({
     data: [
       {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
+        first_name: "Kelsey",
+        email: "siscok@health.missouri.edu",
+        phone: "5734764400",
+        birth_date: "1989-03-07T00:00:00-06:00",
+        familyId: 1,
+        enneagramId: 0,
       },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-      {
-        first_name: "",
-        email: "",
-        phone: "",
-        familyId: ,
-        enneagramId: ,
-      },
-
-    ]
-  })
+    ],
+  });
 
   // CHILD
-    await prisma.child.deleteMany({});
+  await prisma.child.deleteMany({});
   await prisma.child.createMany({
     data: [
       {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
+        first_name: "Jace",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 1,
       },
       {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
+        first_name: "Jett",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 1,
       },
       {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
+        first_name: "Jaelyn",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 1,
       },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      },
-      {
-        first_name: "",
-        birth_date: "",
-        familyId: ,
-      }
-
-    ]
+    ],
   });
 
   // ADDRESS
-    await prisma.address.deleteMany({});
+  await prisma.address.deleteMany({});
   await prisma.address.createMany({
     data: [
       {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
+        street: "5603 Button Buck Cir",
+        city: "Columbia",
+        state: "MO",
+        zip: "65202",
+        familyId: 1,
       },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-      {
-        street: "",
-        city: "",
-        state: "",
-        zip: "",
-        familyId: ,
-      },
-    ]
+    ],
   });
 
   // EVENT
