@@ -1,6 +1,6 @@
 // ** might be able to use client side rendering since we're not displaying data on this page
 
-import Nav from "@/ui/nav";
+import Nav from "@/components/nav";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

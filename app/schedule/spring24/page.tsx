@@ -1,7 +1,7 @@
 // ** use server side rendering to get data from the server
 
-import Nav from "@/ui/nav";
-import { EventDetails } from "@/ui/event";
+import Nav from "@/components/nav";
+import { EventDetails } from "@/components/event";
 
 import eventData from "@/public/data/eventData.json";
 

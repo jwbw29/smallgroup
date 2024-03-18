@@ -1,7 +1,7 @@
 "use client";
 
-import Nav from "@/ui/nav";
-import ProfileClient from "@/ui/user";
+import Nav from "@/components/nav";
+import ProfileClient from "@/components/user";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Page() {

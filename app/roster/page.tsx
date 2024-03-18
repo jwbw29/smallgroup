@@ -1,7 +1,7 @@
 // ** use server side rendering to get data from the server
 
-import Nav from "@/ui/nav";
-import { Person } from "@/ui/person";
+import Nav from "@/components/nav";
+import { Person } from "@/components/person";
 
 import familyData from "@/public/data/familyData.json";
 
