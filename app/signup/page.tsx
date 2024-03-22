@@ -2,7 +2,7 @@ import { AuthenticatedRoute } from "@/components/AuthenticatedRoute";
 
 export default function Page() {
   return (
-    <AuthenticatedRoute allowedRoles={["Pending"]}>
+    <AuthenticatedRoute>
       <div>
         <h1>Approval Pending</h1>{" "}
         <div className="flex w-3/4 justify-end">

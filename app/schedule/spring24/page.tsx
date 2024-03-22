@@ -12,7 +12,7 @@ export default function Page() {
   });
 
   return (
-    <AuthenticatedRoute allowedRoles={["Admin", "Member"]}>
+    <AuthenticatedRoute>
       <main className="flex flex-col min-h-screen p-2">
         <Nav />{" "}
         <div className="flex flex-col flex-1 testBorder items-center ">

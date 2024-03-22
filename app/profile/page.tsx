@@ -12,7 +12,7 @@ export default function Page() {
   if (error) return <div>{error.message}</div>;
 
   return (
-    <AuthenticatedRoute allowedRoles={["Admin", "Member"]}>
+    <AuthenticatedRoute>
       <main className="flex flex-col min-h-screen p-2">
         <Nav />{" "}
         {user && (
