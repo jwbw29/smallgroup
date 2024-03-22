@@ -1,10 +1,11 @@
 [
+  // [x]
   {
     "lastName": "Allen",
     "adult1": {
       "firstName": "Kelsey",
-      "phone": "5734764400",
       "email": "siscok@health.missouri.edu",
+      "phone": "5734764400",
       "dob": "1989-03-07T00:00:00-06:00",
       "enneagram": {
         "primary": "2",
@@ -33,12 +34,13 @@
       }
     ]
   },
+  // [x]
   {
     "lastName": "Byrd",
     "adult1": {
       "firstName": "Justin",
-      "phone": "5733019718",
       "email": "justin.byrd7@gmail.com",
+      "phone": "5733019718",
       "dob": "1989-09-10T00:00:00-06:00",
       "enneagram": {
         "primary": "9",
@@ -48,8 +50,8 @@
     },
     "adult2": {
       "firstName": "Jacqueline",
-      "phone": "5734897960",
       "email": "jacquelinepbyrd@gmail.com",
+      "phone": "5734897960",
       "dob": "1990-09-06T00:00:00-06:00",
       "enneagram": {
         "primary": "2",
@@ -78,12 +80,13 @@
       }
     ]
   },
+  // [ ]
   {
     "lastName": "Kleinhesselink",
     "adult1": {
       "firstName": "Paden",
-      "phone": "7124411745",
       "email": "padenkleinhesselink@gmail.com",
+      "phone": "7124411745",
       "dob": "",
       "enneagram": {
         "primary": "9",
@@ -93,8 +96,8 @@
     },
     "adult2": {
       "firstName": "Mattie",
-      "phone": "5736310620",
       "email": "Martha.bradley16@gmail.com",
+      "phone": "5736310620",
       "dob": "",
       "enneagram": {
         "primary": "",
@@ -115,12 +118,13 @@
       }
     ]
   },
+  // [ ]
   {
     "lastName": "Loethen",
     "adult1": {
       "firstName": "Kyle",
-      "phone": "3108693855",
       "email": "kyleloethen@me.com",
+      "phone": "3108693855",
       "dob": "",
       "enneagram": {
         "primary": "3",
@@ -130,8 +134,8 @@
     },
     "adult2": {
       "firstName": "Madison",
-      "phone": "3145911238",
       "email": "madisonloethen@gmail.com",
+      "phone": "3145911238",
       "dob": "",
       "enneagram": {
         "primary": "5",
@@ -156,12 +160,13 @@
       }
     ]
   },
+  // [ ]
   {
     "lastName": "Rutledge",
     "adult1": {
       "firstName": "Caleb",
-      "phone": "4172527404",
       "email": "calebarutledge@gmail.com",
+      "phone": "4172527404",
       "dob": "",
       "enneagram": {
         "primary": "8",
@@ -171,8 +176,8 @@
     },
     "adult2": {
       "firstName": "Josie",
-      "phone": "6603468500",
       "email": "josiehalen@gmail.com",
+      "phone": "6603468500",
       "dob": "",
       "enneagram": {
         "primary": "9",
@@ -197,12 +202,13 @@
       }
     ]
   },
+  // [ ]
   {
     "lastName": "Shepherd",
     "adult1": {
       "firstName": "Kaelob",
-      "phone": "5732596808",
       "email": "kaelob.shepherd@gmail.com",
+      "phone": "5732596808",
       "dob": "",
       "enneagram": {
         "primary": "3",
@@ -212,8 +218,8 @@
     },
     "adult2": {
       "firstName": "Amy",
-      "phone": "6302006688",
       "email": "ashepherd908@gmail.com",
+      "phone": "6302006688",
       "dob": "",
       "enneagram": {
         "primary": "2",
@@ -238,12 +244,13 @@
       }
     ]
   },
+  // [ ]
   {
     "lastName": "Turner",
     "adult1": {
       "firstName": "Sam",
-      "phone": "5738640773",
       "email": "Samuel.turner@turneragsolutions.com",
+      "phone": "5738640773",
       "dob": "",
       "enneagram": {
         "primary": "3",
@@ -253,8 +260,8 @@
     },
     "adult2": {
       "firstName": "Samantha",
-      "phone": "6603290974",
       "email": "shgibson@live.com",
+      "phone": "6603290974",
       "dob": "",
       "enneagram": {
         "primary": "6",

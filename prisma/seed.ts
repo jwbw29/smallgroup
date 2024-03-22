@@ -126,7 +126,7 @@ async function main() {
   const allEnneagrams = await prisma.enneagram.findMany();
   console.log(allEnneagrams);
 
-  // ADULT
+  // TODO ADULT
   await prisma.adult.createMany({
     data: [
       {
@@ -137,10 +137,106 @@ async function main() {
         familyId: 1,
         enneagramId: 10,
       },
+      {
+        first_name: "Justin",
+        email: "justin.byrd7@gmail.com",
+        phone: "5733019718",
+        birth_date: "1989-09-10T00:00:00-06:00",
+        familyId: 2,
+        enneagramId: 9,
+      },
+      {
+        first_name: "Jacqueline",
+        email: "jacquelinepbyrd@gmail.com",
+        phone: "5734897960",
+        birth_date: "1990-09-06T00:00:00-06:00",
+        familyId: 2,
+        enneagramId: 2,
+      },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 3,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
+      // {
+      //   first_name: "Jacqueline",
+      //   email: "jacquelinepbyrd@gmail.com",
+      //   phone: "5734897960",
+      //   birth_date: "1990-09-06T00:00:00-06:00",
+      //   familyId: 2,
+      //   enneagramId: 2,
+      // },
     ],
   });
 
-  // CHILD
+  // TODO CHILD
   await prisma.child.createMany({
     data: [
       {
@@ -158,10 +254,75 @@ async function main() {
         birth_date: "1900-01-01T00:00:00-06:00",
         familyId: 1,
       },
+      {
+        first_name: "Henry",
+        birth_date: "2019-10-22T00:00:00-06:00",
+        familyId: 2,
+      },
+      {
+        first_name: "Landry",
+        birth_date: "2021-01-21T00:00:00-06:00",
+        familyId: 2,
+      },
+      {
+        first_name: "Millie",
+        birth_date: "2023-08-02T00:00:00-06:00",
+        familyId: 2,
+      },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
+      // {
+      //   first_name: "",
+      //   birth_date: "",
+      //   familyId: 2,
+      // },
     ],
   });
 
-  // ADDRESS
+  // TODO ADDRESS
   await prisma.address.createMany({
     data: [
       {
@@ -171,6 +332,48 @@ async function main() {
         zip: "65202",
         familyId: 1,
       },
+      {
+        street: "16475 Talladega Dr",
+        city: "Ashland",
+        state: "MO",
+        zip: "65010",
+        familyId: 2,
+      },
+      // {
+      //   street: "",
+      //   city: "",
+      //   state: "",
+      //   zip: "",
+      //   familyId: 3,
+      // },
+      // {
+      //   street: "",
+      //   city: "",
+      //   state: "",
+      //   zip: "",
+      //   familyId: 4,
+      // },
+      // {
+      //   street: "",
+      //   city: "",
+      //   state: "",
+      //   zip: "",
+      //   familyId: 5,
+      // },
+      // {
+      //   street: "",
+      //   city: "",
+      //   state: "",
+      //   zip: "",
+      //   familyId: 6,
+      // },
+      // {
+      //   street: "",
+      //   city: "",
+      //   state: "",
+      //   zip: "",
+      //   familyId: 7,
+      // },
     ],
   });
 
