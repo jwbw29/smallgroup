@@ -24,6 +24,7 @@ export const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = ({
     if (!isLoading && !user) {
       router.replace("/login");
     } else if (!roles || roles.includes("Pending")) {
+      // BUG users with "Member" role are being routed to /signup
       router.replace("/signup");
     }
   }, [user, isLoading, router, roles]);
