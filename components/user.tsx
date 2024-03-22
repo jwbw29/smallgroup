@@ -30,6 +30,11 @@ export default function ProfileClient() {
           {/* Check if roles exist and join them with a comma if there are multiple roles */}
           <p>{roles ? roles.join(", ") : "No roles"}</p>
         </div>
+        <div>
+          <h2>Logins: </h2>
+          {/* Check if roles exist and join them with a comma if there are multiple roles */}
+          <p>{user.log}</p>
+        </div>
       </div>
     )
   );

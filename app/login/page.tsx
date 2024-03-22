@@ -21,7 +21,7 @@ export default function Page() {
       <div className="flex flex-col items-center testBorder gap-12">
         <Image src={logo} width={200} height={200} alt="Small Group Logo" />
         <a href="/api/auth/login?returnTo=/">
-          <button className="testBorder w-fit px-12 py-2">Log In</button>
+          <button className="testBorder w-fit px-12 py-2">Enter</button>
         </a>
       </div>
     </main>
