@@ -16,6 +16,12 @@ A website for small groups to use to easily access each other's information and 
 - I wanted to build a fullstack project using NextJS but was unfamiliar with PostgreSQL and Vercel Postgres.
 - I followed tutorials to build and seed my database. There was tons of trial and error. Eventually I decided to install Knex and realized it helped make then process a lot easier to understand; especially with the addition of migrations and rollbacks.
 
+### Authentication/Authorization
+
+- For this project I'm using Auth0 for authentication and authorization
+- Implementing authentication was easy. But I struggled for a long time to figure out how to properly implement the role-based authorization.
+- Using Next.js has been a great learning experience. It also creates tons of challenges as there is relatively little documentation, especially when using the newer versions
+
 ## Theme
 
 ### Colors
