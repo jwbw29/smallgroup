@@ -26,7 +26,7 @@ export default function ProfileClient() {
         <div>
           <h2>Role: </h2>
           {/* Check if roles exist and join them with a comma if there are multiple roles */}
-          <p>{roles ? roles.join(", ") : "No roles"}</p>
+          <p>{roles ? (roles as string[]).join(", ") : "No roles"}</p>
         </div>
       </div>
     )
