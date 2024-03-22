@@ -5,15 +5,6 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 export default function ProfileClient() {
   const { user, error, isLoading } = useUser();
 
-  // Access roles from the user object
-  const roles = user
-    ? (user["https://smallgroup.vercel.app/roles"] as string[])
-    : null;
-
-  const loginCount = user
-    ? (user["https://smallgroup.vercel.app/logins"] as number)
-    : null;
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
