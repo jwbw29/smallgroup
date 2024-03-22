@@ -10,6 +10,10 @@ export default function ProfileClient() {
     ? (user["https://smallgroup.vercel.app/roles"] as string[])
     : null;
 
+  const loginCount = user
+    ? (user["https://smallgroup.vercel.app/logins"] as number)
+    : null;
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
@@ -23,17 +27,6 @@ export default function ProfileClient() {
         <div>
           <h2>Email: </h2>
           <p>{user.email}</p>
-        </div>
-        {/* Display the roles */}
-        <div>
-          <h2>Role: </h2>
-          {/* Check if roles exist and join them with a comma if there are multiple roles */}
-          <p>{roles ? roles.join(", ") : "No roles"}</p>
-        </div>
-        <div>
-          <h2>Logins: </h2>
-          {/* Check if roles exist and join them with a comma if there are multiple roles */}
-          <p>{user.log}</p>
         </div>
       </div>
     )

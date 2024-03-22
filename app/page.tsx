@@ -3,7 +3,6 @@ import { AuthenticatedRoute } from "../components/AuthenticatedRoute";
 
 export default function Page() {
   return (
-    // TODO need to route to /login if not logged in
     <AuthenticatedRoute>
       <main className="flex flex-col min-h-screen p-2">
         <Nav />

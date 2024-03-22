@@ -20,14 +20,23 @@ export const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = ({
     ? (user["https://smallgroup.vercel.app/roles"] as string[])
     : null;
 
+  // Access login count from the user object
+  const loginCount = user
+    ? (user["https://smallgroup.vercel.app/logins"] as number)
+    : null;
+
   useEffect(() => {
+    // if no user, route to login
     if (!isLoading && !user) {
       router.replace("/login");
-    } else if (roles && roles.includes("Pending")) {
-      // BUG users with "Member" role are being routed to /signup
+    } else if (
+      // role is pending OR users first login, route to signup
+      (roles && roles.includes("Pending")) ||
+      (loginCount && loginCount === 1)
+    ) {
       router.replace("/signup");
     }
-  }, [user, isLoading, router, roles]);
+  }, [user, isLoading, router, roles, loginCount]);
 
   if (isLoading || !user) {
     return <div>Loading...</div>; // Or a custom loading component
