@@ -15,11 +15,18 @@ export const AuthenticatedRoute: React.FC<AuthenticatedRouteProps> = ({
   const { user, isLoading } = useUser();
   const router = useRouter();
 
+  // Access roles from the user object
+  const roles = user
+    ? (user["https://smallgroup.vercel.app/roles"] as string[])
+    : null;
+
   useEffect(() => {
     if (!isLoading && !user) {
       router.replace("/login");
+    } else if (roles && roles.includes("Pending")) {
+      router.replace("/signup");
     }
-  }, [user, isLoading, router]);
+  }, [user, isLoading, router, roles]);
 
   if (isLoading || !user) {
     return <div>Loading...</div>; // Or a custom loading component
