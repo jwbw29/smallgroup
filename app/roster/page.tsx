@@ -8,7 +8,7 @@ import familyData from "@/public/data/familyData.json";
 
 export default async function Roster() {
   return (
-    <AuthenticatedRoute>
+    <AuthenticatedRoute allowedRoles={["Admin", "Member"]}>
       <main className="flex flex-col min-h-screen p-2">
         <Nav />{" "}
         <div className="flex flex-col flex-1 testBorder items-center ">
