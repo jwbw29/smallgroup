@@ -80,7 +80,7 @@
       }
     ]
   },
-  // [ ]
+  // [x]
   {
     "lastName": "Kleinhesselink",
     "adult1": {
@@ -118,7 +118,7 @@
       }
     ]
   },
-  // [ ]
+  // [x]
   {
     "lastName": "Loethen",
     "adult1": {
@@ -160,7 +160,7 @@
       }
     ]
   },
-  // [ ]
+  // [x]
   {
     "lastName": "Rutledge",
     "adult1": {
@@ -186,7 +186,7 @@
       }
     },
     "address": {
-      "street": "Talladega Dr",
+      "street": "16240 Talladega Dr",
       "city": "Ashland",
       "state": "MO",
       "zip": "65010"
@@ -202,7 +202,7 @@
       }
     ]
   },
-  // [ ]
+  // [x]
   {
     "lastName": "Shepherd",
     "adult1": {

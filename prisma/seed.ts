@@ -126,7 +126,7 @@ async function main() {
   const allEnneagrams = await prisma.enneagram.findMany();
   console.log(allEnneagrams);
 
-  // TODO ADULT
+  // ADULT
   await prisma.adult.createMany({
     data: [
       {
@@ -153,90 +153,90 @@ async function main() {
         familyId: 2,
         enneagramId: 2,
       },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 3,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
-      // {
-      //   first_name: "Jacqueline",
-      //   email: "jacquelinepbyrd@gmail.com",
-      //   phone: "5734897960",
-      //   birth_date: "1990-09-06T00:00:00-06:00",
-      //   familyId: 2,
-      //   enneagramId: 2,
-      // },
+      {
+        first_name: "Paden",
+        email: "padenkleinhesselink@gmail.com",
+        phone: "7124411745",
+        birth_date: "",
+        familyId: 3,
+        enneagramId: 9,
+      },
+      {
+        first_name: "Mattie",
+        email: "Martha.bradley16@gmail.com",
+        phone: "5736310620",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 3,
+        enneagramId: 10,
+      },
+      {
+        first_name: "Kyle",
+        email: "kyleloethen@me.com",
+        phone: "3108693855",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 4,
+        enneagramId: 3,
+      },
+      {
+        first_name: "Madison",
+        email: "madisonloethen@gmail.com",
+        phone: "3145911238",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 4,
+        enneagramId: 5,
+      },
+      {
+        first_name: "Caleb",
+        email: "calebarutledge@gmail.com",
+        phone: "4172527404",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 5,
+        enneagramId: 8,
+      },
+      {
+        first_name: "Josie",
+        email: "josiehalen@gmail.com",
+        phone: "6603468500",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 5,
+        enneagramId: 9,
+      },
+      {
+        first_name: "Kaelob",
+        email: "kaelob.shepherd@gmail.com",
+        phone: "5732596808",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 6,
+        enneagramId: 3,
+      },
+      {
+        first_name: "Amy",
+        email: "ashepherd908@gmail.com",
+        phone: "6302006688",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 6,
+        enneagramId: 2,
+      },
+      {
+        first_name: "Sam",
+        email: "Samuel.turner@turneragsolutions.com",
+        phone: "5738640773",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 7,
+        enneagramId: 3,
+      },
+      {
+        first_name: "Samantha",
+        email: "shgibson@live.com",
+        phone: "6603290974",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 7,
+        enneagramId: 6,
+      },
     ],
   });
 
-  // TODO CHILD
+  // CHILD
   await prisma.child.createMany({
     data: [
       {
@@ -269,60 +269,60 @@ async function main() {
         birth_date: "2023-08-02T00:00:00-06:00",
         familyId: 2,
       },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
-      // {
-      //   first_name: "",
-      //   birth_date: "",
-      //   familyId: 2,
-      // },
+      {
+        first_name: "Scottie",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 2,
+      },
+      {
+        first_name: "Reese",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 4,
+      },
+      {
+        first_name: "Everly",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 4,
+      },
+      {
+        first_name: "Evangeline",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 5,
+      },
+      {
+        first_name: "Odette",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 5,
+      },
+      {
+        first_name: "Luke",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 6,
+      },
+      {
+        first_name: "Liam",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 6,
+      },
+      {
+        first_name: "Sterling",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 7,
+      },
+      {
+        first_name: "Sutton",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 7,
+      },
+      {
+        first_name: "Baby Turner",
+        birth_date: "1900-01-01T00:00:00-06:00",
+        familyId: 7,
+      },
     ],
   });
 
-  // TODO ADDRESS
+  // ADDRESS
   await prisma.address.createMany({
     data: [
       {
@@ -339,41 +339,41 @@ async function main() {
         zip: "65010",
         familyId: 2,
       },
-      // {
-      //   street: "",
-      //   city: "",
-      //   state: "",
-      //   zip: "",
-      //   familyId: 3,
-      // },
-      // {
-      //   street: "",
-      //   city: "",
-      //   state: "",
-      //   zip: "",
-      //   familyId: 4,
-      // },
-      // {
-      //   street: "",
-      //   city: "",
-      //   state: "",
-      //   zip: "",
-      //   familyId: 5,
-      // },
-      // {
-      //   street: "",
-      //   city: "",
-      //   state: "",
-      //   zip: "",
-      //   familyId: 6,
-      // },
-      // {
-      //   street: "",
-      //   city: "",
-      //   state: "",
-      //   zip: "",
-      //   familyId: 7,
-      // },
+      {
+        street: "260 County Road 430",
+        city: "Fayette",
+        state: "MO",
+        zip: "65248",
+        familyId: 3,
+      },
+      {
+        street: "404 Renee Dr",
+        city: "Ashland",
+        state: "MO",
+        zip: "65010",
+        familyId: 4,
+      },
+      {
+        street: "16240 Talladega Dr",
+        city: "Ashland",
+        state: "MO",
+        zip: "65010",
+        familyId: 5,
+      },
+      {
+        street: "16280 Talladega Dr",
+        city: "Ashland",
+        state: "MO",
+        zip: "65010",
+        familyId: 6,
+      },
+      {
+        street: "UNKNOWN",
+        city: "Ashland",
+        state: "MO",
+        zip: "65010",
+        familyId: 7,
+      },
     ],
   });
 
