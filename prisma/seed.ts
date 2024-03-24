@@ -157,7 +157,7 @@ async function main() {
         first_name: "Paden",
         email: "padenkleinhesselink@gmail.com",
         phone: "7124411745",
-        birth_date: "",
+        birth_date: "1990-09-06T00:00:00-06:00",
         familyId: 3,
         enneagramId: 9,
       },
