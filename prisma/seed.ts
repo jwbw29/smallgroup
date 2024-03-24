@@ -10,7 +10,6 @@ async function main() {
   await prisma.adult.deleteMany({});
   await prisma.enneagram.deleteMany({});
   await prisma.family.deleteMany({});
-  await prisma.user.deleteMany({});
 
   const sequences = [
     "Family_id_seq",
@@ -24,18 +23,6 @@ async function main() {
   for (const seq of sequences) {
     await prisma.$executeRawUnsafe(`ALTER SEQUENCE "${seq}" RESTART WITH 1;`);
   }
-
-  // USERS
-  await prisma.user.create({
-    data: {
-      username: "test_user",
-      email: "justinbyrd7@gmail.com",
-      password: "Test123!",
-    },
-  });
-
-  const allUsers = await prisma.user.findMany();
-  console.log(allUsers);
 
   // FAMILY
   await prisma.family.createMany({
