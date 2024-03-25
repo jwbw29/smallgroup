@@ -19,9 +19,10 @@ export async function middleware(request: NextRequest) {
   }
 
   // Decode the JWT Token
-  let decoded;
+  let decoded: MyJwtPayload | null;
   try {
-    decoded = jwt.decode(token) as MyJwtPayload | null;
+    const tokenString = token as unknown as string;
+    decoded = jwt.decode(tokenString) as MyJwtPayload | null;
   } catch (error) {
     // If there's an error decoding the token, redirect to login
     // return NextResponse.redirect(new URL("/login", request.url));
