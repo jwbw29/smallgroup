@@ -33,8 +33,8 @@
 //       router.replace("/login");
 //     } else if (
 //       // role is pending OR users first login, route to signup
-//       (roles && roles.includes("Pending")) ||
-//       (loginCount && loginCount === 1)
+//   (roles && roles.includes("Pending")) ||
+//   (loginCount && loginCount === 1)
 //     ) {
 //       router.replace("/signup");
 //     }

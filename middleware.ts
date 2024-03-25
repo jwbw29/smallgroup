@@ -25,6 +25,7 @@ export async function middleware(request: NextRequest) {
     decoded = jwt.decode(tokenString) as MyJwtPayload | null;
   } catch (error) {
     // If there's an error decoding the token, redirect to login
+    // TODO uncomment the next line and comment out the line below it:
     // return NextResponse.redirect(new URL("/login", request.url));
     return NextResponse.json({ message: "Error decoding token" });
   }
@@ -34,7 +35,10 @@ export async function middleware(request: NextRequest) {
     const roles = decoded["https://smallgroup.vercel.app/roles"];
     const loginCount = decoded["https://smallgroup.vercel.app/logins"];
 
-    if (roles && roles.includes("Pending")) {
+    if (
+      (roles && roles.includes("Pending")) ||
+      (loginCount && loginCount === 1)
+    ) {
       return NextResponse.redirect(new URL("/signup", request.url));
     }
   }
