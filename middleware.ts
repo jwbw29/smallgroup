@@ -1,18 +1,45 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import jwt, { JwtPayload } from "jsonwebtoken";
+
+interface MyJwtPayload extends JwtPayload {
+  "https://smallgroup.vercel.app/roles"?: string[];
+  "https://smallgroup.vercel.app/logins"?: number;
+}
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
   /* //* Keep in mind
     - Security Assumptions: Relying on the mere presence of a cookie as an indication of authentication assumes that the session it represents is valid and not expired. In many cases, especially for initial middleware checks, this is a practical and acceptable assumption. However, be aware that without validating the session (e.g., checking its signature, expiration, and so forth), there's a slight risk. Such validation is typically handled in more detail within your application, either on specific routes that require secure access or via server-side page rendering logic. */
 
-  const isAuthenticated = request.cookies.get("appSession"); //
+  const token = request.cookies.get("appSession"); //
 
-  if (!isAuthenticated) {
+  if (!token) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
+
+  // Decode the JWT Token
+  let decoded;
+  try {
+    decoded = jwt.decode(token) as MyJwtPayload | null;
+  } catch (error) {
+    // If there's an error decoding the token, redirect to login
+    // return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.json({ message: "Error decoding token" });
+  }
+
+  // Extract Custom Claims
+  if (decoded) {
+    const roles = decoded["https://smallgroup.vercel.app/roles"];
+    const loginCount = decoded["https://smallgroup.vercel.app/logins"];
+
+    if (roles && roles.includes("Pending")) {
+      return NextResponse.redirect(new URL("/signup", request.url));
+    }
+  }
+
   // TODO
-  //   else if (isAuthenticated && role === "Pending"){
+  //   else if (token && role === "Pending"){
   //      return NextResponse.redirect(new URL("/signup", request.url));
   //   }
   else {
