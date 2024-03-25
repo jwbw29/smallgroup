@@ -3,7 +3,6 @@
 import Nav from "@/components/nav";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AuthenticatedRoute } from "@/components/AuthenticatedRoute";
 
 const links = [
   { name: "Fall 2023", href: "/schedule/fall23" },
@@ -12,28 +11,26 @@ const links = [
 
 export default function Page() {
   return (
-    <AuthenticatedRoute>
-      <main className="flex flex-col min-h-screen p-2">
-        <Nav />
-        <div className="flex flex-col flex-1 testBorder p-4">
-          {/* TODO Not MVP */}
-          {/* <div className="flex justify-end testBorder m-4">
+    <main className="flex flex-col min-h-screen p-2">
+      <Nav />
+      <div className="flex flex-col flex-1 testBorder p-4">
+        {/* TODO Not MVP */}
+        {/* <div className="flex justify-end testBorder m-4">
             <button className="testBorder rounded-md py-2 px-4 shadow-lg">
               New Event
             </button>
           </div> */}
-          <div className="flex flex-col testBorder items-center">
-            {links.map((link) => {
-              return (
-                <Link key={link.name} href={link.href} className="customLink">
-                  <h2>{link.name}</h2>
-                </Link>
-              );
-            })}
-          </div>
+        <div className="flex flex-col testBorder items-center">
+          {links.map((link) => {
+            return (
+              <Link key={link.name} href={link.href} className="customLink">
+                <h2>{link.name}</h2>
+              </Link>
+            );
+          })}
         </div>
-      </main>
-    </AuthenticatedRoute>
+      </div>
+    </main>
   );
 }
 // <Link href="/schedule/fall23" className="testBorder">
