@@ -30,27 +30,50 @@ export default async function Page() {
     }),
   });
 
-  // TODO Change to access_token and remove the console.log
   const token: Token = await tokenResponse.json();
-  // console.log(token.token_type);
+  const userId = "auth0|65fd9930f2e86684187e547f"; //fetch the userId from the session
 
   // use token to make a request to the management API
-  const rolesResponse = await fetch((audience as string) + "roles", {
-    headers: {
-      Authorization: `${token.token_type} ${token.access_token}`,
-    },
-  });
+  const rolesResponse = await fetch(
+    (audience as string) + `users/${userId}/roles`,
+    {
+      headers: {
+        Authorization: `${token.token_type} ${token.access_token}`,
+      },
+    }
+  );
+
+  interface Role {
+    id: string;
+    name: string;
+    description?: string;
+  }
 
   const roles = await rolesResponse.json();
   console.log(roles);
 
+  const isMember = roles.some((role: Role) => role.name === "Member");
+
+  // Line below is to fetch all roles from the Auth0 API
+  // const rolesResponse = await fetch((audience as string) + "roles", {
+  //   headers: {
+  //     Authorization: `${token.token_type} ${token.access_token}`,
+  //   },
+  // });
+
+  // const roles = await rolesResponse.json();
+  // console.log(roles);
+
   return (
-    <p>
-      Roles ={" "}
-      {roles.map((role) => {
-        return <p key={role.id}>{role.name}</p>;
-      })}
-    </p>
+    <div>
+      {isMember
+        ? roles.map((role: Role) => (
+            <p key={role.id}>{role.name}: Access granted</p>
+          ))
+        : roles.map((role: Role) => (
+            <p key={role.id}>{role.name}: Access Denied</p>
+          ))}
+    </div>
   );
 
   // return (
