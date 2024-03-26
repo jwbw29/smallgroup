@@ -10,17 +10,19 @@ type Token = {
   token_type: string;
 };
 
-export default async function Page() {
-  // TODO May need to change how the url is constructed
+interface Role {
+  id: string;
+  name: string;
+  description?: string;
+}
 
+export default async function Page() {
   const clientId = process.env.AUTH0_CLIENT_ID;
   const clientSecret = process.env.AUTH0_CLIENT_SECRET;
   const audience = process.env.AUTH0_AUDIENCE;
   const tokenUrl = process.env.AUTH0_TOKEN_URL;
 
-  // the above is all logging correctly
-
-  //// REQUEST TOKEN
+  //Fetch the token
   const tokenResponse = await fetch(tokenUrl as string, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -31,21 +33,18 @@ export default async function Page() {
       grant_type: "client_credentials",
     }),
   });
-
   const token: Token = await tokenResponse.json();
 
+  //Fetch userId via getSession
   const session = await getSession();
-
   if (!session) {
     throw new Error(`Requires authentication`);
   }
-
   const { user } = session;
   const userId = user.sub;
-
   console.log(userId);
 
-  //// use token to make a request to the management API
+  //Use the token to fetch the roles
   const rolesResponse = await fetch(
     (audience as string) + `users/${userId}/roles`,
     {
@@ -54,16 +53,10 @@ export default async function Page() {
       },
     }
   );
-
-  interface Role {
-    id: string;
-    name: string;
-    description?: string;
-  }
-
   const roles: Role[] = await rolesResponse.json();
   console.log(roles);
 
+  //Check if the user is a member
   const isMember = roles.some((role: Role) => role.name === "Member");
 
   return (
