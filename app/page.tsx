@@ -1,5 +1,3 @@
-// Attempt to remove getSession and use withPageAuthRequired
-
 import Nav from "@/components/nav";
 import MembershipPending from "@/components/pending";
 import { getSession } from "@auth0/nextjs-auth0";
