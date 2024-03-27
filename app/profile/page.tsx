@@ -62,7 +62,7 @@ export default async function Page() {
     <MembershipPending />
   ) : (
     <main className="flex flex-col min-h-screen p-2">
-      <Nav /> (
+      <Nav />
       <div className="flex flex-col flex-1 items-center gap-8">
         <h1 className="text-3xl text-center my-6">Profile</h1>{" "}
         <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
@@ -74,7 +74,6 @@ export default async function Page() {
           </a>
         </div>
       </div>
-      )
     </main>
   );
 }
