@@ -11,7 +11,8 @@ const links = [
   { name: "Profile", href: "/profile" },
 ];
 
-export default function Page() {
+//TODO Might need to change this back to Page() if there are errors
+export default function Navigation() {
   const pathname = usePathname();
 
   return (
