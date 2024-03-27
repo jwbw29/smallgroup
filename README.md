@@ -20,7 +20,8 @@ A website for small groups to use to easily access each other's information and 
 
 - For this project I'm using Auth0 for authentication and authorization
 - Implementing authentication was easy. But I struggled for a long time to figure out how to properly implement the role-based authorization.
-- Using Next.js has been a great learning experience. It also creates tons of challenges as there is relatively little documentation, especially when using the newer versions
+- I went down tons of rabbit holes and eventually just need to step back and thing about the logic. I was originally trying to route to a "waiting room" page if a user had a "Pending" role. I eventually discovered it'd be easier (and eliminated a bug I was having where the home page would briefly show to a Pending user before routing them to their waiting room page) to do a conditional rendering (if user is "pending" show a `<MembershipPending />` component, otherwise display the page)
+- For now this works great. I'd still like to figure out how I can put all of the session/token/role access in a separate component that can be imported in to each file instead of repeating the code on each `page.tsx`
 
 ## Theme
 
