@@ -1,7 +1,7 @@
 // Attempt to remove getSession and use withPageAuthRequired
 
 import Nav from "@/components/nav";
-import Signup from "@/components/signup";
+import MembershipPending from "@/components/pending";
 import { getSession } from "@auth0/nextjs-auth0";
 
 type Token = {
@@ -61,7 +61,7 @@ export default async function Page() {
   const isPending = roles.some((role: Role) => role.name === "Pending");
 
   return isPending ? (
-    <Signup />
+    <MembershipPending />
   ) : (
     <main className="flex flex-col min-h-screen p-2">
       <Nav />

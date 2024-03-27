@@ -1,4 +1,4 @@
-export default function Signup() {
+export default function MembershipPending() {
   return (
     <div>
       <h1>Approval Pending</h1>{" "}
