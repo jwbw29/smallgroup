@@ -1,6 +1,7 @@
 import Nav from "@/components/nav";
 import MembershipPending from "@/components/pending";
 import { getSession } from "@auth0/nextjs-auth0";
+import events from "@/public/data/eventData.json";
 
 type Token = {
   access_token: string;
@@ -15,7 +16,41 @@ interface Role {
   description?: string;
 }
 
+interface Event {
+  name: string;
+  date: string;
+  location: string;
+  group_type: string;
+}
+
 export default async function Page() {
+  // get today's date
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // filter events to only include future ones
+  const futureEvents: Event[] = events.filter((event) => {
+    const eventDate = new Date(event.date);
+    return eventDate >= today;
+  });
+
+  // sort future events by date
+  futureEvents.sort((a: Event, b: Event) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateA - dateB;
+  });
+
+  // select the next event (closest to today)
+  const nextEvent: Event | null = futureEvents[0] || null;
+
+  // format the date
+  const formattedDate = new Date(nextEvent.date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
   const clientId = process.env.AUTH0_CLIENT_ID;
   const clientSecret = process.env.AUTH0_CLIENT_SECRET;
   const audience = process.env.AUTH0_AUDIENCE;
@@ -67,12 +102,12 @@ export default async function Page() {
           <h1 className="text-3xl testBorder text-center">Next Event</h1>{" "}
           <div className="flex flex-col border-4 rounded-xl flex-1 justify-around">
             <div className="flex flex-col items-center">
-              <h2 className="text-4xl">{"{eventName}"}</h2>
-              <h3 className=" font-bold">{"Date: {date}"}</h3>
+              <h2 className="text-4xl">{nextEvent.name}</h2>
+              <h3 className=" font-bold">{formattedDate}</h3>
             </div>
             <div className="testBorder mx-4">
-              <p>{"Who: {guys/girls/all/etc}"}</p>
-              <p>{"Where: {location}"}</p>
+              <p>Who: {nextEvent.group_type}</p>
+              <p>Where: {nextEvent.location}</p>
             </div>
           </div>
         </div>

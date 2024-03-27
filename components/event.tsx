@@ -10,15 +10,16 @@ const testEvent = {
 };
 
 export function EventDetails({ event }: { event: any }) {
-  const { agenda, year, semester, date, location, group } = event;
-  const {
-    testAgenda,
-    testYear,
-    testSemester,
-    testDate,
-    testLocation,
-    testGroup,
-  } = testEvent;
+  const { name, date, location, group_type } = event;
+
+  // const {
+  //   testAgenda,
+  //   testYear,
+  //   testSemester,
+  //   testDate,
+  //   testLocation,
+  //   testGroup,
+  // } = testEvent;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -26,20 +27,39 @@ export function EventDetails({ event }: { event: any }) {
     year: "numeric",
   });
 
-  // TODO Just need to add styling and formatting
+  // !! TEST DATA !!
+  // return (
+  //   <div className="flex flex-col align-center border-4 shadow-lg rounded-xl flex-1 p-2 gap-12">
+  //     <div className="flex flex-col items-center testBorder">
+  //       <h2 className="text-2xl text-center testBorder">{testAgenda}</h2>
+  //       <h3 className="text-lg font-bold testBorder">{formattedDate}</h3>
+  //     </div>
+  //     <div className="testBorder mx-4">
+  //       {" "}
+  //       <p>
+  //         Who: <span className="font-bold">{testGroup}</span>
+  //       </p>
+  //       <p>
+  //         Where: <span className="font-bold">{testLocation}</span>
+  //       </p>
+  //     </div>
+  //   </div>
+  // );
+
+  // !! REAL DATA !!
   return (
     <div className="flex flex-col align-center border-4 shadow-lg rounded-xl flex-1 p-2 gap-12">
       <div className="flex flex-col items-center testBorder">
-        <h2 className="text-2xl text-center testBorder">{testAgenda}</h2>
+        <h2 className="text-2xl text-center testBorder">{name}</h2>
         <h3 className="text-lg font-bold testBorder">{formattedDate}</h3>
       </div>
       <div className="testBorder mx-4">
         {" "}
         <p>
-          Who: <span className="font-bold">{testGroup}</span>
+          Who: <span className="font-bold">{group_type}</span>
         </p>
         <p>
-          Where: <span className="font-bold">{testLocation}</span>
+          Where: <span className="font-bold">{location}</span>
         </p>
       </div>
     </div>
