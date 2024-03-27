@@ -26,33 +26,36 @@ export default async function Page() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      client_id: clientId as string,
-      client_secret: clientSecret as string,
-      audience: audience as string,
+      client_id: clientId ?? "",
+      client_secret: clientSecret ?? "",
+      audience: audience ?? "",
       grant_type: "client_credentials",
     }),
   });
+  if (!tokenResponse.ok) {
+    throw new Error("Failed to fetch the token");
+  }
   const token: Token = await tokenResponse.json();
 
   //Fetch userId via getSession
   const session = await getSession();
-  if (!session) {
+  if (!session || !session.user) {
     throw new Error(`Requires authentication`);
   }
-  const { user } = session;
-  const userId = user.sub;
+  const userId = session.user.sub;
+
   //Use the token to fetch the roles
   const rolesResponse = await fetch(
     (audience as string) + `users/${userId}/roles`,
     {
       headers: {
-        Authorization: `${token.token_type} ${token.access_token}`,
+        Authorization: `${token.token_type ?? ""} ${token.access_token ?? ""}`,
       },
     }
   );
   const roles: Role[] = await rolesResponse.json();
   //Check if the user is a member
-  const isPending = roles.some((role: Role) => role.name === "Pending");
+  const isPending = roles?.some((role: Role) => role.name === "Pending");
 
   return isPending ? (
     <MembershipPending />
