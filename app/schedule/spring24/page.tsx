@@ -48,8 +48,6 @@ export default async function Page() {
   }
   const { user } = session;
   const userId = user.sub;
-  console.log(userId);
-
   //Use the token to fetch the roles
   const rolesResponse = await fetch(
     (audience as string) + `users/${userId}/roles`,
@@ -60,8 +58,6 @@ export default async function Page() {
     }
   );
   const roles: Role[] = await rolesResponse.json();
-  console.log(roles);
-
   //Check if the user is a member
   const isPending = roles.some((role: Role) => role.name === "Pending");
 
