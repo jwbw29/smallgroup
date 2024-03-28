@@ -1,4 +1,13 @@
 "use client";
+import { Roboto_Mono } from "next/font/google";
+
+import "./globals.css";
+
+const roboto = Roboto_Mono({
+  weight: ["100", "200", "300", "400", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function GlobalError({
   error,
@@ -8,8 +17,8 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html>
-      <body>
+    <html className="bg-background">
+      <body className={roboto.className}>
         <main className="flex flex-col min-h-screen p-2">
           <div className="flex flex-1   justify-center">
             <div className="flex flex-col my-20   gap-8 max-w-[500px] px-8">
