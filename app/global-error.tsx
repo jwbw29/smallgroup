@@ -20,7 +20,7 @@ export default function GlobalError({
     <html className="bg-background">
       <body className={roboto.className}>
         <main className="flex flex-col min-h-screen p-2 justify-center">
-          <div className="flex flex-1   justify-center">
+          <div className="flex flex-1 justify-center">
             <div className="flex flex-col my-20   gap-8 max-w-[500px] px-8">
               <div className=" ">
                 <h1 className="text-4xl text-blue-950 ">Ruh roh....</h1>
@@ -29,7 +29,10 @@ export default function GlobalError({
                 <p className="text-lg text-blue-950">Something went wrong!</p>
               </div>
               <div className="flex justify-end mt-16">
-                <button onClick={() => reset()} className="primaryButton">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="primaryButton"
+                >
                   Try again
                 </button>
               </div>
