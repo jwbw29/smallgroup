@@ -8,7 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        background: "linear-gradient(to bottom, #4895EF, #4CC9F0)",
+      },
+      colors: {
+        primary: "#4895EF",
+        secondary: "#4CC9F0",
+      },
     },
   },
   plugins: [],
