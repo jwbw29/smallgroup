@@ -1,4 +1,4 @@
-# Small Group Project
+# Small Group Website
 
 A website for small groups to use to easily access each other's information and event dates.
 
