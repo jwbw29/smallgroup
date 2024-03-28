@@ -21,7 +21,9 @@ export default function MembershipPending() {
             </p>
           </div>
           <div className="flex justify-end mt-16">
-            <button className="primaryButton">Logout</button>
+            <a href="/api/auth/logout">
+              <button className="primaryButton">Logout</button>
+            </a>{" "}
           </div>
         </div>
       </div>
