@@ -100,7 +100,7 @@ export default async function Page() {
       <div className="flex flex-1 justify-center">
         <div className="flex flex-col w-3/4 max-w-[500px] gap-16 mt-28 ">
           <h1 className="text-3xl pl-2">Next Event</h1>{" "}
-          <div className="flex flex-col border-4 rounded-xl h-72 justify-around px-4">
+          <div className="flex flex-col shadow-custom bg-white border-4 border-blue-950 rounded-xl h-72 justify-around px-4">
             <div className="flex flex-col items-start">
               <h2 className="text-4xl">{nextEvent.name}</h2>
               <h3 className="text-lg font-light">{formattedDate}</h3>

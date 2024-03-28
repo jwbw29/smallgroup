@@ -6,6 +6,7 @@ import { UserProvider } from "@auth0/nextjs-auth0/client";
 const roboto = Roboto_Mono({
   weight: ["100", "200", "300", "400", "400", "500", "600", "700"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
