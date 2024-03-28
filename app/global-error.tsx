@@ -19,7 +19,7 @@ export default function GlobalError({
   return (
     <html className="bg-background">
       <body className={roboto.className}>
-        <main className="flex flex-col min-h-screen p-2">
+        <main className="flex flex-col min-h-screen p-2 justify-center">
           <div className="flex flex-1   justify-center">
             <div className="flex flex-col my-20   gap-8 max-w-[500px] px-8">
               <div className=" ">
