@@ -5,7 +5,7 @@ import {} from "next/font/google";
 
 export default function MembershipPending() {
   return (
-    <main className="flex flex-col min-h-screen p-2 bg-background">
+    <main className="flex flex-col min-h-screen p-2">
       <nav className="  p-4 py-12">
         <Image src={Logo} width={100} height={100} alt="logo" />
       </nav>
