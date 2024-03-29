@@ -89,6 +89,8 @@ export default async function Page() {
     }
   );
   const roles: Role[] = await rolesResponse.json();
+
+  console.log("Roles: ", roles);
   //Check if the user is a member
   const isPending = roles?.some((role: Role) => role.name === "Pending");
 
