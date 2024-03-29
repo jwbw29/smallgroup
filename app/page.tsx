@@ -79,6 +79,7 @@ export default async function Page() {
     throw new Error(`Requires authentication`);
   }
   const userId = session.user.sub;
+  console.log("UserId: ", userId);
 
   //Use the token to fetch the roles
   const rolesResponse = await fetch(
