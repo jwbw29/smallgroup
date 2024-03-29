@@ -71,6 +71,7 @@ export default async function Page() {
     throw new Error("Failed to fetch the token");
   }
   const token: Token = await tokenResponse.json();
+  console.log("Token: ", token);
 
   //Fetch userId via getSession
   const session = await getSession();
