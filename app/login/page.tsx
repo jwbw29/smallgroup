@@ -10,7 +10,7 @@ export default function Page() {
 
   console.log(user, isLoading);
 
-  if (!isLoading) return <Loading />;
+  if (isLoading) return <Loading />;
   if (error) return <div>{error.message}</div>;
 
   if (user) {
