@@ -3,13 +3,14 @@
 import Image from "next/image";
 import logo from "@/public/sg_logo.png";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import Loading from "@/components/Loading";
 
 export default function Page() {
   const { user, error, isLoading } = useUser();
 
   console.log(user, isLoading);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (!isLoading) return <Loading />;
   if (error) return <div>{error.message}</div>;
 
   if (user) {
