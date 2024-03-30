@@ -69,12 +69,6 @@ export default async function Page() {
     <main className="flex flex-col min-h-screen p-2">
       <Nav />
       <div className="flex flex-col flex-1 testBorder p-4">
-        {/* TODO Not MVP */}
-        {/* <div className="flex justify-end testBorder m-4">
-            <button className="testBorder rounded-md py-2 px-4 shadow-lg">
-              New Event
-            </button>
-          </div> */}
         <div className="flex flex-col testBorder items-center">
           {links.map((link) => {
             return (
