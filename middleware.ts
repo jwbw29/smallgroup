@@ -14,3 +14,13 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ["/", "/roster", "/events", "/profile", "/schedule/:path*"],
 };
+
+/* Could maybe plug this in instead of appSession?
+  //Fetch userId via getSession
+  const session = await getSession();
+  if (!session || !session.user) {
+    throw new Error(`Requires authentication`);
+  }
+  const userId = session.user.sub;
+  console.log("UserId: ", userId);
+*/
