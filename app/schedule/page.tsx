@@ -1,7 +1,8 @@
 import Nav from "@/components/nav";
 import Link from "next/link";
 import MembershipPending from "@/components/pending";
-import { getSession, withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import { getUserSessionAndRoles } from "@/utils/authUtils";
 
 const links = [
   { name: "Fall 2023", href: "/schedule/fall23" },
@@ -11,13 +12,7 @@ const links = [
 export default withPageAuthRequired(
   async function Page() {
     //Fetch user data via getSession
-    const session = await getSession();
-
-    if (!session || !session.user || !session.accessToken) {
-      throw new Error(`Requires authentication`);
-    }
-
-    const roles = session.user["https://smallgroup.vercel.app/roles"] || [];
+    const { roles } = await getUserSessionAndRoles();
     console.log(roles);
     //Check if the user is a member
     const isPending = roles.some((role: string) => role === "Pending");
