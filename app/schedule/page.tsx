@@ -27,7 +27,7 @@ export default async function Page() {
   const audience = process.env.AUTH0_AUDIENCE;
   const tokenUrl = process.env.AUTH0_TOKEN_URL;
 
-  //Fetch the token
+  //Fetch the access token
   const tokenResponse = await fetch(tokenUrl as string, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -50,7 +50,7 @@ export default async function Page() {
   }
   const userId = session.user.sub;
 
-  //Use the token to fetch the roles
+  //Use the access token to fetch the roles
   const rolesResponse = await fetch(
     (audience as string) + `users/${userId}/roles`,
     {
