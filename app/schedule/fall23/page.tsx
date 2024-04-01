@@ -14,7 +14,6 @@ export default withPageAuthRequired(
 
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
-    console.log(roles);
     //Check if the user is a member
     const isPending = roles.some((role: string) => role === "Pending");
 
