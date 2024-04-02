@@ -29,6 +29,9 @@
     @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-sky-100 hover:text-blue-600 lg:flex-none lg:justify-start lg:p-2 lg:px-12;
   }
   .primaryButton {
-    @apply bg-blue-950  text-lg w-32 h-12 rounded-lg hover:bg-blue-800 hover:shadow-md hover:shadow-black text-white focus:bg-blue-800 focus:shadow-md focus:shadow-black;
+    @apply bg-blue-950 text-lg w-32 h-12 rounded-lg hover:bg-blue-800 hover:shadow-md hover:shadow-black text-white focus:bg-blue-800 focus:shadow-md focus:shadow-black;
+  }
+  .secondaryButton {
+    @apply bg-none text-base w-24 h-10 rounded-lg hover:bg-blue-100  text-blue-950 focus:bg-blue-100;
   }
 }
