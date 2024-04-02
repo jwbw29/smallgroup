@@ -15,9 +15,9 @@ export default withPageAuthRequired(
     //Check if the user has authorization
     const isPending = roles.some((role: string) => role === "Pending");
 
-    const isAuthorized = !isPending || loginCount > 1;
+    const notAuthorized = isPending || loginCount <= 1;
 
-    return isAuthorized ? (
+    return notAuthorized ? (
       <MembershipPending />
     ) : (
       <main className="flex flex-col">
