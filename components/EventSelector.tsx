@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import eventData from "@/public/data/eventData.json";
 import { EventDetails } from "@/components/event";
+import { Dropdown } from "flowbite-react";
 
 const getCurrentSemester = () => {
   const today = new Date();
@@ -30,22 +31,22 @@ const EventSelector = () => {
     return event.year === year && event.semester === semester;
   });
 
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedSemester(event.target.value);
+  const handleDropdownSelect = (semester: string) => {
+    setSelectedSemester(semester);
   };
 
   return (
     <div className="flex flex-col">
       <div className="flex justify-end my-6 pr-4 ">
-        <select
-          className="primaryButton text-base px-2 min-w-fit h-10"
-          value={selectedSemester}
-          onChange={handleSelectChange}
-        >
-          <option value="Fall 2023">{"Fall '23"}</option>
-          <option value="Spring 2024">{"Spring '24"}</option>
-          {/* Add more options as needed */}
-        </select>
+        {/* ------Attempt at Dropdown------ */}
+        <Dropdown label={selectedSemester} dismissOnClick={true}>
+          <Dropdown.Item onClick={() => handleDropdownSelect("Spring 2024")}>
+            {"Spring '24"}
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => handleDropdownSelect("Fall 2023")}>
+            {"Fall '23"}
+          </Dropdown.Item>
+        </Dropdown>
       </div>
       <div className="flex flex-col flex-1 items-center ">
         <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
