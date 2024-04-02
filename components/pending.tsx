@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Logo from "@/public/sg_logo.png";
-import RefreshButton from "./refreshButton";
 
 export default function MembershipPending() {
   return (
@@ -21,9 +20,8 @@ export default function MembershipPending() {
           </div>
           <div className="flex items-center justify-end mt-16 gap-2">
             <a href="/api/auth/logout">
-              <button className="secondaryButton">Logout</button>
+              <button className="primaryButton">Logout</button>
             </a>{" "}
-            <RefreshButton />
           </div>
         </div>
       </div>

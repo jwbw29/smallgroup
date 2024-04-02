@@ -41,13 +41,14 @@ export default withPageAuthRequired(
     });
 
     //Fetch user data via getSession
-    const { roles, loginCount } = await getUserSessionAndRoles();
+    const { roles } = await getUserSessionAndRoles();
     //Check if the user has authorization
+
     const isPending = roles.some((role: string) => role === "Pending");
 
-    const isAuthorized = !isPending || loginCount > 1;
+    const notAuthorized = isPending || roles.length === 0;
 
-    return isAuthorized ? (
+    return notAuthorized ? (
       <MembershipPending />
     ) : (
       <main className="flex flex-col text-blue-950">
