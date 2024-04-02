@@ -38,7 +38,6 @@ const EventSelector = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-end my-6 pr-4 ">
-        {/* ------Attempt at Dropdown------ */}
         <Dropdown label={selectedSemester} dismissOnClick={true}>
           <Dropdown.Item onClick={() => handleDropdownSelect("Spring 2024")}>
             {"Spring '24"}
