@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TODO add the min-h-screen stuff back to main */
+
 @layer base {
   main {
     @apply p-2;
