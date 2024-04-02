@@ -16,7 +16,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex justify-around lg:justify-end lg:gap-12">
+    <nav className="flex justify-around gap-2 lg:justify-end lg:gap-12">
       {links.map((link) => {
         return (
           <Link
