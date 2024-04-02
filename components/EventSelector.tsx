@@ -36,9 +36,9 @@ const EventSelector = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="testBorder flex justify-end my-6 pr-4 ">
+      <div className="flex justify-end my-6 pr-4 ">
         <select
-          className="testBorder h-12  w-[8.5rem] p-2 rounded-lg border-2 border-blue-950"
+          className="primaryButton text-base px-2 min-w-fit h-10"
           value={selectedSemester}
           onChange={handleSelectChange}
         >
@@ -47,8 +47,8 @@ const EventSelector = () => {
           {/* Add more options as needed */}
         </select>
       </div>
-      <div className="flex flex-col flex-1 testBorder items-center ">
-        <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
+      <div className="flex flex-col flex-1 items-center ">
+        <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
           {filteredEvents.map((event, i) => (
             <EventDetails key={i} event={event} />
           ))}
