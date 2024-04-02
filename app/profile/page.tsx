@@ -15,7 +15,8 @@ export default withPageAuthRequired(
     return isPending ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col min-h-screen p-2">
+      <main className="flex flex-col">
+        {" "}
         <Nav />
         <div className="flex flex-col flex-1 items-center gap-8">
           <h1 className="text-3xl text-center my-6">Profile</h1>{" "}
