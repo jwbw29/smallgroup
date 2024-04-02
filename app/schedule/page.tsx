@@ -16,7 +16,7 @@ export default withPageAuthRequired(
     return notAuthorized ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col">
+      <main className="testBorder flex flex-col">
         {" "}
         <Nav />
         <EventSelector />{" "}

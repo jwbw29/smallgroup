@@ -48,7 +48,7 @@ export function EventDetails({ event }: { event: any }) {
 
   // !! REAL DATA !!
   return (
-    <div className="flex flex-col align-center border-4 shadow-lg rounded-xl flex-1 p-2 gap-12">
+    <div className="infoCard">
       <div className="flex flex-col items-center testBorder">
         <h2 className="text-2xl text-center testBorder">{name}</h2>
         <h3 className="text-lg font-bold testBorder">{formattedDate}</h3>

@@ -42,7 +42,7 @@ export function Person({ family }: { family: any }) {
   // !! REAL DATA !!
   // TODO Just need to add styling and formatting;
   return (
-    <div className="flex flex-col border-4 shadow-lg rounded-xl flex-1 p-2 gap-16">
+    <div className="infoCard">
       <div className="flex flex-col w-fit testBorder">
         <h2 className="text-4xl testBorder">{lastName}</h2>
         <h3 className="font-light testBorder">

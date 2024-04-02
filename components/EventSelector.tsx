@@ -35,20 +35,24 @@ const EventSelector = () => {
   };
 
   return (
-    <div className="flex flex-col flex-1 p-4">
-      <select
-        className="testBorder w-full"
-        value={selectedSemester}
-        onChange={handleSelectChange}
-      >
-        <option value="Fall 2023">{"Fall '23"}</option>
-        <option value="Spring 2024">{"Spring '24"}</option>
-        {/* Add more options as needed */}
-      </select>
-      <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
-        {filteredEvents.map((event, i) => (
-          <EventDetails key={i} event={event} />
-        ))}
+    <div className="flex flex-col">
+      <div className="testBorder flex justify-end my-6 pr-4 ">
+        <select
+          className="testBorder h-14  w-[8.5rem] p-2 rounded-lg border-2 border-blue-950"
+          value={selectedSemester}
+          onChange={handleSelectChange}
+        >
+          <option value="Fall 2023">{"Fall '23"}</option>
+          <option value="Spring 2024">{"Spring '24"}</option>
+          {/* Add more options as needed */}
+        </select>
+      </div>
+      <div className="flex flex-col flex-1 testBorder items-center ">
+        <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
+          {filteredEvents.map((event, i) => (
+            <EventDetails key={i} event={event} />
+          ))}
+        </div>
       </div>
     </div>
   );
