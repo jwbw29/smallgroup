@@ -1,24 +1,9 @@
 import Nav from "@/components/nav";
-import Link from "next/link";
 import MembershipPending from "@/components/pending";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import EventSelector from "@/components/EventSelector";
 import eventData from "@/public/data/eventData.json";
-import { EventDetails } from "@/components/event";
-
-// const links = [
-//   { name: "Fall '23", href: "/schedule/fall23" },
-//   { name: "Spring '24", href: "/schedule/spring24" },
-// ];
-
-const fall23 = eventData.filter((event) => {
-  return event.year === "2023" && event.semester === "Fall";
-});
-
-const spring24 = eventData.filter((event) => {
-  return event.year === "2024" && event.semester === "Spring";
-});
 
 export default withPageAuthRequired(
   async function Page() {
