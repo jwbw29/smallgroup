@@ -38,7 +38,7 @@ const EventSelector = () => {
     <div className="flex flex-col">
       <div className="testBorder flex justify-end my-6 pr-4 ">
         <select
-          className="testBorder h-14  w-[8.5rem] p-2 rounded-lg border-2 border-blue-950"
+          className="testBorder h-12  w-[8.5rem] p-2 rounded-lg border-2 border-blue-950"
           value={selectedSemester}
           onChange={handleSelectChange}
         >
