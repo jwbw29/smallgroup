@@ -1,7 +1,6 @@
-// TODO Once button is styled, extract it to a separate component
 import Image from "next/image";
 import Logo from "@/public/sg_logo.png";
-import {} from "next/font/google";
+import RefreshButton from "./refreshButton";
 
 export default function MembershipPending() {
   return (
@@ -20,10 +19,11 @@ export default function MembershipPending() {
               refresh this page.
             </p>
           </div>
-          <div className="flex justify-end mt-16">
+          <div className="flex items-center justify-end mt-16 gap-2">
             <a href="/api/auth/logout">
-              <button className="primaryButton">Logout</button>
+              <button className="secondaryButton">Logout</button>
             </a>{" "}
+            <RefreshButton />
           </div>
         </div>
       </div>

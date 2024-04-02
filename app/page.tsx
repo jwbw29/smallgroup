@@ -48,7 +48,7 @@ export default withPageAuthRequired(
     return isPending ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col min-h-screen p-2 text-blue-950">
+      <main className="flex flex-col text-blue-950">
         <Nav />
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[500px] gap-16 mt-28 ">

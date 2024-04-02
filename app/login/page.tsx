@@ -18,7 +18,7 @@ export default function Page() {
   }
 
   return (
-    <main className="flex flex-col min-h-screen p-2 items-center justify-center">
+    <main className="flex flex-col items-center justify-center">
       <div className="flex flex-col items-center gap-12">
         <Image src={logo} width={200} height={200} alt="Small Group Logo" />
         <a href="/api/auth/login?returnTo=/">

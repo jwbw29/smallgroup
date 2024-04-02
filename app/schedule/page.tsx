@@ -11,15 +11,14 @@ const links = [
 
 export default withPageAuthRequired(
   async function Page() {
-    //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
-    //Check if the user is a member
     const isPending = roles.some((role: string) => role === "Pending");
 
     return isPending ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col min-h-screen p-2">
+      <main className="flex flex-col">
+        {" "}
         <Nav />
         <div className="flex flex-col flex-1 testBorder p-4">
           <div className="flex flex-col testBorder items-center">
@@ -37,9 +36,19 @@ export default withPageAuthRequired(
   },
   { returnTo: "/schedule" }
 );
-// <Link href="/schedule/fall23" className="testBorder">
-//   <h2>Fall 2023</h2>
-// </Link>
-// <Link href="/schedule/spring24" className="testBorder">
-//   <h2>Spring 2024</h2>
-// </Link>
+
+/** // **NOTES
+ * should default to the current semester
+ * and the route by default should be /schedule/{current semester}
+ * ***** OR ******
+ * we get rid of the fall23 and spring24 routes
+ * and whatever is chosen in the drop down just displays different data
+ * fall23 = 08/01/2023 - 12/31/2023
+ * spring24 = 01/01/2024 - 05/31/2024
+ * fall24 = 08/01/2024 - 12/31/2024
+ * etc
+ *
+ *
+ *
+ *
+ */
