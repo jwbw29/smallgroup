@@ -4,26 +4,18 @@ import { useState, useEffect } from "react";
 import eventData from "@/public/data/eventData.json";
 import { EventDetails } from "@/components/event";
 
-// const fall23 = eventData.filter((event) => {
-//   return event.year === "2023" && event.semester === "Fall";
-// });
-
-// const spring24 = eventData.filter((event) => {
-//   return event.year === "2024" && event.semester === "Spring";
-// });
-
-// Helper function to determine the current semester
 const getCurrentSemester = () => {
   const today = new Date();
-  const currentYear = today.getFullYear();
-  const month = today.getMonth(); // January is 0, July is 6
-  const isFallOrLater = month >= 7; // Assuming Fall semester starts in July or later
-  const semester = isFallOrLater ? "Fall" : "Spring";
-  const year = isFallOrLater
-    ? currentYear.toString()
-    : (currentYear - 1).toString();
-
-  return `${semester} '${year.slice(-2)}`; // Returns "Fall '23" or "Spring '23" format
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1; // getMonth is zero-indexed
+  if (month >= 8) {
+    return `Fall ${year}`;
+  } else if (month >= 1 && month <= 5) {
+    return `Spring ${year}`;
+  } else {
+    // Adjust based on your semester system; maybe Summer or a previous semester
+    return `Summer ${year}`;
+  }
 };
 
 const EventSelector = () => {
@@ -34,11 +26,11 @@ const EventSelector = () => {
   const filteredEvents = eventData.filter((event) => {
     const semesterYear = selectedSemester.split(" ");
     const semester = semesterYear[0];
-    const year = "20" + semesterYear[1].replace("'", ""); // Converts "'23" to "2023"
+    const year = semesterYear[1]; // Converts "'23" to "2023"
     return event.year === year && event.semester === semester;
   });
 
-  const handleSelectChange = (event) => {
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedSemester(event.target.value);
   };
 
@@ -49,8 +41,8 @@ const EventSelector = () => {
         value={selectedSemester}
         onChange={handleSelectChange}
       >
-        <option value="Fall '23">{"Fall '23"}</option>
-        <option value="Spring '24">{"Spring '24"}</option>
+        <option value="Fall 2023">{"Fall '23"}</option>
+        <option value="Spring 2024">{"Spring '24"}</option>
         {/* Add more options as needed */}
       </select>
       <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
