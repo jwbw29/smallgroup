@@ -11,11 +11,11 @@ const links = [
 
 export default withPageAuthRequired(
   async function Page() {
-    const { roles, loginCount } = await getUserSessionAndRoles();
+    const { roles } = await getUserSessionAndRoles();
     //Check if the user has authorization
     const isPending = roles.some((role: string) => role === "Pending");
 
-    const notAuthorized = isPending || loginCount <= 1;
+    const notAuthorized = isPending || roles.length === 0;
 
     return notAuthorized ? (
       <MembershipPending />

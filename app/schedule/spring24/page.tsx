@@ -14,12 +14,12 @@ export default withPageAuthRequired(
 
     //Fetch the token
     //Fetch user data via getSession
-    const { roles, loginCount } = await getUserSessionAndRoles();
+    const { roles } = await getUserSessionAndRoles();
     //Check if the user is a member
     //Check if the user has authorization
     const isPending = roles.some((role: string) => role === "Pending");
 
-    const notAuthorized = isPending || loginCount <= 1;
+    const notAuthorized = isPending || roles.length === 0;
 
     return notAuthorized ? (
       <MembershipPending />
