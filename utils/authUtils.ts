@@ -11,5 +11,8 @@ export async function getUserSessionAndRoles() {
   const roles: string[] =
     session.user["https://smallgroup.vercel.app/roles"] || [];
 
-  return { roles };
+  const loginCount: number =
+    session.user["https://smallgroup.vercel.app/logins"] || 0;
+
+  return { roles, loginCount };
 }

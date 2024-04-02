@@ -9,11 +9,14 @@ import familyData from "@/public/data/familyData.json";
 export default withPageAuthRequired(
   async function Page() {
     //Fetch user data via getSession
-    const { roles } = await getUserSessionAndRoles();
+    const { roles, loginCount } = await getUserSessionAndRoles();
     //Check if the user is a member
+    //Check if the user has authorization
     const isPending = roles.some((role: string) => role === "Pending");
 
-    return isPending ? (
+    const isAuthorized = !isPending || loginCount > 1;
+
+    return isAuthorized ? (
       <MembershipPending />
     ) : (
       <main className="flex flex-col">
