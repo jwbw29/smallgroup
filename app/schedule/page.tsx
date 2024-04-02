@@ -3,11 +3,22 @@ import Link from "next/link";
 import MembershipPending from "@/components/pending";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
+import EventSelector from "@/components/EventSelector";
+import eventData from "@/public/data/eventData.json";
+import { EventDetails } from "@/components/event";
 
-const links = [
-  { name: "Fall 2023", href: "/schedule/fall23" },
-  { name: "Spring 2024", href: "/schedule/spring24" },
-];
+// const links = [
+//   { name: "Fall '23", href: "/schedule/fall23" },
+//   { name: "Spring '24", href: "/schedule/spring24" },
+// ];
+
+const fall23 = eventData.filter((event) => {
+  return event.year === "2023" && event.semester === "Fall";
+});
+
+const spring24 = eventData.filter((event) => {
+  return event.year === "2024" && event.semester === "Spring";
+});
 
 export default withPageAuthRequired(
   async function Page() {
@@ -23,17 +34,7 @@ export default withPageAuthRequired(
       <main className="flex flex-col">
         {" "}
         <Nav />
-        <div className="flex flex-col flex-1 testBorder p-4">
-          <div className="flex flex-col testBorder items-center">
-            {links.map((link) => {
-              return (
-                <Link key={link.name} href={link.href} className="customLink">
-                  <h2>{link.name}</h2>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        <EventSelector />{" "}
       </main>
     );
   },
