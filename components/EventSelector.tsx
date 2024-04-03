@@ -42,12 +42,13 @@ const EventSelector = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="testBorder flex justify-end my-6 pr-4 ">
+      <div className="testBorder flex justify-center my-6 ">
         {/* -------A stab at custom dropdown--------- */}
-        <div className="testBorder flex flex-col items-end w-48">
+        <div className="testBorder flex h-fit w-3/4 justify-end">
           <button onClick={toggle} className="primaryButton">
             {selectedSemester}
           </button>
+          {/* TODO make this float */}
           {isExpanded && (
             <div className="bg-white rounded border px-2 py-1 my-2 w-full ">
               <li className="listItem">{"Spring '24"}</li>
@@ -65,8 +66,8 @@ const EventSelector = () => {
           </Dropdown.Item>
         </Dropdown> */}
       </div>
-      <div className="flex flex-col flex-1 items-center ">
-        <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
+      <div className="testBorder flex flex-col flex-1 items-center ">
+        <div className="testBorder flex flex-col h-fit w-3/4 gap-8 my-6">
           {filteredEvents.map((event, i) => (
             <EventDetails key={i} event={event} />
           ))}
