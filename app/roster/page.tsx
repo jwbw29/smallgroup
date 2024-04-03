@@ -10,11 +10,9 @@ export default withPageAuthRequired(
   async function Page() {
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
-    //Check if the user is a member
-    //Check if the user has authorization
-    //   const isPending = roles.some((role: string) => role === "Pending");
 
     const notAuthorized = roles.length === 0;
+
     return notAuthorized ? (
       <MembershipPending />
     ) : (
