@@ -1,7 +1,3 @@
-/** // TODO Family Card Styling
- * - add a tilt effect on hover
- */
-
 import {
   Accordion,
   AccordionContent,
@@ -12,15 +8,6 @@ import { FiMail } from "react-icons/fi";
 import { FiSmartphone } from "react-icons/fi";
 import { FiMapPin } from "react-icons/fi";
 import { FiUsers } from "react-icons/fi";
-
-// const testPerson = {
-//   testLast: "Test",
-//   testAdult1: {
-//     testFirst: "Test",
-//     testPhone: "123-456-7890",
-//     testEmail: "test@email.com",
-//   },
-// };
 
 export function Person({ family }: { family: any }) {
   const { lastName, adult1, adult2, address, children } = family;
@@ -122,44 +109,4 @@ export function Person({ family }: { family: any }) {
       </AccordionItem>
     </Accordion>
   );
-}
-
-// Original code
-{
-  /* 
-<div className="">
-<p>
-  {"Address:"}
-  <div className="px-2">
-    <p>{address.street || "N/A"}</p>
-    <p>
-      {address.city || "N/A"}, {address.state || "N/A"}
-    </p>
-    <p>{address.zip || "N/A"}</p>
-  </div>
-</p>
-<p>
-  {adult1.firstName} cell: {adult1.phone}
-</p>
-{adult2 && (
-  <p>
-    {adult2.firstName} cell: {adult2.phone}
-  </p>
-)}
-<p>
-  {adult1.firstName} email: {adult1.email}
-</p>
-{adult2 && (
-  <p>
-    {adult2.firstName} email: {adult2.email}
-  </p>
-)}
-<div>
-  Kids:{" "}
-  {children &&
-    children.map((child: any) => (
-      <p key={child.id}>{child.firstName}</p>
-    ))}
-</div>
-</div> */
 }
