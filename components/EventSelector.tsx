@@ -42,13 +42,13 @@ const EventSelector = () => {
   return (
     <div className="flex flex-col">
       <div className="flex justify-center my-6 ">
-        <div className="flex h-fit w-3/4 justify-end">
+        <div className="flex h-fit w-3/4 max-w-[750px] justify-end my-8 lg:my-16">
           <Select
             onValueChange={setSelectedSemester}
             defaultValue={selectedSemester}
           >
             {" "}
-            <SelectTrigger className="bg-blue-950 rounded-md text-white w-[9rem] min-w-fit">
+            <SelectTrigger className="bg-blue-950 rounded-md text-white w-[9rem] min-w-fit lg:h-12 lg:w-36">
               <SelectValue placeholder="Choose a Semester" />
             </SelectTrigger>
             <SelectContent className="bg-white">
@@ -69,7 +69,7 @@ const EventSelector = () => {
         </div>
       </div>
       <div className="flex flex-col flex-1 items-center ">
-        <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
+        <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
           {filteredEvents.map((event, i) => (
             <EventDetails key={i} event={event} />
           ))}

@@ -48,12 +48,12 @@ export default withPageAuthRequired(
     return notAuthorized ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col text-blue-950">
+      <main className="flex flex-col">
         <Nav />
         <div className="flex flex-1 justify-center">
-          <div className="flex flex-col w-3/4 max-w-[500px] gap-16 mt-28 ">
+          <div className="flex flex-col w-3/4 max-w-[750px] max-w-[500px] gap-16 mt-20 ">
             <h1 className="text-3xl pl-2">Next Event</h1>{" "}
-            <div className="infoCard">
+            <div className="eventCard">
               <div className="flex flex-col items-start">
                 <h2 className="text-4xl">{nextEvent.name}</h2>
                 <h3 className="text-lg font-light">{formattedDate}</h3>
