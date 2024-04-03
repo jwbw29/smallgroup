@@ -6,7 +6,7 @@
 
 @layer base {
   main {
-    @apply p-2;
+    @apply p-2 text-blue-950;
   }
   body {
     @apply min-h-screen bg-background;

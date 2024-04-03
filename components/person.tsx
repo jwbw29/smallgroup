@@ -25,33 +25,6 @@ import { FiUsers } from "react-icons/fi";
 export function Person({ family }: { family: any }) {
   const { lastName, adult1, adult2, address, children } = family;
 
-  // !! TEST DATA !!
-
-  // return (
-  //   <div className="flex flex-col border-4 shadow-lg rounded-xl flex-1 p-2 gap-16">
-  //     <div className="flex flex-col w-fit testBorder">
-  //       <h2 className="text-4xl testBorder">Last Name</h2>
-  //       <h3 className="font-light testBorder">First & First</h3>
-  //     </div>
-  //     <div className="testBorder">
-  //       <p>
-  //         {"Address:"}
-  //         <div className="px-2">
-  //           <p>Street</p>
-  //           <p>City, State </p>
-  //           <p>Zip</p>
-  //         </div>
-  //       </p>
-  //       <p>First cell: 555-555-5555</p>
-  //       <p>Second cell: 555-555-5555</p>
-  //       <p>First email: test@email.com</p>
-  //       <p>Second email: test@email.com</p>
-  //     </div>
-  //   </div>
-  // );
-
-  // !! REAL DATA !!
-  // TODO Just need to add styling and formatting;
   return (
     <Accordion className="familyCard" type="single" collapsible>
       <AccordionItem value="item-1" className="border-none">
@@ -65,20 +38,86 @@ export function Person({ family }: { family: any }) {
             </h3>
           </div>{" "}
         </AccordionTrigger>
-        <AccordionContent className="">
-          Yes. It adheres to the WAI-ARIA design pattern.
-          <div className="email flex testBorder">
-            <FiMail />
-            <a className="testBorder" href={`mailto:${adult1.email}`}>
-              {adult1.email}
-            </a>
+        <AccordionContent className=" flex flex-col gap-12 py-8">
+          {/* //// ADULT 1 */}
+          <div className=" flex flex-col gap-3 ">
+            <h3>{adult1.firstName}</h3>
+            {/* //// A1 EMAIL */}
+            <div className="flex  gap-4">
+              <div className=" flex items-center justify-center p-1">
+                <FiMail className=" self-center" />
+              </div>
+              <div className=" flex flex-1 font-light">
+                <a href={`mailto:${adult1.email}`}>{adult1.email}</a>
+              </div>
+            </div>
+            {/* //// A1 PHONE */}
+            <div className="flex  gap-4">
+              <div className=" flex items-center justify-center p-1">
+                <FiSmartphone />
+              </div>
+              <div className=" flex flex-1 font-light">
+                <a href={`tel:${adult1.phone}`}>{adult1.phone}</a>
+              </div>{" "}
+            </div>
           </div>
-          <div className="phone flex testBorder">
-            <FiSmartphone />
-            <a className="testBorder" href={`tel:${adult1.phone}`}>
-              {adult1.phone}
-            </a>
+          {/* //// ADULT 2 */}
+          {adult2 && (
+            <div className=" flex flex-col gap-3">
+              <h3>{adult2.firstName}</h3>
+              {/* //// A2 EMAIL */}
+              <div className="flex  gap-4">
+                <div className=" flex items-center justify-center p-1">
+                  <FiMail />
+                </div>
+                <div className=" flex flex-1 font-light">
+                  <a href={`mailto:${adult2.email}`}>{adult2.email}</a>
+                </div>
+              </div>
+              {/* //// A2 PHONE */}
+              <div className="flex  gap-4">
+                <div className=" flex items-center justify-center p-1">
+                  <FiSmartphone />
+                </div>
+                <div className=" flex flex-1 font-light">
+                  <a href={`tel:${adult2.phone}`}>{adult2.phone}</a>
+                </div>
+              </div>
+            </div>
+          )}{" "}
+          {/* //// ADDRESS */}
+          <div className=" flex flex-col gap-3">
+            <h3>Address</h3>
+            <div className=" flex gap-4">
+              <div className=" flex items-start justify-center p-1">
+                <FiMapPin />
+              </div>
+              <div className=" flex-1 font-light">
+                <p>{address.street || "N/A"}</p>
+                <p>
+                  {address.city || "N/A"}, {address.state || "N/A"}
+                </p>
+                <p>{address.zip || "N/A"}</p>
+              </div>
+            </div>
           </div>
+          {/* //// KIDS */}
+          {children && (
+            <div className=" flex flex-col gap-3">
+              <h3>Kids</h3>
+              <div className=" flex gap-4">
+                <div className=" flex items-start p-1 justify-center">
+                  <FiUsers />
+                </div>
+                <div className=" flex flex-col flex-1 gap-1 font-light ">
+                  {children &&
+                    children.map((child: any) => (
+                      <p key={child.id}>{child.firstName}</p>
+                    ))}
+                </div>
+              </div>
+            </div>
+          )}{" "}
         </AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -88,7 +127,7 @@ export function Person({ family }: { family: any }) {
 // Original code
 {
   /* 
-<div className="testBorder">
+<div className="">
 <p>
   {"Address:"}
   <div className="px-2">
@@ -115,12 +154,12 @@ export function Person({ family }: { family: any }) {
     {adult2.firstName} email: {adult2.email}
   </p>
 )}
-<p>
+<div>
   Kids:{" "}
   {children &&
     children.map((child: any) => (
       <p key={child.id}>{child.firstName}</p>
     ))}
-</p>
+</div>
 </div> */
 }
