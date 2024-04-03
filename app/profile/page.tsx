@@ -9,10 +9,7 @@ export default withPageAuthRequired(
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
 
-    //Check if the user has authorization
-    const isPending = roles.some((role: string) => role === "Pending");
-
-    const notAuthorized = isPending || roles.length === 0;
+    const notAuthorized = roles.length === 0;
 
     return notAuthorized ? (
       <MembershipPending />
@@ -22,10 +19,10 @@ export default withPageAuthRequired(
         <Nav />
         <div className="flex flex-col flex-1 items-center gap-8">
           <h1 className="text-3xl text-center my-6">Profile</h1>{" "}
-          <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
+          <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
             <ProfileClient />
           </div>
-          <div className="flex w-3/4 justify-end">
+          <div className="flex w-3/4 max-w-[750px] justify-end">
             <a href="/api/auth/logout">
               <button className="primaryButton">Logout</button>
             </a>
