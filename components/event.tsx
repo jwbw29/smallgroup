@@ -48,7 +48,7 @@ export function EventDetails({ event }: { event: any }) {
 
   // !! REAL DATA !!
   return (
-    <div className="infoCard">
+    <div className="eventCard">
       <div className="flex flex-col items-start ">
         <h2 className="text-2xl text-left font-bold">{name}</h2>
         <h3 className="text-lg font-light  ">{formattedDate}</h3>

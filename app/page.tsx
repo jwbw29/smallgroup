@@ -53,7 +53,7 @@ export default withPageAuthRequired(
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[500px] gap-16 mt-28 ">
             <h1 className="text-3xl pl-2">Next Event</h1>{" "}
-            <div className="infoCard">
+            <div className="eventCard">
               <div className="flex flex-col items-start">
                 <h2 className="text-4xl">{nextEvent.name}</h2>
                 <h3 className="text-lg font-light">{formattedDate}</h3>
