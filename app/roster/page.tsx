@@ -22,7 +22,9 @@ export default withPageAuthRequired(
         {" "}
         <Nav />{" "}
         <div className="flex flex-col flex-1 testBorder items-center ">
-          <h1 className="text-3xl testBorder text-center my-6">Roster</h1>{" "}
+          <div className="flex testBorder w-3/4">
+            <h1 className="text-3xl testBorder text-center my-6">Roster</h1>{" "}
+          </div>
           <div className="flex flex-col testBorder h-fit w-3/4 gap-8 my-6">
             {familyData.map((family, i) => (
               <Person key={i} family={family} />

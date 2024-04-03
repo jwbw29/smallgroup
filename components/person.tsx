@@ -2,14 +2,14 @@
  * - add a tilt effect on hover
  */
 
-const testPerson = {
-  testLast: "Test",
-  testAdult1: {
-    testFirst: "Test",
-    testPhone: "123-456-7890",
-    testEmail: "test@email.com",
-  },
-};
+// const testPerson = {
+//   testLast: "Test",
+//   testAdult1: {
+//     testFirst: "Test",
+//     testPhone: "123-456-7890",
+//     testEmail: "test@email.com",
+//   },
+// };
 
 export function Person({ family }: { family: any }) {
   const { lastName, adult1, adult2, address, children } = family;
