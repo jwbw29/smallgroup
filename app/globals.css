@@ -39,4 +39,7 @@
   .infoCard {
     @apply flex flex-col shadow-custom bg-white border-4 border-blue-950 rounded-xl h-72 justify-around px-4;
   }
+  .listItem {
+    @apply list-none cursor-default rounded-md hover:text-white hover:bg-blue-800 px-2;
+  }
 }

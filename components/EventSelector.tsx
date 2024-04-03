@@ -22,6 +22,7 @@ const getCurrentSemester = () => {
 const EventSelector = () => {
   const currentSemester = getCurrentSemester();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Assuming the eventData format allows this kind of filtering directly
   const filteredEvents = eventData.filter((event) => {
@@ -35,17 +36,34 @@ const EventSelector = () => {
     setSelectedSemester(semester);
   };
 
+  const toggle = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="flex flex-col">
-      <div className="flex justify-end my-6 pr-4 ">
-        <Dropdown label={selectedSemester} dismissOnClick={true}>
+      <div className="testBorder flex justify-end my-6 pr-4 ">
+        {/* -------A stab at custom dropdown--------- */}
+        <div className="testBorder flex flex-col items-end w-48">
+          <button onClick={toggle} className="primaryButton">
+            {selectedSemester}
+          </button>
+          {isExpanded && (
+            <div className="bg-white rounded border px-2 py-1 my-2 w-full ">
+              <li className="listItem">{"Spring '24"}</li>
+              <li className="listItem">{"Fall '23"}</li>
+            </div>
+          )}
+        </div>
+        {/* -------A stab at custom dropdown--------- */}
+        {/* <Dropdown label={selectedSemester} dismissOnClick={true}>
           <Dropdown.Item onClick={() => handleDropdownSelect("Spring 2024")}>
             {"Spring '24"}
           </Dropdown.Item>
           <Dropdown.Item onClick={() => handleDropdownSelect("Fall 2023")}>
             {"Fall '23"}
           </Dropdown.Item>
-        </Dropdown>
+        </Dropdown> */}
       </div>
       <div className="flex flex-col flex-1 items-center ">
         <div className="flex flex-col h-fit w-3/4 gap-8 my-6">
