@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import logo from "@/public/sg_logo.png";
+import Image from "next/image";
 
 interface MdPicture {
   picture: string;
@@ -48,23 +50,17 @@ export default function Navigation() {
           );
         })}
         {/* //// PROFILE IMAGE HERE */}
-        {mdPictureUrl ? (
-          <Link href="/profile" className="self-center">
-            <Avatar>
-              <AvatarImage src={mdPictureUrl} />
-              <AvatarFallback>NA</AvatarFallback>
-            </Avatar>
-          </Link>
-        ) : (
-          <Link
-            href="/profile"
-            className={clsx("customLink", {
-              "bg-sky-100 text-blue-600": pathname === "/profile",
-            })}
-          >
-            <h3 className="text-sm">Profile</h3>
-          </Link>
-        )}
+        <Link
+          href="/profile"
+          className="self-center hover:shadow-lg hover:shadow-white rounded-full"
+        >
+          <Avatar>
+            <AvatarImage src={mdPictureUrl} />
+            <AvatarFallback>
+              <Image src={logo} height="40" width="40" alt="smallgroup logo" />
+            </AvatarFallback>
+          </Avatar>
+        </Link>
       </div>
     </nav>
   );
