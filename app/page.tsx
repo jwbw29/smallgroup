@@ -51,7 +51,7 @@ export default withPageAuthRequired(
       <main className="flex flex-col">
         <Nav />
         <div className="flex flex-1 justify-center">
-          <div className="flex flex-col w-3/4 max-w-[750px] max-w-[500px] gap-16 mt-20 ">
+          <div className="flex flex-col w-3/4 max-w-[750px] gap-16 mt-20 ">
             <h1 className="text-3xl pl-2">Next Event</h1>{" "}
             <div className="eventCard">
               <div className="flex flex-col items-start">
