@@ -5,12 +5,24 @@ import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 
+interface MdPicture {
+  picture: string;
+}
+
+interface User {
+  // Define other properties as needed
+  "smallgroup/mdPicture": MdPicture;
+  name: string;
+  email: string;
+}
+
 export default withPageAuthRequired(
   async function Page() {
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
     const session = await getSession();
-    const user = session?.user;
+    const user = session?.user as User;
+    const mdPictureUrl = user["smallgroup/mdPicture"].picture;
 
     const notAuthorized = roles.length === 0;
 
@@ -22,17 +34,24 @@ export default withPageAuthRequired(
         <Nav />
         {/* //// MAIN CONTENT */}
         <div className="flex flex-1 justify-center mb-16">
-          <div className=" flex flex-col w-3/4 max-w-[750px] gap-16 justify-center">
+          <div className="  flex flex-col w-3/4 max-w-[750px] gap-16 justify-center">
             {/* //// IMAGE */}
             <div className=" flex items-center justify-center">
-              <Image
-                src={user?.picture}
-                width={250}
-                height={250}
-                alt="Profile Picture"
-                className="rounded-full"
-              />
+              {mdPictureUrl ? (
+                <Image
+                  src={mdPictureUrl}
+                  width={250}
+                  height={250}
+                  alt="Profile Picture"
+                  className="rounded-full"
+                />
+              ) : (
+                <div className="flex justify-center items-center rounded-full bg-blue-100 border border-blue-950 size-[250px] ">
+                  <h1 className="text-8xl text-blue-950">NA</h1>
+                </div>
+              )}
             </div>
+
             {/* //// NAME & EMAIL */}
             <div className=" flex flex-col justify-center items-center gap-4">
               <h1 className="text-4xl">{user?.name}</h1>
