@@ -41,8 +41,8 @@ export default withPageAuthRequired(
               {mdPictureUrl ? (
                 <Image
                   src={mdPictureUrl}
-                  width={250}
-                  height={250}
+                  width={500}
+                  height={500}
                   alt="Profile Picture"
                   className="rounded-full"
                 />
@@ -58,7 +58,7 @@ export default withPageAuthRequired(
 
             {/* //// NAME & EMAIL */}
             <div className=" flex flex-col justify-center items-center gap-4">
-              <h1 className="text-4xl">{user?.name}</h1>
+              <h1 className="text-4xl text-center">{user?.name}</h1>
               <h3 className="text-sm font-light">{user?.email}</h3>
             </div>
             {/* //// LOGOUT BUTTON */}
