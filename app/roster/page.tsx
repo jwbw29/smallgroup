@@ -5,7 +5,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { prisma } from "@/db/client";
 
-// import familyData from "@/public/data/familyData.json";
+// import familyTestData from "@/public/data/familyTestData.json";
 
 async function getData() {
   const familyData = await prisma.family.findMany({
@@ -24,7 +24,6 @@ export default withPageAuthRequired(
   async function Page() {
     //// DATABASE ////
     const familyData = await getData();
-    console.log("FAMILY DATA: ", familyData);
 
     //// Authorization ////
     const { roles } = await getUserSessionAndRoles();
@@ -41,6 +40,7 @@ export default withPageAuthRequired(
             <h1 className="text-3xl text-center my-6">Roster</h1>{" "}
           </div>
           <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
+            {/* //* REPLACE `familyData` with `familyTestData` to use test data */}
             {familyData.map((family, i) => (
               <Person key={i} family={family} />
             ))}

@@ -2,10 +2,10 @@
   {
     "lastName": "Allen",
     "adult1": {
-      "firstName": "Kelsey",
+      "first_name": "Kelsey",
       "email": "siscok@health.missouri.edu",
       "phone": "5734764400",
-      "dob": "1989-03-07T00:00:00-06:00",
+      "birth_date": "1989-03-07T00:00:00-06:00",
       "enneagram": {
         "primary": "2",
         "wing": "",
@@ -21,28 +21,28 @@
     "children": [
       {
         "id": "1",
-        "firstName": "Jace",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Jace",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "2",
-        "firstName": "Jett",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Jett",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "3",
-        "firstName": "Jaelyn",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Jaelyn",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Byrd",
     "adult1": {
-      "firstName": "Justin",
+      "first_name": "Justin",
       "email": "justin.byrd7@gmail.com",
       "phone": "5733019718",
-      "dob": "1989-09-10T00:00:00-06:00",
+      "birth_date": "1989-09-10T00:00:00-06:00",
       "enneagram": {
         "primary": "9",
         "wing": "1 - The Reformer",
@@ -50,10 +50,10 @@
       }
     },
     "adult2": {
-      "firstName": "Jacqueline",
+      "first_name": "Jacqueline",
       "email": "jacquelinepbyrd@gmail.com",
       "phone": "5734897960",
-      "dob": "1990-09-06T00:00:00-06:00",
+      "birth_date": "1990-09-06T00:00:00-06:00",
       "enneagram": {
         "primary": "2",
         "wing": "3",
@@ -69,28 +69,28 @@
     "children": [
       {
         "id": "4",
-        "firstName": "Henry",
-        "dob": "2019-10-22T00:00:00-06:00"
+        "first_name": "Henry",
+        "birth_date": "2019-10-22T00:00:00-06:00"
       },
       {
         "id": "5",
-        "firstName": "Landry",
-        "dob": "2021-01-21T00:00:00-06:00"
+        "first_name": "Landry",
+        "birth_date": "2021-01-21T00:00:00-06:00"
       },
       {
         "id": "6",
-        "firstName": "Millie",
-        "dob": "2023-08-02T00:00:00-06:00"
+        "first_name": "Millie",
+        "birth_date": "2023-08-02T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Kleinhesselink",
     "adult1": {
-      "firstName": "Paden",
+      "first_name": "Paden",
       "email": "padenkleinhesselink@gmail.com",
       "phone": "7124411745",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "9",
         "wing": "",
@@ -98,10 +98,10 @@
       }
     },
     "adult2": {
-      "firstName": "Mattie",
+      "first_name": "Mattie",
       "email": "Martha.bradley16@gmail.com",
       "phone": "5736310620",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "",
         "wing": "",
@@ -117,18 +117,18 @@
     "children": [
       {
         "id": "7",
-        "firstName": "Scottie",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Scottie",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Loethen",
     "adult1": {
-      "firstName": "Kyle",
+      "first_name": "Kyle",
       "email": "kyleloethen@me.com",
       "phone": "3108693855",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "3",
         "wing": "2",
@@ -136,10 +136,10 @@
       }
     },
     "adult2": {
-      "firstName": "Madison",
+      "first_name": "Madison",
       "email": "madisonloethen@gmail.com",
       "phone": "3145911238",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "5",
         "wing": "",
@@ -155,23 +155,23 @@
     "children": [
       {
         "id": "8",
-        "firstName": "Reese",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Reese",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "9",
-        "firstName": "Everly",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Everly",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Rutledge",
     "adult1": {
-      "firstName": "Caleb",
+      "first_name": "Caleb",
       "email": "calebarutledge@gmail.com",
       "phone": "4172527404",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "8",
         "wing": "",
@@ -179,10 +179,10 @@
       }
     },
     "adult2": {
-      "firstName": "Josie",
+      "first_name": "Josie",
       "email": "josiehalen@gmail.com",
       "phone": "6603468500",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "9",
         "wing": "1 - The Reformer",
@@ -198,23 +198,23 @@
     "children": [
       {
         "id": "10",
-        "firstName": "Evangeline",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Evangeline",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "11",
-        "firstName": "Odette",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Odette",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Shepherd",
     "adult1": {
-      "firstName": "Kaelob",
+      "first_name": "Kaelob",
       "email": "kaelob.shepherd@gmail.com",
       "phone": "5732596808",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "3",
         "wing": "",
@@ -222,10 +222,10 @@
       }
     },
     "adult2": {
-      "firstName": "Amy",
+      "first_name": "Amy",
       "email": "ashepherd908@gmail.com",
       "phone": "6302006688",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "2",
         "wing": "",
@@ -241,23 +241,23 @@
     "children": [
       {
         "id": "12",
-        "firstName": "Luke",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Luke",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "13",
-        "firstName": "Liam",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Liam",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   },
   {
     "lastName": "Turner",
     "adult1": {
-      "firstName": "Sam",
+      "first_name": "Sam",
       "email": "Samuel.turner@turneragsolutions.com",
       "phone": "5738640773",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "3",
         "wing": "2",
@@ -265,10 +265,10 @@
       }
     },
     "adult2": {
-      "firstName": "Samantha",
+      "first_name": "Samantha",
       "email": "shgibson@live.com",
       "phone": "6603290974",
-      "dob": "",
+      "birth_date": "",
       "enneagram": {
         "primary": "6",
         "wing": "",
@@ -284,18 +284,18 @@
     "children": [
       {
         "id": "14",
-        "firstName": "Sterling",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Sterling",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "15",
-        "firstName": "Sutton",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Sutton",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       },
       {
         "id": "16",
-        "firstName": "Baby Turner",
-        "dob": "1900-01-01T00:00:00-06:00"
+        "first_name": "Baby Turner",
+        "birth_date": "1900-01-01T00:00:00-06:00"
       }
     ]
   }

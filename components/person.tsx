@@ -13,22 +13,6 @@ export function Person({ family }: { family: any }) {
   const { last_name, adults, children, address } = family;
 
   return (
-    // <div className="familyCard">
-    //   {/* ////LAST NAME */}
-    //   <p>{last_name}</p>
-    //   {/* //// ADDRESS */}
-    //   <p>{address.street}</p>
-    //   <p>{address.city}</p>
-    //   <p>{address.state}</p>
-    //   <p>{address.zip}</p>
-    //   {/* //// KIDS */}
-    //   <p>
-    //     {children.map((child: any, i: number) => (
-    //       <p key={i}>{child.first_name}</p>
-    //     ))}
-    //   </p>
-    // </div>
-    // TODO Uncomment below and replace old variables with new ones once we figure out what they are
     <Accordion className="familyCard" type="single" collapsible>
       <AccordionItem value="item-1" className="border-none">
         <AccordionTrigger className="">
