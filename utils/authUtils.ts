@@ -7,8 +7,7 @@ export async function getUserSessionAndRoles() {
     throw new Error(`Requires authentication`);
   }
 
-  const roles: string[] =
-    session.user["https://smallgroup.vercel.app/roles"] || [];
+  const roles: string[] = session.user["smallgroup/roles"] || [];
 
   return { roles };
 }
