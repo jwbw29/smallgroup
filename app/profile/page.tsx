@@ -40,7 +40,9 @@ export default withPageAuthRequired(
             </div>
             {/* //// LOGOUT BUTTON */}
             <div className=" flex justify-center">
-              <button className="primaryButton">Log Out</button>
+              <a href="/api/auth/logout">
+                <button className="primaryButton">Log Out</button>
+              </a>
             </div>
           </div>
         </div>
