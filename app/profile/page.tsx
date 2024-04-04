@@ -4,6 +4,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
+import logo from "@/public/sg_logo.png";
 
 interface MdPicture {
   picture: string;
@@ -46,9 +47,12 @@ export default withPageAuthRequired(
                   className="rounded-full"
                 />
               ) : (
-                <div className="flex justify-center items-center rounded-full bg-blue-100 border border-blue-950 size-[250px] ">
-                  <h1 className="text-8xl text-blue-950">NA</h1>
-                </div>
+                <Image
+                  src={logo}
+                  height="250"
+                  width="250"
+                  alt="smallgroup logo"
+                />
               )}
             </div>
 
