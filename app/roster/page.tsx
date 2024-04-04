@@ -10,6 +10,11 @@ import { prisma } from "@/db/client";
 async function getData() {
   const familyData = await prisma.family.findMany({
     orderBy: { last_name: "asc" },
+    include: {
+      adults: true,
+      children: true,
+      address: true,
+    },
   });
 
   return familyData;
