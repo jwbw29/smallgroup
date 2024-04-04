@@ -10,7 +10,7 @@ export default withPageAuthRequired(
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
     const session = await getSession();
-    const user = session?.user; // Add type assertion to ensure session is not null or undefined
+    const user = session?.user;
 
     const notAuthorized = roles.length === 0;
 
