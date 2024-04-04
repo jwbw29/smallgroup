@@ -1,6 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/db/client";
+import { config } from "dotenv";
 
-const prisma = new PrismaClient();
+config({ path: ".env.local" });
 
 async function main() {
   // ... you will write your Prisma Client queries here
@@ -259,7 +260,7 @@ async function main() {
       {
         first_name: "Scottie",
         birth_date: "1900-01-01T00:00:00-06:00",
-        familyId: 2,
+        familyId: 3,
       },
       {
         first_name: "Reese",

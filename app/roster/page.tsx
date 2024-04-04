@@ -3,14 +3,26 @@ import MembershipPending from "@/components/pending";
 import { Person } from "@/components/person";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
+import { prisma } from "@/db/client";
 
-import familyData from "@/public/data/familyData.json";
+// import familyData from "@/public/data/familyData.json";
+
+async function getData() {
+  const familyData = await prisma.family.findMany({
+    orderBy: { last_name: "asc" },
+  });
+
+  return familyData;
+}
 
 export default withPageAuthRequired(
   async function Page() {
-    //Fetch user data via getSession
-    const { roles } = await getUserSessionAndRoles();
+    //// DATABASE ////
+    const familyData = await getData();
+    console.log("FAMILY DATA: ", familyData);
 
+    //// Authorization ////
+    const { roles } = await getUserSessionAndRoles();
     const notAuthorized = roles.length === 0;
 
     return notAuthorized ? (
