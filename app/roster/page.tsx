@@ -16,7 +16,6 @@ async function getData() {
       address: true,
     },
   });
-
   return familyData;
 }
 

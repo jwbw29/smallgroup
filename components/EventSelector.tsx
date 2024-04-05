@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import eventData from "@/public/data/eventData.json";
+import { useState, useEffect } from "react";
+// import eventData from "@/public/data/eventData.json";
 import { EventCard } from "@/components/event";
 import {
   Select,
@@ -13,27 +13,45 @@ import {
 
 const getCurrentSemester = () => {
   const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth() + 1; // getMonth is zero-indexed
-  if (month >= 8) {
-    return `Fall ${year}`;
-  } else if (month >= 1 && month <= 5) {
-    return `Spring ${year}`;
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth() + 1; // getMonth is zero-indexed
+  if (currentMonth >= 8) {
+    return `Fall ${currentYear}`;
+  } else if (currentMonth >= 1 && currentMonth <= 5) {
+    return `Spring ${currentYear}`;
   } else {
-    return `Summer ${year}`;
+    return `Summer ${currentYear}`;
   }
 };
 
 const EventSelector = () => {
   const currentSemester = getCurrentSemester();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
+  const [eventData, setEventData] = useState([]);
 
-  const filteredEvents = eventData.filter((event) => {
-    const semesterYear = selectedSemester.split(" ");
-    const semester = semesterYear[0];
-    const year = semesterYear[1];
-    return event.year === year && event.semester === semester;
-  });
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch("/api/events");
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log("data:", data);
+        setEventData(data);
+      } catch (error) {
+        console.error("Failed to fetch events:", error);
+      }
+    };
+    fetchEvents();
+  }, []);
+
+  //TODO Update this
+  // const filteredEvents = eventData.filter(
+  //   (event) =>
+  //     event.year.year === currentYear &&
+  //     event.semester.semester_name === currentSemester
+  // );
 
   const handleDropdownSelect = (semester: string) => {
     setSelectedSemester(semester);
@@ -69,11 +87,11 @@ const EventSelector = () => {
         </div>
       </div>
       <div className="flex flex-col flex-1 items-center ">
-        <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
+        {/* <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
           {filteredEvents.map((event, i) => (
             <EventCard key={i} event={event} />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
