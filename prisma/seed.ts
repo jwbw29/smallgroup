@@ -51,7 +51,6 @@ async function main() {
       },
     ],
   });
-
   const allFamily = await prisma.family.findMany();
   console.log(allFamily);
 
@@ -110,7 +109,6 @@ async function main() {
       },
     ],
   });
-
   const allEnneagrams = await prisma.enneagram.findMany();
   console.log(allEnneagrams);
 
