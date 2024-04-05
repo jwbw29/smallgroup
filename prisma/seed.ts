@@ -22,6 +22,9 @@ async function main() {
     "Child_id_seq",
     "Address_id_seq",
     "Event_id_seq",
+    "Semester_id_seq",
+    "Group_id_seq",
+    "Year_id_seq",
   ];
 
   for (const seq of sequences) {
@@ -57,7 +60,7 @@ async function main() {
   const allFamily = await prisma.family.findMany();
   console.log(allFamily);
 
-  // ENNEAGRAM
+  // // ENNEAGRAM
   await prisma.enneagram.createMany({
     data: [
       {
@@ -115,7 +118,7 @@ async function main() {
   const allEnneagrams = await prisma.enneagram.findMany();
   console.log(allEnneagrams);
 
-  // ADULT
+  // // ADULT
   await prisma.adult.createMany({
     data: [
       {

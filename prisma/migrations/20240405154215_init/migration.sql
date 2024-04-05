@@ -1,19 +1,3 @@
--- CreateEnum
-CREATE TYPE "Semester" AS ENUM ('SPRING', 'SUMMER', 'FALL', 'WINTER');
-
--- CreateEnum
-CREATE TYPE "GroupType" AS ENUM ('STUDY', 'SOCIAL', 'SPORT', 'VOLUNTEER');
-
--- CreateTable
-CREATE TABLE "User" (
-    "id" TEXT NOT NULL,
-    "username" TEXT,
-    "email" TEXT NOT NULL,
-    "password" TEXT NOT NULL,
-
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
-);
-
 -- CreateTable
 CREATE TABLE "Family" (
     "id" SERIAL NOT NULL,
@@ -25,9 +9,9 @@ CREATE TABLE "Family" (
 -- CreateTable
 CREATE TABLE "Enneagram" (
     "id" SERIAL NOT NULL,
-    "number" INTEGER NOT NULL,
+    "type" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
+    "url" TEXT NOT NULL,
 
     CONSTRAINT "Enneagram_pkey" PRIMARY KEY ("id")
 );
@@ -38,6 +22,7 @@ CREATE TABLE "Adult" (
     "first_name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "phone" TEXT NOT NULL,
+    "birth_date" TIMESTAMP(3) NOT NULL,
     "familyId" INTEGER NOT NULL,
     "enneagramId" INTEGER NOT NULL,
 
@@ -67,20 +52,41 @@ CREATE TABLE "Address" (
 );
 
 -- CreateTable
+CREATE TABLE "Semester" (
+    "id" SERIAL NOT NULL,
+    "semester_name" TEXT NOT NULL,
+
+    CONSTRAINT "Semester_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Group" (
+    "id" SERIAL NOT NULL,
+    "group_type" TEXT NOT NULL,
+
+    CONSTRAINT "Group_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Year" (
+    "id" SERIAL NOT NULL,
+    "year" TEXT NOT NULL,
+
+    CONSTRAINT "Year_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Event" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
-    "year" INTEGER NOT NULL,
-    "semester" "Semester" NOT NULL,
     "date" TIMESTAMP(3) NOT NULL,
     "location" TEXT NOT NULL,
-    "group_type" "GroupType" NOT NULL,
+    "semesterId" INTEGER NOT NULL DEFAULT 1,
+    "groupId" INTEGER NOT NULL DEFAULT 1,
+    "yearId" INTEGER NOT NULL DEFAULT 1,
 
     CONSTRAINT "Event_pkey" PRIMARY KEY ("id")
 );
-
--- CreateIndex
-CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Address_familyId_key" ON "Address"("familyId");
@@ -96,3 +102,12 @@ ALTER TABLE "Child" ADD CONSTRAINT "Child_familyId_fkey" FOREIGN KEY ("familyId"
 
 -- AddForeignKey
 ALTER TABLE "Address" ADD CONSTRAINT "Address_familyId_fkey" FOREIGN KEY ("familyId") REFERENCES "Family"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Event" ADD CONSTRAINT "Event_semesterId_fkey" FOREIGN KEY ("semesterId") REFERENCES "Semester"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Event" ADD CONSTRAINT "Event_groupId_fkey" FOREIGN KEY ("groupId") REFERENCES "Group"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Event" ADD CONSTRAINT "Event_yearId_fkey" FOREIGN KEY ("yearId") REFERENCES "Year"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
