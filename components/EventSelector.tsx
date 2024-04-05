@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import eventData from "@/public/data/eventData.json";
-import { EventDetails } from "@/components/event";
+import { EventCard } from "@/components/event";
 import {
   Select,
   SelectContent,
@@ -71,7 +71,7 @@ const EventSelector = () => {
       <div className="flex flex-col flex-1 items-center ">
         <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
           {filteredEvents.map((event, i) => (
-            <EventDetails key={i} event={event} />
+            <EventCard key={i} event={event} />
           ))}
         </div>
       </div>
