@@ -1,6 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 
-// TODO Remove the `{log: ["query"],}` option if the console gets too noisy
+declare global {
+  // allow global `var` declarations
+  // eslint-disable-next-line no-var
+  var prisma: PrismaClient | undefined;
+}
 
 export const prisma =
   global.prisma ||
