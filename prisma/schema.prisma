@@ -66,7 +66,6 @@ model Address {
 model Semester {
   id                  Int     @id @default(autoincrement())
   semester_name       String
-  semester_year       String
   events              Event[]
 }
 
@@ -76,16 +75,23 @@ model Group {
   events              Event[]
 }
 
+model Year {
+  id                  Int     @id @default(autoincrement())
+  year                String
+  events              Event[]
+}
+
 model Event {
   id          Int       @id @default(autoincrement())
   name        String
-  year        String
   date        DateTime
   location    String
-  semesterId  Int
+  semesterId  Int       @default(1)
   semester    Semester  @relation(fields: [semesterId], references: [id])
-  groupId     Int       @unique
+  groupId     Int       @default(1)
   group       Group     @relation(fields: [groupId], references: [id])
+  yearId      Int       @default(1)
+  year        Year      @relation(fields: [yearId], references: [id])
   }
 
 //TODO add a model for year
