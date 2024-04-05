@@ -377,6 +377,8 @@ async function main() {
       { semester_name: "Winter" },
     ],
   });
+  const allSemesters = await prisma.semester.findMany();
+  console.log(allSemesters);
 
   await prisma.year.createMany({
     data: [
@@ -388,6 +390,8 @@ async function main() {
       { year: "2028" },
     ],
   });
+  const allYears = await prisma.year.findMany();
+  console.log(allYears);
 
   await prisma.group.createMany({
     data: [
@@ -398,6 +402,8 @@ async function main() {
       { group_type: "Off" },
     ],
   });
+  const allGroups = await prisma.group.findMany();
+  console.log(allGroups);
 
   // EVENT
   // CST = UTC-6 Standard
