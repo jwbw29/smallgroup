@@ -17,6 +17,7 @@ export default withPageAuthRequired(
       <main className="flex flex-col">
         {" "}
         <Nav />
+        {/* //* I feel like this should map EventDetails, and the EventSelector should only be the selector component */}
         <EventSelector />{" "}
       </main>
     );

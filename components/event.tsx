@@ -1,25 +1,7 @@
 /** // TODO create table of events like we did users/members */
 
-// const testEvent = {
-//   testAgenda: "Test Event",
-//   testYear: "2021",
-//   testSemester: "Fall",
-//   testDate: "2021-10-10",
-//   testLocation: "Test Location",
-//   testGroup: "Test Group",
-// };
-
 export function EventDetails({ event }: { event: any }) {
   const { name, date, location, group_type } = event;
-
-  // const {
-  //   testAgenda,
-  //   testYear,
-  //   testSemester,
-  //   testDate,
-  //   testLocation,
-  //   testGroup,
-  // } = testEvent;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
