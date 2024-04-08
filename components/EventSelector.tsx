@@ -88,7 +88,9 @@ const EventSelector = () => {
     setSelectedYear(year);
   };
 
-  return (
+  return isLoading ? (
+    <ScheduleSkeleton />
+  ) : (
     <div className="flex flex-col">
       <div className="flex justify-center my-6 ">
         <div className="flex h-fit w-3/4 max-w-[750px] justify-end my-8 lg:my-16">
@@ -122,17 +124,13 @@ const EventSelector = () => {
         </div>
       </div>
       {/* //// LISTED EVENTS */}
-      {!isLoading ? (
-        <ScheduleSkeleton />
-      ) : (
-        <div className="flex flex-col flex-1 items-center ">
-          <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
-            {filteredEvents.map((event, i) => (
-              <EventCard key={i} event={event} />
-            ))}
-          </div>
+      <div className="flex flex-col flex-1 items-center ">
+        <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
+          {filteredEvents.map((event, i) => (
+            <EventCard key={i} event={event} />
+          ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };
