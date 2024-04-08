@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Event, SemesterYearOption } from "@/utils/types";
+import { ScheduleSkeleton } from "./ui/ScheduleSkeleton";
 
 const getCurrentSemester = () => {
   const today = new Date();
@@ -29,12 +30,11 @@ const EventSelector = () => {
   const currentYear = new Date().getFullYear();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
   const [selectedYear, setSelectedYear] = useState(currentYear.toString());
-
   const [semesterYearOptions, setSemesterYearOptions] = useState<
     SemesterYearOption[]
   >([]);
-
   const [eventData, setEventData] = useState<Event[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -66,21 +66,21 @@ const EventSelector = () => {
         setSemesterYearOptions(uniqueSemesterYears);
       } catch (error) {
         console.error("Failed to fetch events:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchEvents();
   }, []);
 
-  //TODO Update this
-  const filteredEvents = eventData.filter((event) =>
-    //grab only the events that match the current semester AND current year
-    {
-      const eventYear = event.year.year;
-      const eventSemester = event.semester.semester_name;
-      return eventYear === selectedYear && eventSemester === selectedSemester;
-    }
-  );
+  //// Filtering Events
+  const filteredEvents = eventData.filter((event) => {
+    const eventYear = event.year.year;
+    const eventSemester = event.semester.semester_name;
+    return eventYear === selectedYear && eventSemester === selectedSemester;
+  });
 
+  //// Handling Dropdown Select
   const handleDropdownSelect = (value: string) => {
     const [semester, year] = value.split(" ");
     // Assuming you add selectedYear to your state
@@ -92,6 +92,7 @@ const EventSelector = () => {
     <div className="flex flex-col">
       <div className="flex justify-center my-6 ">
         <div className="flex h-fit w-3/4 max-w-[750px] justify-end my-8 lg:my-16">
+          {/* //// SELECTOR */}
           <Select
             onValueChange={(newValue) => {
               const [semester, year] = newValue.split(" ");
@@ -120,13 +121,18 @@ const EventSelector = () => {
           </Select>
         </div>
       </div>
-      <div className="flex flex-col flex-1 items-center ">
-        <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
-          {filteredEvents.map((event, i) => (
-            <EventCard key={i} event={event} />
-          ))}
+      {/* //// LISTED EVENTS */}
+      {!isLoading ? (
+        <ScheduleSkeleton />
+      ) : (
+        <div className="flex flex-col flex-1 items-center ">
+          <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
+            {filteredEvents.map((event, i) => (
+              <EventCard key={i} event={event} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
