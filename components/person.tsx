@@ -10,68 +10,54 @@ import { FiMapPin } from "react-icons/fi";
 import { FiUsers } from "react-icons/fi";
 
 export function Person({ family }: { family: any }) {
-  const { lastName, adult1, adult2, address, children } = family;
+  const { last_name, adults, children, address } = family;
 
   return (
     <Accordion className="familyCard" type="single" collapsible>
       <AccordionItem value="item-1" className="border-none">
         <AccordionTrigger className="">
           <div className="flex flex-col ">
-            <h2 className="text-2xl text-left ">{lastName}</h2>
+            <h2 className="text-2xl text-left ">{last_name}</h2>
             <h3 className="text-lg text-left font-light ">
-              {adult2
-                ? adult1.firstName + " & " + adult2.firstName
-                : adult1.firstName}
+              {adults.length > 1
+                ? adults[0].first_name + " & " + adults[1].first_name
+                : adults[0].first_name}
             </h3>
           </div>{" "}
         </AccordionTrigger>
         <AccordionContent className=" flex flex-col gap-12 py-8">
           {/* //// ADULT 1 */}
-          <div className=" flex flex-col gap-3 ">
-            <h3>{adult1.firstName}</h3>
-            {/* //// A1 EMAIL */}
-            <div className="flex  gap-4">
-              <div className=" flex items-center justify-center p-1">
-                <FiMail className=" self-center" />
-              </div>
-              <div className=" flex flex-1 font-light">
-                <a href={`mailto:${adult1.email}`}>{adult1.email}</a>
-              </div>
-            </div>
-            {/* //// A1 PHONE */}
-            <div className="flex  gap-4">
-              <div className=" flex items-center justify-center p-1">
-                <FiSmartphone />
-              </div>
-              <div className=" flex flex-1 font-light">
-                <a href={`tel:${adult1.phone}`}>{adult1.phone}</a>
-              </div>{" "}
-            </div>
-          </div>
-          {/* //// ADULT 2 */}
-          {adult2 && (
-            <div className=" flex flex-col gap-3">
-              <h3>{adult2.firstName}</h3>
-              {/* //// A2 EMAIL */}
-              <div className="flex  gap-4">
-                <div className=" flex items-center justify-center p-1">
-                  <FiMail />
+          {adults.map(
+            (adult: {
+              id: number;
+              first_name: string;
+              phone: string;
+              email: string;
+              birth_date: string;
+            }) => (
+              <div key={adult.id} className=" flex flex-col gap-3 ">
+                <h3>{adult.first_name}</h3>
+                {/* //// A1 EMAIL */}
+                <div className="flex  gap-4">
+                  <div className=" flex items-center justify-center p-1">
+                    <FiMail className=" self-center" />
+                  </div>
+                  <div className=" flex flex-1 font-light">
+                    <a href={`mailto:${adult.email}`}>{adult.email}</a>
+                  </div>
                 </div>
-                <div className=" flex flex-1 font-light">
-                  <a href={`mailto:${adult2.email}`}>{adult2.email}</a>
+                {/* //// A1 PHONE */}
+                <div className="flex  gap-4">
+                  <div className=" flex items-center justify-center p-1">
+                    <FiSmartphone />
+                  </div>
+                  <div className=" flex flex-1 font-light">
+                    <a href={`tel:${adult.phone}`}>{adult.phone}</a>
+                  </div>{" "}
                 </div>
               </div>
-              {/* //// A2 PHONE */}
-              <div className="flex  gap-4">
-                <div className=" flex items-center justify-center p-1">
-                  <FiSmartphone />
-                </div>
-                <div className=" flex flex-1 font-light">
-                  <a href={`tel:${adult2.phone}`}>{adult2.phone}</a>
-                </div>
-              </div>
-            </div>
-          )}{" "}
+            )
+          )}
           {/* //// ADDRESS */}
           <div className=" flex flex-col gap-3">
             <h3>Address</h3>
@@ -99,7 +85,7 @@ export function Person({ family }: { family: any }) {
                 <div className=" flex flex-col flex-1 gap-1 font-light ">
                   {children &&
                     children.map((child: any) => (
-                      <p key={child.id}>{child.firstName}</p>
+                      <p key={child.id}>{child.first_name}</p>
                     ))}
                 </div>
               </div>

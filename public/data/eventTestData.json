@@ -1,0 +1,737 @@
+[
+  {
+    "id": 19,
+    "name": "Event Name",
+    "date": "2023-09-10T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Event Name",
+    "date": "2023-09-17T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Guys",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Event Name",
+    "date": "2023-09-24T06:00:00.000Z",
+    "location": "Kelsey'TBD",
+    "semesterId": "Fall",
+    "groupId": "Girls",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Event Name",
+    "date": "2023-10-01T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 4,
+      "group_type": "Social"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Event Name",
+    "date": "2023-10-08T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Event Name",
+    "date": "2023-10-15T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Guys",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Event Name",
+    "date": "2023-10-22T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Girls",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Event Name",
+    "date": "2023-10-29T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 4,
+      "group_type": "Social"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Event Name",
+    "date": "2023-11-05T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Event Name",
+    "date": "2023-11-12T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Guys",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Event Name",
+    "date": "2023-11-19T06:00:00.000Z",
+    "location": "Kelsey'TBD",
+    "semesterId": "Fall",
+    "groupId": "Girls",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Event Name",
+    "date": "2023-11-26T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Off",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 5,
+      "group_type": "Off"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Event Name",
+    "date": "2023-12-03T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Guys",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Event Name",
+    "date": "2023-12-10T06:00:00.000Z",
+    "location": "Kelsey'TBD",
+    "semesterId": "Fall",
+    "groupId": "Girls",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Event Name",
+    "date": "2023-12-17T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "All",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Event Name",
+    "date": "2023-12-24T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Off",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 5,
+      "group_type": "Off"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Event Name",
+    "date": "2023-12-31T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": "Fall",
+    "groupId": "Off",
+    "yearId": "2023",
+    "semester": {
+      "id": 3,
+      "semester_name": "Fall"
+    },
+    "year": {
+      "id": 1,
+      "year": "2023"
+    },
+    "group": {
+      "id": 5,
+      "group_type": "Off"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Event Name",
+    "date": "2024-03-06T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Event Name",
+    "date": "2024-03-10T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Event Name",
+    "date": "2024-03-17T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 4,
+      "group_type": "Social"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Event Name",
+    "date": "2024-03-24T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Event Name",
+    "date": "2024-03-27T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Guys",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Event Name",
+    "date": "2024-03-31T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Event Name",
+    "date": "2024-04-03T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Event Name",
+    "date": "2024-04-07T06:00:00.000Z",
+    "location": "Byrds/TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 4,
+      "group_type": "Social"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Event Name",
+    "date": "2024-04-14T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Guys",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Event Name",
+    "date": "2024-04-21T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Event Name",
+    "date": "2024-04-24T06:00:00.000Z",
+    "location": "Downtown TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Event Name",
+    "date": "2024-04-28T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Event Name",
+    "date": "2024-05-01T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Event Name",
+    "date": "2024-05-05T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Event Name",
+    "date": "2024-05-12T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Off",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 5,
+      "group_type": "Off"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Event Name",
+    "date": "2024-05-19T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "All",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 1,
+      "group_type": "All"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Event Name",
+    "date": "2024-05-29T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Guys",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 2,
+      "group_type": "Guys"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Event Name",
+    "date": "2024-06-05T06:00:00.000Z",
+    "location": "TBD",
+    "semesterId": 1,
+    "groupId": "Girls",
+    "yearId": "2024",
+    "semester": {
+      "id": 1,
+      "semester_name": "Spring"
+    },
+    "year": {
+      "id": 2,
+      "year": "2024"
+    },
+    "group": {
+      "id": 3,
+      "group_type": "Girls"
+    }
+  }
+]

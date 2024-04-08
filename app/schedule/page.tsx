@@ -3,7 +3,6 @@ import MembershipPending from "@/components/pending";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import EventSelector from "@/components/EventSelector";
-import eventData from "@/public/data/eventData.json";
 
 export default withPageAuthRequired(
   async function Page() {

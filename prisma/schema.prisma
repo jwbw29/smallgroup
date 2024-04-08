@@ -63,27 +63,35 @@ model Address {
   family      Family  @relation(fields: [familyId], references: [id])
 }
 
-enum Semester {
-  Spring
-  Summer 
-  Fall
-  Winter
+model Semester {
+  id                  Int     @id @default(autoincrement())
+  semester_name       String
+  events              Event[]
 }
 
-enum GroupType {
-  Girls
-  Guys
-  All
-  Social
-  Off
+model Group {
+  id                  Int     @id @default(autoincrement()) 
+  group_type          String
+  events              Event[]
+}
+
+model Year {
+  id                  Int     @id @default(autoincrement())
+  year                String
+  events              Event[]
 }
 
 model Event {
   id          Int       @id @default(autoincrement())
   name        String
-  year        String
-  semester    Semester
   date        DateTime
   location    String
-  group_type  GroupType
-}
+  semesterId  Int       @default(1)
+  semester    Semester  @relation(fields: [semesterId], references: [id])
+  groupId     Int       @default(1)
+  group       Group     @relation(fields: [groupId], references: [id])
+  yearId      Int       @default(1)
+  year        Year      @relation(fields: [yearId], references: [id])
+  }
+
+//TODO add a model for year
