@@ -6,28 +6,7 @@ import { EventCard } from "@/components/event";
 // import eventData from "@/public/data/eventTestData.json";
 import { prisma } from "@/db/client";
 // import { eventData } from "@/public/data/eventTestData.json";
-
-interface Event {
-  id: number;
-  name: string;
-  date: Date;
-  location: string;
-  semesterId: number;
-  groupId: number;
-  yearId: number;
-  semester: {
-    id: number;
-    semester_name: string;
-  };
-  year: {
-    id: number;
-    year: string; // Note that year is a string here
-  };
-  group: {
-    id: number;
-    group_type: string;
-  };
-}
+import { Event } from "@/utils/types";
 
 async function getEventData() {
   const eventData = await prisma.event.findMany({
@@ -84,22 +63,27 @@ export default withPageAuthRequired(
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[750px] gap-16 mt-20 ">
             <h1 className="text-3xl pl-2">Next Event</h1>
-            <EventCard event={nextEvent} />
-            {/* <div className="eventCard">
-              <div className="flex flex-col items-start ">
-                <h2 className="text-2xl text-left font-bold">No upcoming Events</h2>
-                <h3 className="text-lg font-light  ">None</h3>
+            {nextEvent ? (
+              <EventCard event={nextEvent} />
+            ) : (
+              <div className="eventCard">
+                <div className="flex flex-col items-start ">
+                  <h2 className="text-2xl text-left font-bold">
+                    No upcoming Events
+                  </h2>
+                  <h3 className="text-lg font-light  ">None</h3>
+                </div>
+                <div className=" mx-4">
+                  {" "}
+                  <p>
+                    Who: <span className="font-bold">N/A</span>
+                  </p>
+                  <p>
+                    Where: <span className="font-bold">N/A</span>
+                  </p>
+                </div>
               </div>
-              <div className=" mx-4">
-                {" "}
-                <p>
-                  Who: <span className="font-bold">N/A</span>
-                </p>
-                <p>
-                  Where: <span className="font-bold">N/A</span>
-                </p>
-              </div>
-            </div> */}
+            )}
           </div>
         </div>
       </main>
