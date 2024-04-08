@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import eventData from "@/public/data/eventData.json";
+// import eventTestData from "@/public/data/evenTestData.json";
 import { EventCard } from "@/components/event";
 import {
   Select,
@@ -102,9 +102,9 @@ const EventSelector = () => {
   const filteredEvents = eventData.filter((event) =>
     //grab only the events that match the current semester AND current year
     {
-      const eventYear = parseInt(event.year.year);
+      const eventYear = event.year.year;
       const eventSemester = event.semester.semester_name;
-      return eventYear === currentYear && eventSemester === currentSemester;
+      return eventYear === selectedYear && eventSemester === selectedSemester;
     }
   );
 
@@ -136,7 +136,9 @@ const EventSelector = () => {
                 <SelectItem
                   key={value}
                   value={value}
-                  onClick={() => handleDropdownSelect(value)}
+                  onClick={() => {
+                    handleDropdownSelect(value);
+                  }}
                 >
                   {label}
                 </SelectItem>

@@ -2,28 +2,59 @@ import Nav from "@/components/nav";
 import MembershipPending from "@/components/pending";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
-import events from "@/public/data/eventData.json";
+import { EventCard } from "@/components/event";
+// import eventData from "@/public/data/eventTestData.json";
+import { prisma } from "@/db/client";
+// import { eventData } from "@/public/data/eventTestData.json";
 
 interface Event {
+  id: number;
   name: string;
-  date: string;
+  date: Date;
   location: string;
-  group_type: string;
+  semesterId: number;
+  groupId: number;
+  yearId: number;
+  semester: {
+    id: number;
+    semester_name: string;
+  };
+  year: {
+    id: number;
+    year: string; // Note that year is a string here
+  };
+  group: {
+    id: number;
+    group_type: string;
+  };
+}
+
+async function getEventData() {
+  const eventData = await prisma.event.findMany({
+    orderBy: { date: "asc" },
+    include: {
+      semester: true,
+      year: true,
+      group: true,
+    },
+  });
+  return eventData;
 }
 
 export default withPageAuthRequired(
   async function Page() {
+    const eventData = await getEventData();
     // get today's date
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    // filter events to only include future ones
-    const futureEvents: Event[] = events.filter((event) => {
+    // filter eventData to only include future ones
+    const futureEvents: Event[] = eventData.filter((event) => {
       const eventDate = new Date(event.date);
       return eventDate >= today;
     });
 
-    // sort future events by date
+    //// sort future eventData by date //TODO might delete this after pulling from db
     futureEvents.sort((a: Event, b: Event) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
@@ -53,7 +84,7 @@ export default withPageAuthRequired(
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[750px] gap-16 mt-20 ">
             <h1 className="text-3xl pl-2">Next Event</h1>{" "}
-            <div className="eventCard">
+            {/* <div className="eventCard">
               <div className="flex flex-col items-start">
                 <h2 className="text-4xl">{nextEvent.name}</h2>
                 <h3 className="text-lg font-light">{formattedDate}</h3>
@@ -62,7 +93,8 @@ export default withPageAuthRequired(
                 <p className="py-1 font-light">Who: {nextEvent.group_type}</p>
                 <p className="py-1 font-light">Where: {nextEvent.location}</p>
               </div>
-            </div>
+            </div> */}
+            <EventCard event={eventData} />
           </div>
         </div>
       </main>

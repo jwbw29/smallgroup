@@ -7,7 +7,7 @@ import { prisma } from "@/db/client";
 
 // import familyTestData from "@/public/data/familyTestData.json";
 
-async function getData() {
+async function getFamilyData() {
   const familyData = await prisma.family.findMany({
     orderBy: { last_name: "asc" },
     include: {
@@ -22,7 +22,7 @@ async function getData() {
 export default withPageAuthRequired(
   async function Page() {
     //// DATABASE ////
-    const familyData = await getData();
+    const familyData = await getFamilyData();
 
     //// Authorization ////
     const { roles } = await getUserSessionAndRoles();
