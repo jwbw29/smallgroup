@@ -19,3 +19,27 @@ export interface Event {
     group_type: string;
   };
 }
+
+export interface SemesterYearOption {
+  key: string;
+  label: string;
+  value: string;
+}
+
+export interface MdPicture {
+  picture: string;
+}
+
+export interface CustomUser {
+  name?: string;
+  email?: string;
+  "smallgroup/mdPicture"?: {
+    picture: string;
+  };
+}
+export interface User {
+  // Define other properties as needed
+  "smallgroup/mdPicture": MdPicture;
+  name: string;
+  email: string;
+}

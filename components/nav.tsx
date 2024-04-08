@@ -7,18 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import logo from "@/public/sg_logo.png";
 import Image from "next/image";
-
-interface MdPicture {
-  picture: string;
-}
-
-interface CustomUser {
-  name?: string;
-  email?: string;
-  "smallgroup/mdPicture"?: {
-    picture: string;
-  };
-}
+import { MdPicture, CustomUser } from "@/utils/types";
 
 const links = [
   { name: "Home", href: "/" },

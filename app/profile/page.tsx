@@ -5,17 +5,7 @@ import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import logo from "@/public/sg_logo.png";
-
-interface MdPicture {
-  picture: string;
-}
-
-interface User {
-  // Define other properties as needed
-  "smallgroup/mdPicture": MdPicture;
-  name: string;
-  email: string;
-}
+import { MdPicture, User } from "@/utils/types";
 
 export default withPageAuthRequired(
   async function Page() {

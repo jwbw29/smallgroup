@@ -10,34 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-interface Event {
-  id: number;
-  name: string;
-  date: string;
-  location: string;
-  semesterId: number;
-  groupId: number;
-  yearId: number;
-  semester: {
-    id: number;
-    semester_name: string;
-  };
-  year: {
-    id: number;
-    year: string; // Note that year is a string here
-  };
-  group: {
-    id: number;
-    group_type: string;
-  };
-}
-
-interface SemesterYearOption {
-  key: string;
-  label: string;
-  value: string;
-}
+import { Event, SemesterYearOption } from "@/utils/types";
 
 const getCurrentSemester = () => {
   const today = new Date();
