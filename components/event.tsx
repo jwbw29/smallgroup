@@ -1,7 +1,7 @@
 /** // TODO create table of events like we did users/members */
 
 export function EventCard({ event }: { event: any }) {
-  const { name, date, location, group_type } = event;
+  const { name, date, location, group } = event;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     month: "long",
@@ -38,7 +38,7 @@ export function EventCard({ event }: { event: any }) {
       <div className=" mx-4">
         {" "}
         <p>
-          Who: <span className="font-bold">{group_type}</span>
+          Who: <span className="font-bold">{group.group_type}</span>
         </p>
         <p>
           Where: <span className="font-bold">{location}</span>
