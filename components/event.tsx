@@ -1,6 +1,7 @@
 /** // TODO create table of events like we did users/members */
+import { Event } from "@/utils/types";
 
-export function EventCard({ event }: { event: any }) {
+export function EventCard({ event }: { event: Event }) {
   const { name, date, location, group } = event;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {

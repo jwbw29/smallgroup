@@ -83,18 +83,23 @@ export default withPageAuthRequired(
         <Nav />
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[750px] gap-16 mt-20 ">
-            <h1 className="text-3xl pl-2">Next Event</h1>{" "}
+            <h1 className="text-3xl pl-2">Next Event</h1>
+            <EventCard event={nextEvent} />
             {/* <div className="eventCard">
-              <div className="flex flex-col items-start">
-                <h2 className="text-4xl">{nextEvent.name}</h2>
-                <h3 className="text-lg font-light">{formattedDate}</h3>
+              <div className="flex flex-col items-start ">
+                <h2 className="text-2xl text-left font-bold">No upcoming Events</h2>
+                <h3 className="text-lg font-light  ">None</h3>
               </div>
-              <div className="">
-                <p className="py-1 font-light">Who: {nextEvent.group_type}</p>
-                <p className="py-1 font-light">Where: {nextEvent.location}</p>
+              <div className=" mx-4">
+                {" "}
+                <p>
+                  Who: <span className="font-bold">N/A</span>
+                </p>
+                <p>
+                  Where: <span className="font-bold">N/A</span>
+                </p>
               </div>
             </div> */}
-            <EventCard event={eventData} />
           </div>
         </div>
       </main>
