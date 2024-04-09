@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import logo from "@/public/sg_logo.png";
 import Image from "next/image";
-import { MdPicture, CustomUser } from "@/utils/types";
+import { CustomUser } from "@/utils/types";
 
 const links = [
   { name: "Home", href: "/" },
@@ -46,7 +46,7 @@ export default function Navigation() {
           <Avatar>
             <AvatarImage src={mdPictureUrl} />
             <AvatarFallback>
-              <Image src={logo} height="40" width="40" alt="smallgroup logo" />
+              <Image src={logo} height={40} width={40} alt="smallgroup logo" />
             </AvatarFallback>
           </Avatar>
         </Link>

@@ -5,7 +5,8 @@ import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 import logo from "@/public/sg_logo.png";
-import { MdPicture, User } from "@/utils/types";
+import { User } from "@/utils/types";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default withPageAuthRequired(
   async function Page() {
@@ -28,22 +29,17 @@ export default withPageAuthRequired(
           <div className="  flex flex-col w-3/4 max-w-[750px] gap-16 justify-center">
             {/* //// IMAGE */}
             <div className=" flex items-center justify-center">
-              {mdPictureUrl ? (
-                <Image
-                  src={mdPictureUrl}
-                  width={500}
-                  height={500}
-                  alt="Profile Picture"
-                  className="rounded-full"
-                />
-              ) : (
-                <Image
-                  src={logo}
-                  height="250"
-                  width="250"
-                  alt="smallgroup logo"
-                />
-              )}
+              <Avatar className="w-[250px] h-[250px] md:w-[500px] md:h-[500px]">
+                <AvatarImage src={mdPictureUrl} />
+                <AvatarFallback>
+                  <Image
+                    src={logo}
+                    height={40}
+                    width={40}
+                    alt="smallgroup logo"
+                  />
+                </AvatarFallback>
+              </Avatar>
             </div>
 
             {/* //// NAME & EMAIL */}
