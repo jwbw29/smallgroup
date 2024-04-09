@@ -43,13 +43,6 @@ export default withPageAuthRequired(
     // select the next event (closest to today)
     const nextEvent: Event | null = futureEvents[0] || null;
 
-    // format the date
-    const formattedDate = new Date(nextEvent.date).toLocaleDateString("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    });
-
     //Fetch user data via getSession
     const { roles } = await getUserSessionAndRoles();
 
