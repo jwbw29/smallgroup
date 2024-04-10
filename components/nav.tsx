@@ -46,7 +46,12 @@ export default function Navigation() {
           <Avatar>
             <AvatarImage src={mdPictureUrl} />
             <AvatarFallback>
-              <Image src={logo} height={40} width={40} alt="smallgroup logo" />
+              <Image
+                src="https://github.com/shadcn.png"
+                height={40}
+                width={40}
+                alt="shadcn/ui avatar"
+              />
             </AvatarFallback>
           </Avatar>
         </Link>

@@ -33,10 +33,11 @@ export default withPageAuthRequired(
                 <AvatarImage src={mdPictureUrl} />
                 <AvatarFallback>
                   <Image
-                    src={logo}
-                    height={250}
-                    width={250}
-                    alt="smallgroup logo"
+                    src="https://github.com/shadcn.png"
+                    height={400}
+                    width={400}
+                    alt="shadcn/ui avatar"
+                    className="rounded-full"
                   />
                 </AvatarFallback>
               </Avatar>
