@@ -34,8 +34,8 @@ export default withPageAuthRequired(
                 <AvatarFallback>
                   <Image
                     src={logo}
-                    height={40}
-                    width={40}
+                    height={250}
+                    width={250}
                     alt="smallgroup logo"
                   />
                 </AvatarFallback>
