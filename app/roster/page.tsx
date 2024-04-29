@@ -35,7 +35,7 @@ export default withPageAuthRequired(
         {" "}
         <Nav />{" "}
         <div className="flex flex-col flex-1 items-center ">
-          <div className="flex w-3/4 max-w-[750px] mt-20">
+          <div className="flex w-3/4 max-w-[750px] mt-6">
             <h1 className="text-3xl text-center my-6">Roster</h1>{" "}
           </div>
           <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">

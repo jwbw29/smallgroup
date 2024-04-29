@@ -4,7 +4,6 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import { getSession } from "@auth0/nextjs-auth0";
 import Image from "next/image";
-import logo from "@/public/sg_logo.png";
 import { User } from "@/utils/types";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -25,17 +24,17 @@ export default withPageAuthRequired(
         {" "}
         <Nav />
         {/* //// MAIN CONTENT */}
-        <div className="flex flex-1 justify-center mb-16">
-          <div className="  flex flex-col w-3/4 max-w-[750px] gap-16 justify-center">
+        <div className="flex flex-1 justify-center">
+          <div className=" testBorder flex flex-col w-3/4 max-w-[750px] gap-16 justify-center m-8">
             {/* //// IMAGE */}
             <div className=" flex items-center justify-center">
-              <Avatar className="w-[250px] h-[250px] md:w-[500px] md:h-[500px]">
+              <Avatar className="w-[250px] h-[250px]">
                 <AvatarImage src={mdPictureUrl} />
                 <AvatarFallback>
                   <Image
                     src="https://github.com/shadcn.png"
-                    height={400}
-                    width={400}
+                    height={250}
+                    width={250}
                     alt="shadcn/ui avatar"
                     className="rounded-full"
                   />

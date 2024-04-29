@@ -93,7 +93,7 @@ const EventSelector = () => {
   ) : (
     <div className="flex flex-col">
       <div className="flex justify-center my-6 ">
-        <div className="flex h-fit w-3/4 max-w-[750px] justify-end my-8 lg:my-16">
+        <div className="flex h-fit w-3/4 max-w-[750px] justify-end">
           {/* //// SELECTOR */}
           <Select
             onValueChange={(newValue) => {
