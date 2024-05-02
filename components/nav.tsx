@@ -31,7 +31,8 @@ export default function Navigation() {
               key={link.name}
               href={link.href}
               className={clsx("customLink", {
-                "bg-muted-primary text-muted-secondary": pathname === link.href,
+                "bg-muted-primary text-primary-foreground":
+                  pathname === link.href,
               })}
             >
               <h3 className="text-sm">{link.name}</h3>
@@ -41,7 +42,7 @@ export default function Navigation() {
         {/* //// PROFILE IMAGE HERE */}
         <Link
           href="/profile"
-          className="self-center hover:shadow-custom rounded-full"
+          className="self-center hover:customShadow rounded-full"
         >
           <Avatar>
             <AvatarImage src={mdPictureUrl} />

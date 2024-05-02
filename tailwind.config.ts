@@ -10,11 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        custom: "4px 4px 8px var(--primary)", // x=4, y=4, blur=8, transparency=38%
+        custom: "2px 2px 4px var(--primary)", // x=4, y=4, blur=8, transparency=38%
       },
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
