@@ -6,11 +6,11 @@
 
 /* Define custom CSS variables for theme */
 :root {
-  --foreground: hsl(223, 58%, 92%);
-  --background: hsl(225, 56%, 7%);
-  --primary: hsl(225, 58%, 74%);
-  --primary-foreground: hsl(225, 56%, 7%);
-  --secondary: hsl(288, 57%, 34%);
+  --foreground: #dfe5f6;
+  --background: #080d1c;
+  --primary: #96a9e3;
+  --primary-foreground: #080d1c;
+  --secondary: #742588;
   --secondary-foreground: hsl(223, 58%, 92%);
 
   --accent: hsl(311, 57%, 57%);
@@ -20,16 +20,16 @@
   --border: hsl(223, 58%, 92%);
   --input: hsl(223, 58%, 92%);
   --ring: hsl(223, 58%, 92%);
-  --card-background: hsl(230, 20%, 20%);
+  --card-background: #292c3d;
   --card-foreground: hsl(223, 58%, 92%);
   --card-border: hsl(223, 58%, 92%);
 
   /* Muted Versions */
-  --muted-foreground: hsl(217, 30%, 95%);
+  --muted-foreground: #eef1f6;
   --muted-background: hsl(230, 20%, 15%);
-  --muted-primary: hsl(221, 35%, 80%);
+  --muted-primary: #bac5de;
   --muted-secondary: hsl(286, 40%, 38%);
-  --muted-accent: hsl(312, 40%, 60%);
+  --muted-accent: #c270b1;
 
   /* Gradients */
   --linearPrimarySecondary: linear-gradient(
