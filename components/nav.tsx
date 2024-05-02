@@ -23,7 +23,7 @@ export default function Navigation() {
   const mdPictureUrl = user?.["smallgroup/mdPicture"]?.picture;
 
   return (
-    <nav className=" flex justify-center gap-4 lg:justify-end lg:gap-12 border-b-2 border-b-white p-4 mx-4">
+    <nav className=" flex justify-center gap-4 lg:justify-end lg:gap-12 border-b-2 border-b-border p-4 mx-4">
       <div className=" flex gap-2 lg:justify-end lg:gap-12">
         {links.map((link) => {
           return (
@@ -31,7 +31,7 @@ export default function Navigation() {
               key={link.name}
               href={link.href}
               className={clsx("customLink", {
-                "bg-sky-100 text-blue-600": pathname === link.href,
+                "bg-muted-primary text-muted-secondary": pathname === link.href,
               })}
             >
               <h3 className="text-sm">{link.name}</h3>
@@ -41,7 +41,7 @@ export default function Navigation() {
         {/* //// PROFILE IMAGE HERE */}
         <Link
           href="/profile"
-          className="self-center hover:shadow-lg hover:shadow-white rounded-full"
+          className="self-center hover:shadow-custom rounded-full"
         >
           <Avatar>
             <AvatarImage src={mdPictureUrl} />

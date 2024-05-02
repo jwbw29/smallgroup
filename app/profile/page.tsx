@@ -25,7 +25,7 @@ export default withPageAuthRequired(
         <Nav />
         {/* //// MAIN CONTENT */}
         <div className="flex flex-1 justify-center">
-          <div className=" testBorder flex flex-col w-3/4 max-w-[750px] gap-16 justify-center m-8">
+          <div className="flex flex-col w-3/4 max-w-[750px] gap-16 justify-center m-8">
             {/* //// IMAGE */}
             <div className=" flex items-center justify-center">
               <Avatar className="w-[250px] h-[250px]">
