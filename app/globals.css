@@ -4,6 +4,24 @@
 
 /* TODO add the min-h-screen stuff back to main */
 
+/* Define custom CSS variables for theme */
+/* root: {
+  --background: ;
+  --foreground: ;
+  --destructive: ;
+  --destructive-foreground: ;
+  --destructive-hover: ;
+  --destructive-hover-foreground: ;
+  --muted: ;
+  --muted-foreground: ;
+  --accent: ;
+  --accent-foreground: ;
+  --popover: ;
+  --popover-foreground: ;
+  --card: ;
+  --card-foreground: ;
+} */
+
 @layer base {
   main {
     @apply p-2 text-blue-950;
