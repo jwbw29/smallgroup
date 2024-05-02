@@ -4,13 +4,60 @@
 
 /* TODO add the min-h-screen stuff back to main */
 
+/* Define custom CSS variables for theme */
+:root {
+  --foreground: hsl(223, 58%, 92%);
+  --background: hsl(225, 56%, 7%);
+  --primary: hsl(225, 58%, 74%);
+  --primary-foreground: hsl(225, 56%, 7%);
+  --secondary: hsl(288, 57%, 34%);
+  --secondary-foreground: hsl(223, 58%, 92%);
+
+  --accent: hsl(311, 57%, 57%);
+  --accent-foreground: hsl(295, 58%, 93%);
+  --destructive: hsl(360, 70%, 50%);
+  --destructive-foreground: hsl(360, 70%, 30%);
+  --border: hsl(223, 58%, 92%);
+  --input: hsl(223, 58%, 92%);
+  --ring: hsl(223, 58%, 92%);
+  --card-background: hsl(230, 20%, 20%);
+  --card-foreground: hsl(223, 58%, 92%);
+  --card-border: hsl(223, 58%, 92%);
+
+  /* Muted Versions */
+  --muted-foreground: hsl(217, 30%, 95%);
+  --muted-background: hsl(230, 20%, 15%);
+  --muted-primary: hsl(221, 35%, 80%);
+  --muted-secondary: hsl(286, 40%, 38%);
+  --muted-accent: hsl(312, 40%, 60%);
+
+  /* Gradients */
+  --linearPrimarySecondary: linear-gradient(
+    hsl(225, 58%, 74%),
+    hsl(288, 57%, 34%)
+  );
+  --linearPrimaryAccent: linear-gradient(
+    hsl(225, 58%, 74%),
+    hsl(311, 57%, 57%)
+  );
+  --linearSecondaryAccent: linear-gradient(hsl(288, #d053ba%), #d053ba);
+  --radialPrimarySecondary: radial-gradient(
+    hsl(225, 58%, 74%),
+    hsl(288, 57%, 34%)
+  );
+  --radialPrimaryAccent: radial-gradient(
+    hsl(225, 58%, 74%),
+    hsl(311, 57%, 57%)
+  );
+  --radialSecondaryAccent: radial-gradient(hsl(288, #d053ba%), #d053ba);
+}
+
 @layer base {
   main {
-    @apply p-2 text-blue-950;
+    @apply p-2;
   }
   body {
-    @apply min-h-screen bg-background;
-    background-attachment: fixed;
+    @apply min-h-screen bg-background text-foreground;
   }
   h1 {
     @apply text-5xl;
@@ -27,22 +74,25 @@
   .testBorder {
     @apply border border-red-500;
   }
+  .customShadow {
+    @apply shadow-md shadow-primary;
+  }
   .customLink {
-    @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-sky-100 hover:text-blue-600 lg:flex-none lg:justify-start lg:p-2 lg:px-12;
+    @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-muted-primary hover:text-primary-foreground lg:flex-none lg:justify-start lg:p-2 lg:px-12;
   }
   .primaryButton {
-    @apply bg-blue-950 text-lg w-32 h-12 rounded-lg hover:bg-blue-800 hover:shadow-md hover:shadow-black text-white focus:bg-blue-800 focus:shadow-md focus:shadow-black;
+    @apply bg-primary text-primary-foreground text-lg w-32 h-12 rounded-lg hover:bg-muted-primary hover:customShadow  focus:customShadow;
   }
   .secondaryButton {
-    @apply bg-none text-base w-24 h-10 rounded-lg hover:bg-blue-100  text-blue-950 focus:bg-blue-100;
+    @apply bg-secondary text-secondary-foreground text-lg w-32 h-12 rounded-lg hover:bg-muted-secondary hover:customShadow  focus:customShadow;
   }
   .eventCard {
-    @apply flex flex-col shadow-custom bg-white border-4 border-blue-950 rounded-xl md:min-h-fit  gap-4 p-4;
+    @apply flex flex-col bg-card text-card-foreground rounded-xl md:min-h-fit  gap-4 p-4;
   }
   .familyCard {
-    @apply flex flex-col shadow-custom bg-white border-4 border-blue-950 rounded-xl justify-around px-4 hover:bg-blue-100;
+    @apply flex flex-col bg-card text-card-foreground rounded-xl justify-around px-4 hover:bg-muted-background;
   }
   .listItem {
-    @apply list-none cursor-default rounded-md hover:text-white hover:bg-blue-800 px-2;
+    @apply list-none cursor-default rounded-md hover:text-foreground hover:bg-primary px-2;
   }
 }

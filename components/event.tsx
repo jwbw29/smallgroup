@@ -13,16 +13,18 @@ export function EventCard({ event }: { event: Event }) {
   return (
     <div className="eventCard">
       <div className="flex flex-col items-start ">
-        <h2 className="text-2xl text-left font-bold">{name}</h2>
-        <h3 className="text-lg font-light  ">{formattedDate}</h3>
+        <h2 className="text-2xl text-left">{name}</h2>
+        <h3 className="text-lg font-light">{formattedDate}</h3>
       </div>
       <div className=" mx-4">
         {" "}
         <p>
-          Who: <span className="font-bold">{group.group_type}</span>
+          <span className="font-light">Who: </span>
+          {group.group_type}
         </p>
         <p>
-          Where: <span className="font-bold">{location}</span>
+          <span className="font-light">Where: </span>
+          {location}
         </p>
       </div>
     </div>

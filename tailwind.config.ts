@@ -10,38 +10,42 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        custom: "4px 4px 8px rgba(0, 0, 0, 0.38)", // x=4, y=4, blur=8, transparency=38%
-      },
-      backgroundImage: {
-        background: "linear-gradient(to bottom, #4895EF, #4CC9F0)",
+        custom: "2px 2px 4px var(--primary)", // x=4, y=4, blur=8, transparency=38%
       },
       colors: {
-        primary: "#4895EF",
-        secondary: "#4CC9F0",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "(var(--muted-background))",
+          foreground: "(var(--muted-foreground))",
+          background: "var(--muted-background)",
+          primary: "var(--muted-primary)",
+          secondary: "var(--muted-secondary)",
+          accent: "var(--muted-accent)",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "(var(--accent))",
+          foreground: "var(--accent-foreground)",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "var(--card-background)",
+          foreground: "var(--card-foreground)",
+          border: "var(--card-border)",
         },
       },
       keyframes: {

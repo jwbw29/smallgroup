@@ -104,10 +104,10 @@ const EventSelector = () => {
             defaultValue={`${selectedSemester} ${selectedYear}`}
           >
             {" "}
-            <SelectTrigger className="bg-blue-950 rounded-md text-white w-[9rem] min-w-fit lg:h-12 lg:w-36">
+            <SelectTrigger className="bg-primary rounded-md text-primary-foreground w-[9rem] min-w-fit lg:h-12 lg:w-36">
               <SelectValue placeholder="Choose a Semester" />
             </SelectTrigger>
-            <SelectContent className="bg-white">
+            <SelectContent className="bg-primary text-primary-foreground">
               {semesterYearOptions.map(({ label, value }) => (
                 <SelectItem
                   key={value}
