@@ -12,7 +12,7 @@ export default withPageAuthRequired(
     return notAuthorized ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col">
+      <main className="flex flex-col items-center">
         {" "}
         <Nav />
         <EventsPage />

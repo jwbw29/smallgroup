@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SemesterYearOption } from "@/utils/types";
+import AddEvent from "@/components/AddEvent";
 
 interface EventSelectorProps {
   selectedSemester: string;
@@ -31,7 +32,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
 
   return (
     <div className="flex justify-center my-6 ">
-      <div className="flex h-fit w-3/4 max-w-[750px] justify-between">
+      <div className="flex w-full h-fit md:justify-end">
         <Select
           onValueChange={(newValue) => {
             const [semester, year] = newValue.split(" ");
@@ -40,7 +41,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
           defaultValue={`${selectedSemester} ${selectedYear}`}
         >
           {" "}
-          <SelectTrigger className="bg-primary rounded-md text-primary-foreground w-[9rem] min-w-fit lg:h-12 lg:w-36">
+          <SelectTrigger className="bg-primary rounded-md text-primary-foreground w-full min-w-fit md:h-12 md:w-48">
             <SelectValue placeholder="Choose a Semester" />
           </SelectTrigger>
           <SelectContent className="bg-primary text-primary-foreground">
@@ -57,9 +58,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({
             ))}{" "}
           </SelectContent>
         </Select>
-        <button className="bg-primary rounded-md text-primary-foreground text-sm w-[9rem] min-w-fit lg:h-12 lg:w-36">
-          + Add Event
-        </button>
+        {/* <AddEvent /> */}
       </div>
     </div>
   );

@@ -63,7 +63,7 @@ const EventsPage = () => {
   return isLoading ? (
     <ScheduleSkeleton />
   ) : (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-3/4 md:max-w-[750px]">
       <EventSelector
         selectedSemester={selectedSemester}
         selectedYear={selectedYear}
