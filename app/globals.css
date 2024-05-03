@@ -78,7 +78,7 @@
     @apply shadow-md shadow-primary;
   }
   .customLink {
-    @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-muted-primary hover:text-primary-foreground lg:flex-none lg:justify-start lg:p-2 lg:px-12;
+    @apply flex h-[48px] items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-muted-primary hover:text-primary-foreground md:flex-none md:justify-start md:p-2 md:px-12;
   }
   .primaryButton {
     @apply bg-primary text-primary-foreground text-lg w-32 h-12 rounded-lg hover:bg-muted-primary hover:customShadow  focus:customShadow;

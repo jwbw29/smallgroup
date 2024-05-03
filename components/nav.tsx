@@ -23,8 +23,8 @@ export default function Navigation() {
   const mdPictureUrl = user?.["smallgroup/mdPicture"]?.picture;
 
   return (
-    <nav className=" flex justify-center gap-4 md:justify-end md:gap-12 border-b-2 border-b-border p-4 mx-4">
-      <div className=" flex gap-2 md:justify-end md:gap-12">
+    <nav className="flex w-full border-b-2 border-b-border p-4 mx-4">
+      <div className="flex w-full justify-between md:justify-end md:gap-12">
         {links.map((link) => {
           return (
             <Link
