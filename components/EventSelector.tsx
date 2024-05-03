@@ -33,7 +33,7 @@ const EventSelector = () => {
   const [semesterYearOptions, setSemesterYearOptions] = useState<
     SemesterYearOption[]
   >([]);
-  const [eventData, setEventData] = useState<Event[]>([]);
+  const [events, setEvents] = useState<Event[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const EventSelector = () => {
         );
 
         console.log("data:", data);
-        setEventData(data);
+        setEvents(data);
         setSemesterYearOptions(uniqueSemesterYears);
       } catch (error) {
         console.error("Failed to fetch events:", error);
@@ -74,7 +74,7 @@ const EventSelector = () => {
   }, []);
 
   //// Filtering Events
-  const filteredEvents = eventData.filter((event) => {
+  const filteredEvents = events.filter((event) => {
     const eventYear = event.year.year;
     const eventSemester = event.semester.semester_name;
     return eventYear === selectedYear && eventSemester === selectedSemester;

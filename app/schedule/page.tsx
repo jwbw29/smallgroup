@@ -7,7 +7,6 @@ import EventSelector from "@/components/EventSelector";
 export default withPageAuthRequired(
   async function Page() {
     const { roles } = await getUserSessionAndRoles();
-
     const notAuthorized = roles.length === 0;
 
     return notAuthorized ? (
