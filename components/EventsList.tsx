@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 
 import { EventCard } from "@/components/event";
 import { Event } from "@/utils/types";
@@ -21,6 +20,7 @@ const EventsList: React.FC<EventsListProps> = ({
     const eventSemester = event.semester.semester_name;
     return eventYear === selectedYear && eventSemester === selectedSemester;
   });
+  console.log("filtered events = ", filteredEvents);
 
   return (
     <div className="flex flex-col flex-1 items-center ">

@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
 // import eventTestData from "@/public/data/evenTestData.json";
-import { EventCard } from "@/components/event";
 import {
   Select,
   SelectContent,
@@ -10,27 +8,21 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Event, SemesterYearOption } from "@/utils/types";
-import { ScheduleSkeleton } from "./ui/ScheduleSkeleton";
-import { getCurrentSemester } from "@/utils/utils";
+import { SemesterYearOption } from "@/utils/types";
 
 interface EventSelectorProps {
   selectedSemester: string;
   selectedYear: string;
   onSemesterYearChange: (semester: string, year: string) => void;
+  semesterYearOptions: SemesterYearOption[];
 }
 
 const EventSelector: React.FC<EventSelectorProps> = ({
   selectedSemester,
   selectedYear,
   onSemesterYearChange,
+  semesterYearOptions,
 }) => {
-  const currentSemester = getCurrentSemester();
-  const currentYear = new Date().getFullYear();
-  const [semesterYearOptions, setSemesterYearOptions] = useState<
-    SemesterYearOption[]
-  >([]);
-
   const handleDropdownSelect = (value: string) => {
     const [semester, year] = value.split(" ");
     // Assuming you add selectedYear to your state
