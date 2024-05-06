@@ -20,7 +20,7 @@ export default withPageAuthRequired(
     return notAuthorized ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col h-screen">
+      <main className="flex flex-col h-screen items-center">
         {" "}
         <Nav />
         {/* //// MAIN CONTENT */}
