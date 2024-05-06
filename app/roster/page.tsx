@@ -33,17 +33,15 @@ export default withPageAuthRequired(
     ) : (
       <main className="flex flex-col items-center">
         {" "}
-        <Nav />{" "}
-        <div className="flex flex-col flex-1 items-center ">
-          <div className="flex w-3/4 max-w-[750px] mt-6">
-            <h1 className="text-3xl text-center my-6">Roster</h1>{" "}
-          </div>
-          <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
-            {/* //* REPLACE `familyData` with `familyTestData` to use test data */}
-            {familyData.map((family, i) => (
-              <Person key={i} family={family} />
-            ))}
-          </div>
+        <Nav />
+        <div className="flex w-3/4 max-w-[750px] mt-6">
+          <h1 className="text-3xl text-center my-6">Roster</h1>{" "}
+        </div>
+        <div className="flex flex-col h-fit w-3/4 max-w-[750px] gap-8 my-6">
+          {/* //* REPLACE `familyData` with `familyTestData` to use test data */}
+          {familyData.map((family, i) => (
+            <Person key={i} family={family} />
+          ))}
         </div>
       </main>
     );

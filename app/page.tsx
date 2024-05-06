@@ -53,31 +53,29 @@ export default withPageAuthRequired(
     ) : (
       <main className="flex flex-col items-center">
         <Nav />
-        <div className="flex flex-1 justify-center">
-          <div className="flex flex-col w-3/4 max-w-[750px] gap-8 mt-20 ">
-            <h1 className="text-3xl pl-2">Next Event</h1>
-            {nextEvent ? (
-              <EventCard event={nextEvent} />
-            ) : (
-              <div className="eventCard">
-                <div className="flex flex-col items-start ">
-                  <h2 className="text-2xl text-left font-bold">
-                    No upcoming Events
-                  </h2>
-                  <h3 className="text-lg font-light  ">None</h3>
-                </div>
-                <div className=" mx-4">
-                  {" "}
-                  <p>
-                    Who: <span className="font-bold">N/A</span>
-                  </p>
-                  <p>
-                    Where: <span className="font-bold">N/A</span>
-                  </p>
-                </div>
+        <div className="flex flex-col w-3/4 md:max-w-[750px] gap-8 mt-20 ">
+          <h1 className="text-3xl pl-2">Next Event</h1>
+          {nextEvent ? (
+            <EventCard event={nextEvent} />
+          ) : (
+            <div className="eventCard">
+              <div className="flex flex-col items-start ">
+                <h2 className="text-2xl text-left font-bold">
+                  No upcoming Events
+                </h2>
+                <h3 className="text-lg font-light  ">None</h3>
               </div>
-            )}
-          </div>
+              <div className=" mx-4">
+                {" "}
+                <p>
+                  Who: <span className="font-bold">N/A</span>
+                </p>
+                <p>
+                  Where: <span className="font-bold">N/A</span>
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </main>
     );
