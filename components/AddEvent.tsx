@@ -1,8 +1,8 @@
 // # button placement/styling
 // ## Mobile
-// [ ] check for react-icons
-// [ ] make it a circular floating button in the bottom right corner
-// [ ] add a plus icon
+// [x] check for react-icons
+// [x] make it a floating button in the bottom right corner
+// [x] add a plus icon
 // ## Desktop
 // - will need to apply JS logic to make this happen, so putting it off for now
 // [] everything falls under lg: breakpoint
@@ -19,8 +19,12 @@
 // [ ] show error message (toast)
 // [ ] clear form (to allow for another entry)
 // [ ] close modal
+import { LuCalendarPlus } from "react-icons/lu";
 
 export default function AddEvent() {
-  // maybe replace this with a icon
-  return <button className="addEventMobile">+</button>;
+  return (
+    <button className="addEventMobile">
+      <LuCalendarPlus />
+    </button>
+  );
 }

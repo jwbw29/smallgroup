@@ -96,9 +96,6 @@
     @apply list-none cursor-default rounded-md hover:text-foreground hover:bg-primary px-2;
   }
   .addEventMobile {
-    @apply h-20 w-20 rounded-full bg-primary text-primary-foreground text-6xl;
-  }
-  .addEventDesktop {
-    @apply bg-primary rounded-md text-primary-foreground text-sm min-w-fit h-12 w-36;
+    @apply fixed bottom-8 right-8 lg:bottom-16 lg:right-16 shadow-xl shadow-black flex justify-center items-center h-16 w-16 bg-primary text-primary-foreground text-2xl rounded-full;
   }
 }
