@@ -10,9 +10,9 @@
 // [] add event button on top of select dropdown
 
 // ## onClick
-// [ ] open modal
-// [ ] add event details
-// [ ] save event
+// [x] open modal
+// [x] add event details
+// [x] save event
 // [ ] show loading spinner if needed
 // [ ] update events list
 // [ ] show success message (toast)

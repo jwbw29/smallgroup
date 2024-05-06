@@ -4,7 +4,7 @@ import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import EventsPage from "@/components/EventsPage";
 import AddEvent from "@/components/AddEvent";
-import NewEventForm from "@/components/NewEventForm";
+import NewEventModal from "@/components/NewEventModal";
 
 export default withPageAuthRequired(
   async function Page() {
@@ -19,8 +19,7 @@ export default withPageAuthRequired(
         <Nav />
         <EventsPage />
         {/* make the button a floating fixed position */}
-        <AddEvent />
-        <NewEventForm />
+        <NewEventModal />
       </main>
     );
   },

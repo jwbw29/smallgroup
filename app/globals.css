@@ -17,15 +17,15 @@
   --accent-foreground: hsl(295, 58%, 93%);
   --destructive: hsl(360, 70%, 50%);
   --destructive-foreground: hsl(360, 70%, 30%);
-  --border: hsl(223, 58%, 92%);
+  --border: #96a9e3;
   --input: hsl(223, 58%, 92%);
-  --ring: hsl(223, 58%, 92%);
+  --ring: hsl(311, 57%, 57%);
   --card-background: #292c3d;
   --card-foreground: hsl(223, 58%, 92%);
   --card-border: hsl(223, 58%, 92%);
 
   /* Muted Versions */
-  --muted-foreground: #eef1f6;
+  --muted-foreground: #bfc3cb;
   --muted-background: hsl(230, 20%, 15%);
   --muted-primary: #bac5de;
   --muted-secondary: hsl(286, 40%, 38%);
