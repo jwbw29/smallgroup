@@ -1,8 +1,15 @@
-// button placement/styling
+// # button placement/styling
+// ## Mobile
+// [ ] check for react-icons
 // [ ] make it a circular floating button in the bottom right corner
 // [ ] add a plus icon
+// ## Desktop
+// - will need to apply JS logic to make this happen, so putting it off for now
+// [] everything falls under lg: breakpoint
+//    - `lg:addEventDesktop` already exists in `globals.css`
+// [] add event button on top of select dropdown
 
-// on click
+// ## onClick
 // [ ] open modal
 // [ ] add event details
 // [ ] save event
@@ -14,9 +21,6 @@
 // [ ] close modal
 
 export default function AddEvent() {
-  return (
-    <button className="bg-primary rounded-md text-primary-foreground text-sm w-[9rem] min-w-fit lg:h-12 lg:w-36">
-      + Add Event
-    </button>
-  );
+  // maybe replace this with a icon
+  return <button className="addEventMobile">+</button>;
 }
