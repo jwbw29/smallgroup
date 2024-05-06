@@ -51,7 +51,7 @@ export default withPageAuthRequired(
     return notAuthorized ? (
       <MembershipPending />
     ) : (
-      <main className="flex flex-col">
+      <main className="flex flex-col items-center">
         <Nav />
         <div className="flex flex-1 justify-center">
           <div className="flex flex-col w-3/4 max-w-[750px] gap-8 mt-20 ">
