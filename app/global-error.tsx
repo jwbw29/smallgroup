@@ -1,6 +1,6 @@
 "use client";
 import { Roboto_Mono } from "next/font/google";
-
+import { Button } from "@/components/ui/button";
 import "./globals.css";
 
 const roboto = Roboto_Mono({
@@ -29,12 +29,12 @@ export default function GlobalError({
                 <p className="text-lg text-blue-950">Something went wrong!</p>
               </div>
               <div className="flex justify-end mt-16">
-                <button
+                <Button
                   onClick={() => window.location.reload()}
-                  className="primaryButton"
+                  variant={"secondary"}
                 >
                   Try again
-                </button>
+                </Button>
               </div>
             </div>
           </div>

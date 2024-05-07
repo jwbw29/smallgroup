@@ -80,9 +80,6 @@
   .customLink {
     @apply flex h-[48px] items-center justify-center gap-2 rounded-md p-3 text-sm font-normal hover:bg-muted-primary hover:text-primary-foreground md:flex-none md:justify-start md:p-2 md:px-12;
   }
-  .primaryButton {
-    @apply bg-primary text-primary-foreground text-lg w-32 h-12 rounded-lg hover:bg-muted-primary hover:customShadow  focus:customShadow;
-  }
   .secondaryButton {
     @apply bg-secondary text-secondary-foreground text-lg w-32 h-12 rounded-lg hover:bg-muted-secondary hover:customShadow  focus:customShadow;
   }

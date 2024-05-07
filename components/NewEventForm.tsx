@@ -1,5 +1,7 @@
 "use client";
 
+// [ ] Replace date input with <DatePicker />
+
 import * as React from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,14 +23,13 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
-// [ ] Replace date input with the date picker
+import { DatePicker } from "./DatePicker";
 
 const formSchema = z.object({
-  title: z.string().min(2).max(100),
+  name: z.string().min(2).max(100),
   date: z.date(),
-  who: z.string().min(2).max(100),
-  where: z.string().min(2).max(100),
+  attendees: z.string().min(2).max(100),
+  location: z.string().min(2).max(100),
 });
 
 export function NewEventForm() {
@@ -38,10 +39,10 @@ export function NewEventForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: "",
+      name: "",
       date: new Date(),
-      who: "",
-      where: "",
+      attendees: "",
+      location: "",
     },
   });
 
@@ -54,24 +55,67 @@ export function NewEventForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col gap-4"
+      >
         <FormField
           control={form.control}
-          name="username"
+          name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Event Name: </FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="Event Name" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        {/* // [ ]  replace w/ DatePicker */}
+        <FormField
+          control={form.control}
+          name="date"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>When: </FormLabel>
+              <FormControl>
+                <DatePicker />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* // [ ] Attendees needs to be a dropdown */}
+        <FormField
+          control={form.control}
+          name="attendees"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Attendees: </FormLabel>
+              <FormControl>
+                <Input placeholder="Attendees" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="location"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Location: </FormLabel>
+              <FormControl>
+                <Input placeholder="Location" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit" className="w-full mt-8">
+          Add Event
+        </Button>
       </form>
     </Form>
   );

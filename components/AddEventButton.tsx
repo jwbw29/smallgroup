@@ -21,24 +21,10 @@
 // [ ] close modal
 import { LuCalendarPlus } from "react-icons/lu";
 
-export default function AddEvent() {
+export default function AddEventButton() {
   return (
     <button className="addEventMobile">
       <LuCalendarPlus />
     </button>
   );
 }
-
-`schedule/page.tsx`
-  |- `EventPage.tsx`
-  | |- `EventList.tsx`
-  | | |- `event.tsx`
-  | |- `EventSelector.tsx`
-
-
-  `schedule/page.tsx`
-  ├ sub1
-  | ├ sub1a
-  | └ sub1b
-  ├ sub2
-  └ sub3

@@ -4,8 +4,8 @@
 // # Form
 // [x] get form from Component Gallery or ShadCN
 
-// [ ] install popover
-// [ ] install calendar
+// [x] install popover
+// [x] install calendar
 // [ ] look at instrux to build date picker
 // [ ] put date picker inside form
 // [ ] put form inside modal
@@ -21,23 +21,25 @@ import {
   DialogTrigger,
   DialogFooter,
 } from "@/components/ui/dialog";
-import AddEvent from "@/components/AddEvent";
+import AddEventButton from "@/components/AddEventButton";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { NewEventForm } from "./NewEventForm";
 
 export default function NewEventModal() {
   return (
     <Dialog>
       <DialogTrigger>
-        <AddEvent />
+        <AddEventButton />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>New Event</DialogTitle>
           <DialogDescription>Add a new small group event.</DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
+        <NewEventForm />
+        {/* <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
@@ -50,10 +52,7 @@ export default function NewEventModal() {
             </Label>
             <Input id="username" placeholder="Date" className="col-span-3" />
           </div>
-        </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
+        </div> */}
       </DialogContent>{" "}
     </Dialog>
   );
