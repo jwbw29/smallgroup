@@ -28,3 +28,17 @@ export default function AddEvent() {
     </button>
   );
 }
+
+`schedule/page.tsx`
+  |- `EventPage.tsx`
+  | |- `EventList.tsx`
+  | | |- `event.tsx`
+  | |- `EventSelector.tsx`
+
+
+  `schedule/page.tsx`
+  ├ sub1
+  | ├ sub1a
+  | └ sub1b
+  ├ sub2
+  └ sub3
