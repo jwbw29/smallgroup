@@ -17,13 +17,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Calendar } from "@/components/ui/calendar";
+import { DatePicker } from "@/components/DatePicker";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { DatePicker } from "./DatePicker";
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import { toast } from "@/components/ui/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2).max(100),
@@ -50,6 +52,13 @@ export function NewEventForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    // [ ] post to /api/events
+    //// IF SUCCESS
+    // toast success
+
+    //// IF ERROR
+    // toast destructive
+
     console.log(values);
   }
 
@@ -86,8 +95,9 @@ export function NewEventForm() {
             </FormItem>
           )}
         />
+
         {/* // [ ] Attendees needs to be a dropdown */}
-        <FormField
+        {/* <FormField
           control={form.control}
           name="attendees"
           render={({ field }) => (
@@ -99,7 +109,31 @@ export function NewEventForm() {
               <FormMessage />
             </FormItem>
           )}
+        /> */}
+
+        <FormField
+          control={form.control}
+          name="attendees"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Attendees: </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a verified email to display" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="m@example.com">m@example.com</SelectItem>
+                  <SelectItem value="m@google.com">m@google.com</SelectItem>
+                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
         />
+
         <FormField
           control={form.control}
           name="location"
