@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="oq7ptMDaJFBCSFqX5TiV" name="Page-1">
+        <mxGraphModel dx="1028" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="schedule/page.tsx&lt;br&gt;&lt;br&gt;server component" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="343" y="30" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;u&gt;EventsPage.tsx&lt;br&gt;&lt;/u&gt;&lt;br&gt;state currently managed here" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="200" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="7" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;u&gt;NewEventModal.tsx&lt;/u&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="200" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;u&gt;EventSelector&lt;br&gt;&lt;/u&gt;&lt;br&gt;receives from EventsPage:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- selectedSemester&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- selectedYear&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- onSemesterYearChange&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- semesterYearOptions&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="380" width="165" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="9" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;u&gt;EventsList&lt;br&gt;&lt;/u&gt;&lt;br&gt;receives from EventsPage:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- events&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- selectedSemester&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- selectedYear&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="380" width="165" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;u&gt;event.tsx&lt;br&gt;&lt;/u&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;receives from &lt;u&gt;EventsList&lt;/u&gt; which comes from &lt;u&gt;EventsPage&lt;/u&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- events&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="620" width="165" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="16" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="16" target="18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;u&gt;NewEventForm.tsx&lt;/u&gt;&lt;br&gt;&lt;br&gt;some state managed here" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="370" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;u&gt;DatePicker.tsx&lt;/u&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="550" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;u&gt;Attendees selector&lt;/u&gt;&lt;br&gt;&lt;br&gt;not a component, but will need to read and write data" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="810" y="550" width="165" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;h1&gt;State management&lt;/h1&gt;&lt;p&gt;db is currently only being called in EventsPage&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Options/thoughts:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;call the db in schedule/page (SSR)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;then pass that down through EventsPage and NewEventModal&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;call db in NewEventModal (CSR)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;would this only load when triggered or on EventsPage load?&lt;/li&gt;&lt;li&gt;we're already doing it in EventsPage, does it make sense to also do it here?&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;use Context API or Redux and have data fetching live in it's own file&lt;/li&gt;&lt;ul&gt;&lt;li&gt;would need to look in to how this works more&lt;/li&gt;&lt;li&gt;probably start with the first two and rule those out before trying this one&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#3333FF;fillColor=#000033;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="990" y="100" width="430" height="400" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
