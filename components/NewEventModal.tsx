@@ -1,15 +1,3 @@
-// # Modal
-// [x] get modal from Component Gallery or ShadCN
-
-// # Form
-// [x] get form from Component Gallery or ShadCN
-
-// [x] install popover
-// [x] install calendar
-// [ ] look at instrux to build date picker
-// [ ] put date picker inside form
-// [ ] put form inside modal
-
 "use client";
 
 import {
