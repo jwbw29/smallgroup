@@ -97,19 +97,6 @@ export function NewEventForm() {
         />
 
         {/* // [ ] Attendees needs to be a dropdown */}
-        {/* <FormField
-          control={form.control}
-          name="attendees"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Attendees: </FormLabel>
-              <FormControl>
-                <Input placeholder="Attendees" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        /> */}
 
         <FormField
           control={form.control}
@@ -120,13 +107,17 @@ export function NewEventForm() {
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a verified email to display" />
+                    <SelectValue placeholder="Attendees" />
                   </SelectTrigger>
                 </FormControl>
-                <SelectContent>
-                  <SelectItem value="m@example.com">m@example.com</SelectItem>
-                  <SelectItem value="m@google.com">m@google.com</SelectItem>
-                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                <SelectContent className="bg-input text-primary-foreground">
+                  <SelectItem value="Guys">{"pull 'Guys' from db"}</SelectItem>
+                  <SelectItem value="Girls">
+                    {" "}
+                    {"pull 'Girls' from db"}
+                  </SelectItem>
+                  <SelectItem value="All"> {"pull 'All' from db"}</SelectItem>
+                  <SelectItem value="Off"> {"pull 'Off' from db"}</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

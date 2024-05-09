@@ -95,4 +95,7 @@
   .addEventMobile {
     @apply fixed bottom-8 right-8 lg:bottom-16 lg:right-16 shadow-xl shadow-black flex justify-center items-center h-16 w-16 bg-primary text-primary-foreground text-2xl rounded-full;
   }
+  .input-hide-placeholder:focus::placeholder {
+    color: transparent;
+  }
 }

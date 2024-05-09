@@ -29,7 +29,7 @@ export function DatePicker() {
           {date ? (
             format(date, "PPP")
           ) : (
-            <span className="text-primary-foreground">Pick a date</span>
+            <span className="text-primary-foreground text-sm">Pick a date</span>
           )}
         </Button>
       </PopoverTrigger>
