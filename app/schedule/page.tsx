@@ -3,7 +3,7 @@ import MembershipPending from "@/components/pending";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { getUserSessionAndRoles } from "@/utils/authUtils";
 import EventsPage from "@/components/EventsPage";
-import NewEventModal from "@/components/NewEventModal";
+import AddEvent from "@/components/AddEvent";
 
 export default withPageAuthRequired(
   async function Page() {
@@ -17,7 +17,7 @@ export default withPageAuthRequired(
         {" "}
         <Nav />
         <EventsPage />
-        <NewEventModal />
+        <AddEvent />
       </main>
     );
   },

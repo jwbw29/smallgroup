@@ -11,7 +11,7 @@ import {
 import AddEventButton from "@/components/AddEventButton";
 import { NewEventForm } from "./NewEventForm";
 
-export default function NewEventModal() {
+export default function AddEvent() {
   return (
     <Dialog>
       <DialogTrigger>
