@@ -20,6 +20,11 @@ export interface Event {
   };
 }
 
+export interface EventsContextType {
+  events: Event[];
+  setEvents: (events: Event[]) => void;
+}
+
 export interface SemesterYearOption {
   key: string;
   label: string;
