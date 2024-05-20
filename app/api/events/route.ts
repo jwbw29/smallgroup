@@ -33,3 +33,27 @@ export async function GET() {
     );
   }
 }
+
+export async function POST(request: Request) {
+  try {
+    const newEvent = await request.json();
+    const savedEvent = await prisma.event.create({
+      data: newEvent,
+    });
+
+    return new Response(JSON.stringify(savedEvent), {
+      status: 201,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Failed to save event:", error);
+    return new Response(JSON.stringify({ message: "Failed to save event" }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
+}

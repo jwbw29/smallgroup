@@ -13,9 +13,6 @@ const EventsPage = () => {
   const currentYear = new Date().getFullYear().toString();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
   const [selectedYear, setSelectedYear] = useState(currentYear);
-  const [semesterYearOptions, setSemesterYearOptions] = useState<
-    SemesterYearOption[]
-  >([]);
   const { events, setEvents } = useEvents();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,42 +21,20 @@ const EventsPage = () => {
     setSelectedYear(year);
   };
 
-  // useEffect(() => {
-  //   const fetchEvents = async () => {
-  //     try {
-  //       const response = await fetch("/api/events");
-  //       if (!response.ok) {
-  //         throw new Error(`Error: ${response.statusText}`);
-  //       }
-  //       const data: Event[] = await response.json();
-  //       const uniqueSemesterYears = data.reduce<SemesterYearOption[]>(
-  //         (acc, event) => {
-  //           const key = `${event.semester.semester_name} ${event.year.year}`;
-  //           if (!acc.some((item) => item.key === key)) {
-  //             acc.push({
-  //               key,
-  //               label: `${
-  //                 event.semester.semester_name
-  //               } '${event.year.year.slice(2)}`,
-  //               value: key,
-  //             });
-  //           }
-  //           return acc;
-  //         },
-  //         []
-  //       );
-
-  //       console.log("data:", data);
-  //       setEvents(data);
-  //       setSemesterYearOptions(uniqueSemesterYears);
-  //     } catch (error) {
-  //       console.error("Failed to fetch events:", error);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
-  //   fetchEvents();
-  // }, []);
+  const semesterYearOptions = events.reduce<SemesterYearOption[]>(
+    (acc, event) => {
+      const key = `${event.semester.semester_name} ${event.year.year}`;
+      if (!acc.some((item) => item.key === key)) {
+        acc.push({
+          key,
+          label: `${event.semester.semester_name} '${event.year.year.slice(2)}`,
+          value: key,
+        });
+      }
+      return acc;
+    },
+    []
+  );
 
   return isLoading ? (
     <ScheduleSkeleton />
