@@ -6,6 +6,7 @@ import EventsList from "./EventsList";
 import { Event, SemesterYearOption } from "@/utils/types";
 import { ScheduleSkeleton } from "./ui/ScheduleSkeleton";
 import { getCurrentSemester } from "@/utils/utils";
+import { useEvents } from "@/context/EventContext";
 
 const EventsPage = () => {
   const currentSemester = getCurrentSemester();
@@ -15,7 +16,7 @@ const EventsPage = () => {
   const [semesterYearOptions, setSemesterYearOptions] = useState<
     SemesterYearOption[]
   >([]);
-  const [events, setEvents] = useState<Event[]>([]);
+  const { events, setEvents } = useEvents();
   const [isLoading, setIsLoading] = useState(true);
 
   const handleSemesterYearChange = (semester: string, year: string) => {
