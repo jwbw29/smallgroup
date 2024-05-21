@@ -7,7 +7,9 @@ import AddEvent from "@/components/AddEvent";
 import { EventsProvider } from "@/context/EventContext";
 
 async function fetchEvents() {
-  const res = await fetch("/api/events");
+  const baseUrl = process.env.AUTH0_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/events`);
+
   if (!res.ok) {
     throw new Error("Failed to fetch event data");
   }
@@ -25,7 +27,6 @@ export default withPageAuthRequired(
     ) : (
       <EventsProvider initialEvents={events}>
         <main className="flex flex-col items-center">
-          {" "}
           <Nav />
           <EventsPage />
           <AddEvent />
