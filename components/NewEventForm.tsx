@@ -3,6 +3,7 @@
 // [ ] Replace date input with <DatePicker />
 
 import * as React from "react";
+import { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -26,6 +27,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
+import { NewEvent } from "@/utils/types";
 
 const formSchema = z.object({
   name: z.string().min(2).max(100),
@@ -34,7 +36,11 @@ const formSchema = z.object({
   location: z.string().min(2).max(100),
 });
 
-export function NewEventForm() {
+export function NewEventForm({
+  onSubmit,
+}: {
+  onSubmit: (values: NewEvent) => void;
+}) {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   // 1. Define the form
@@ -49,23 +55,25 @@ export function NewEventForm() {
   });
 
   // 2. Define a submit handler
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    // [ ] post to /api/events
-    //// IF SUCCESS
-    // toast success
-
-    //// IF ERROR
-    // toast destructive
-
-    console.log(values);
+  async function handleSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      await onSubmit(values);
+      toast({
+        title: "Event added",
+        description: "Your event was added successfully!",
+      });
+    } catch (error) {
+      toast({
+        title: "Uh oh!",
+        description: "Something went wrong while trying to add your event",
+      });
+    }
   }
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(handleSubmit)}
         className="flex flex-col gap-4"
       >
         <FormField

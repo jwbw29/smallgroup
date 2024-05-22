@@ -20,6 +20,13 @@ export interface Event {
   };
 }
 
+export interface NewEvent {
+  name: string;
+  date: Date;
+  location: string;
+  attendees: string;
+}
+
 export interface EventsContextType {
   events: Event[];
   setEvents: (events: Event[]) => void;
