@@ -1,5 +1,6 @@
 "use client";
 
+// context/EventContext.tsx
 import { createContext, useContext, useState, ReactNode } from "react";
 import { Event, EventsContextType } from "@/utils/types";
 
