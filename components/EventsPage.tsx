@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import EventSelector from "./EventSelector";
 import EventsList from "./EventsList";
-import { Event, SemesterYearOption } from "@/utils/types";
+import { SemesterYearOption } from "@/utils/types";
 import { ScheduleSkeleton } from "./ui/ScheduleSkeleton";
 import { getCurrentSemester } from "@/utils/utils";
 import { useEvents } from "@/context/EventContext";
@@ -13,14 +13,15 @@ const EventsPage = () => {
   const currentYear = new Date().getFullYear().toString();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
   const [selectedYear, setSelectedYear] = useState(currentYear);
-  const { events } = useEvents();
-  const [isLoading, setIsLoading] = useState(false);
+  const { events } = useEvents(); // Use events from context
+  const [isLoading, setIsLoading] = useState(false); // Set loading state
 
   const handleSemesterYearChange = (semester: string, year: string) => {
     setSelectedSemester(semester);
     setSelectedYear(year);
   };
 
+  // Calculate semesterYearOptions based on events from context
   const semesterYearOptions = events.reduce<SemesterYearOption[]>(
     (acc, event) => {
       const key = `${event.semester.semester_name} ${event.year.year}`;

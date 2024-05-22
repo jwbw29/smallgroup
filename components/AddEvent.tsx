@@ -13,6 +13,7 @@ import { NewEventForm } from "./NewEventForm";
 import { useEvents } from "@/context/EventContext";
 import { NewEvent } from "@/utils/types";
 
+// Define the function to save a new event to the database
 async function saveEventToDB(newEvent: NewEvent) {
   const response = await fetch("/api/events", {
     method: "POST",
@@ -34,13 +35,12 @@ export default function AddEvent() {
   const { events, setEvents } = useEvents();
 
   const handleAddEvent = async (newEvent: NewEvent) => {
-    // save new event to the database
     try {
+      // Call the function to save the event and update local state
       const savedEvent = await saveEventToDB(newEvent);
-      // update local state
       setEvents([...events, savedEvent]);
     } catch (error) {
-      console.error("Failed to add event: ", error);
+      console.error("Failed to add event:", error);
     }
   };
 
@@ -55,7 +55,7 @@ export default function AddEvent() {
           <DialogDescription>Add a new small group event.</DialogDescription>
         </DialogHeader>
         <NewEventForm onSubmit={handleAddEvent} />
-      </DialogContent>{" "}
+      </DialogContent>
     </Dialog>
   );
 }
