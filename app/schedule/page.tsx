@@ -9,6 +9,7 @@ import { EventsProvider } from "@/context/EventContext";
 async function fetchEvents() {
   const baseUrl = process.env.AUTH0_BASE_URL || "http://localhost:3000";
   const res = await fetch(`${baseUrl}/api/events`);
+  console.log("Here's the res", res);
 
   if (!res.ok) {
     throw new Error("Failed to fetch event data");

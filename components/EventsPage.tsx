@@ -13,8 +13,8 @@ const EventsPage = () => {
   const currentYear = new Date().getFullYear().toString();
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
   const [selectedYear, setSelectedYear] = useState(currentYear);
-  const { events, setEvents } = useEvents();
-  const [isLoading, setIsLoading] = useState(true);
+  const { events } = useEvents();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSemesterYearChange = (semester: string, year: string) => {
     setSelectedSemester(semester);
