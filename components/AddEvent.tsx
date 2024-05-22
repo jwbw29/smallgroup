@@ -1,3 +1,4 @@
+// components/AddEvent.tsx
 "use client";
 
 import {
@@ -46,7 +47,7 @@ export default function AddEvent() {
 
   return (
     <Dialog>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <AddEventButton />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
