@@ -5,7 +5,6 @@ import { useState } from "react";
 import EventSelector from "./EventSelector";
 import EventsList from "./EventsList";
 import { SemesterYearOption } from "@/utils/types";
-import { ScheduleSkeleton } from "./ui/ScheduleSkeleton";
 import { getCurrentSemester } from "@/utils/utils";
 import { useEvents } from "@/context/EventContext";
 
@@ -15,7 +14,6 @@ const EventsPage = () => {
   const [selectedSemester, setSelectedSemester] = useState(currentSemester);
   const [selectedYear, setSelectedYear] = useState(currentYear);
   const { events } = useEvents(); // Use events from context
-  const [isLoading, setIsLoading] = useState(false); // Set loading state
 
   const handleSemesterYearChange = (semester: string, year: string) => {
     setSelectedSemester(semester);
@@ -38,9 +36,7 @@ const EventsPage = () => {
     []
   );
 
-  return isLoading ? (
-    <ScheduleSkeleton />
-  ) : (
+  return (
     <div className="flex flex-col w-3/4 md:max-w-[750px]">
       <EventSelector
         selectedSemester={selectedSemester}
