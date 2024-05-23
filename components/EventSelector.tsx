@@ -9,7 +9,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SemesterYearOption } from "@/utils/types";
-import AddEventButton from "@/components/AddEventButton";
 
 interface EventSelectorProps {
   selectedSemester: string;
