@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/dialog";
 import AddEventButton from "@/components/AddEventButton";
 import { NewEventForm } from "./NewEventForm";
-import { useEvents } from "@/context/EventContext";
 import { NewEvent } from "@/utils/types";
 
 // Define the function to save a new event to the database
@@ -34,13 +33,11 @@ async function saveEventToDB(newEvent: NewEvent) {
 }
 
 export default function AddEvent() {
-  const { events, setEvents } = useEvents();
-
   const handleAddEvent = async (newEvent: NewEvent) => {
     try {
       // Call the function to save the event and update local state
-      const savedEvent = await saveEventToDB(newEvent);
-      setEvents([...events, savedEvent]);
+      //// format date here if needed
+      await saveEventToDB(newEvent);
     } catch (error) {
       console.error("Failed to add event:", error);
     }
