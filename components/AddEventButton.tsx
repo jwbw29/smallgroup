@@ -19,12 +19,17 @@
 // [ ] show error message (toast)
 // [ ] clear form (to allow for another entry)
 // [ ] close modal
+import { forwardRef } from "react";
 import { LuCalendarPlus } from "react-icons/lu";
 
-export default function AddEventButton() {
+const AddEventButton = forwardRef<HTMLButtonElement>((props, ref) => {
   return (
-    <button className="addEventMobile">
+    <button ref={ref} className="addEventMobile" {...props}>
       <LuCalendarPlus />
     </button>
   );
-}
+});
+
+AddEventButton.displayName = "AddEventButton";
+
+export default AddEventButton;
