@@ -16,6 +16,7 @@ import { NewEvent } from "@/utils/types";
 
 // Define the function to save a new event to the database
 async function saveEventToDB(newEvent: NewEvent) {
+  //// The POST request to save the event to the database
   const response = await fetch("/api/events", {
     method: "POST",
     headers: {

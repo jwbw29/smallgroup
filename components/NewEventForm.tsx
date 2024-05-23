@@ -60,7 +60,8 @@ export function NewEventForm({
       await onSubmit(values);
       toast({
         title: "Event added",
-        description: "Your event was added successfully!",
+        description:
+          "Your event was added successfully! The event will not appear in the list until the page is refreshed.",
       });
     } catch (error) {
       toast({
@@ -147,7 +148,7 @@ export function NewEventForm({
           )}
         />
         <Button type="submit" className="w-full mt-8">
-          Add Event
+          SAVE
         </Button>
       </form>
     </Form>
