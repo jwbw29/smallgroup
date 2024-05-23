@@ -41,8 +41,6 @@ export function NewEventForm({
 }: {
   onSubmit: (values: NewEvent) => void;
 }) {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-
   // 1. Define the form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,7 +55,9 @@ export function NewEventForm({
   // 2. Define a submit handler
   async function handleSubmit(values: z.infer<typeof formSchema>) {
     try {
+      const formattedValues = { ...values, date: values.date.toISOString() }; // Ensure date is in ISO format IF NEEDED
       await onSubmit(values);
+      form.reset(); // Reset the form fields after successful submit
       toast({
         title: "Event added",
         description:
@@ -120,13 +120,11 @@ export function NewEventForm({
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-input text-primary-foreground">
-                  <SelectItem value="Guys">{"pull 'Guys' from db"}</SelectItem>
-                  <SelectItem value="Girls">
-                    {" "}
-                    {"pull 'Girls' from db"}
-                  </SelectItem>
-                  <SelectItem value="All"> {"pull 'All' from db"}</SelectItem>
-                  <SelectItem value="Off"> {"pull 'Off' from db"}</SelectItem>
+                  <SelectItem value="All">All</SelectItem>
+                  <SelectItem value="Guys">Guys</SelectItem>
+                  <SelectItem value="Girls"> Girls</SelectItem>
+                  <SelectItem value="Social">Social</SelectItem>
+                  <SelectItem value="Off">Off</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

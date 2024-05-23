@@ -21,7 +21,10 @@ async function saveEventToDB(newEvent: NewEvent) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(newEvent),
+    body: JSON.stringify({
+      ...newEvent,
+      date: new Date(newEvent.date).toISOString(),
+    }), // Ensure date is in ISO format
   });
 
   if (!response.ok) {
