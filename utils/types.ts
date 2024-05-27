@@ -20,6 +20,24 @@ export interface Event {
   };
 }
 
+export interface Semester {
+  id: number;
+  semester_name: string;
+  events: Event[];
+}
+
+export interface Group {
+  id: number;
+  group_type: string;
+  events: Event[];
+}
+
+export interface Year {
+  id: number;
+  year: string;
+  events: Event[];
+}
+
 export interface NewEvent {
   name: string;
   date: string;
@@ -32,9 +50,12 @@ export interface NewEvent {
 export interface EventsContextType {
   events: Event[];
   setEvents: (events: Event[]) => void;
-  semesterOptions: SemesterYearOption[];
-  groupOptions: SemesterYearOption[];
-  yearOptions: SemesterYearOption[];
+  semesters: Semester[];
+  setSemesters: (semesters: Semester[]) => void;
+  groups: Group[];
+  setGroups: (groups: Group[]) => void;
+  years: Year[];
+  setYears: (years: Year[]) => void;
 }
 
 export interface SemesterYearOption {

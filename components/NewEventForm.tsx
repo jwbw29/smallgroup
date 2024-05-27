@@ -91,7 +91,7 @@ export function NewEventForm({
             <FormItem>
               <FormLabel>Event Name: </FormLabel>
               <FormControl>
-                <Input placeholder="Event Name" {...field} />
+                <Input placeholder="Enter Event Name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -120,18 +120,18 @@ export function NewEventForm({
           render={({ field }) => (
             <FormItem>
               <FormLabel>Group: </FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select {...field} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Group" />
+                    <SelectValue placeholder="Select a Group" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-input text-primary-foreground">
-                  <SelectItem value="All">All</SelectItem>
-                  <SelectItem value="Guys">Guys</SelectItem>
-                  <SelectItem value="Girls"> Girls</SelectItem>
-                  <SelectItem value="Social">Social</SelectItem>
-                  <SelectItem value="Off">Off</SelectItem>
+                  {groupOptions.map((group) => (
+                    <SelectItem key={group.id} value={group.id}>
+                      {group.group_type}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -146,7 +146,7 @@ export function NewEventForm({
             <FormItem>
               <FormLabel>Location: </FormLabel>
               <FormControl>
-                <Input placeholder="Location" {...field} />
+                <Input placeholder="Enter Location" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
