@@ -22,16 +22,19 @@ export interface Event {
 
 export interface NewEvent {
   name: string;
-  date: Date;
+  date: string;
   location: string;
-  semester: string;
-  year: string;
-  group: string;
+  semesterId: number;
+  yearId: number;
+  groupId: number;
 }
 
 export interface EventsContextType {
   events: Event[];
   setEvents: (events: Event[]) => void;
+  semesterOptions: SemesterYearOption[];
+  groupOptions: SemesterYearOption[];
+  yearOptions: SemesterYearOption[];
 }
 
 export interface SemesterYearOption {

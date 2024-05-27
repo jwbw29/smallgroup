@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
 import { NewEvent } from "@/utils/types";
+import { useEvents } from "@/context/EventContext";
 
 const formSchema = z.object({
   name: z.string().min(2).max(100),
@@ -40,20 +41,21 @@ const formSchema = z.object({
 
 export function NewEventForm({
   onSubmit,
-  semesterOptions,
-  yearOptions,
-  groupOptions,
 }: {
   onSubmit: (values: NewEvent) => void;
 }) {
+  const { groupOptions, semesterOptions, yearOptions } = useEvents();
+
   // 1. Define the form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       date: new Date(),
-      attendees: "",
       location: "",
+      groupId: 0,
+      semesterId: 0,
+      yearId: 0,
     },
   });
 
@@ -61,7 +63,7 @@ export function NewEventForm({
   async function handleSubmit(values: z.infer<typeof formSchema>) {
     try {
       const formattedValues = { ...values, date: values.date.toISOString() }; // Ensure date is in ISO format IF NEEDED
-      await onSubmit(values);
+      await onSubmit(formattedValues);
       form.reset(); // Reset the form fields after successful submit
       toast({
         title: "Event added",
