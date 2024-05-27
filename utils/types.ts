@@ -23,7 +23,7 @@ export interface Event {
 export interface NewEvent {
   name: string;
   date: Date;
-  attendees: string;
+  group: string;
   location: string;
 }
 
