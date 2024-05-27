@@ -32,12 +32,17 @@ import { NewEvent } from "@/utils/types";
 const formSchema = z.object({
   name: z.string().min(2).max(100),
   date: z.date(),
-  attendees: z.string().min(2).max(100),
   location: z.string().min(2).max(100),
+  groupId: z.number(),
+  semesterId: z.number(),
+  yearId: z.number(),
 });
 
 export function NewEventForm({
   onSubmit,
+  semesterOptions,
+  yearOptions,
+  groupOptions,
 }: {
   onSubmit: (values: NewEvent) => void;
 }) {
@@ -109,14 +114,14 @@ export function NewEventForm({
 
         <FormField
           control={form.control}
-          name="attendees"
+          name="groupId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Attendees: </FormLabel>
+              <FormLabel>Group: </FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Attendees" />
+                    <SelectValue placeholder="Group" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-input text-primary-foreground">

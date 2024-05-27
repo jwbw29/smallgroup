@@ -23,8 +23,10 @@ export interface Event {
 export interface NewEvent {
   name: string;
   date: Date;
-  group: string;
   location: string;
+  semester: string;
+  year: string;
+  group: string;
 }
 
 export interface EventsContextType {
