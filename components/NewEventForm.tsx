@@ -44,7 +44,7 @@ export function NewEventForm({
 }: {
   onSubmit: (values: NewEvent) => void;
 }) {
-  const { groupOptions, semesterOptions, yearOptions } = useEvents();
+  const { groups, years, semesters } = useEvents();
 
   // 1. Define the form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -84,6 +84,7 @@ export function NewEventForm({
         onSubmit={form.handleSubmit(handleSubmit)}
         className="flex flex-col gap-4"
       >
+        {/* //// Event Name */}
         <FormField
           control={form.control}
           name="name"
@@ -97,7 +98,7 @@ export function NewEventForm({
             </FormItem>
           )}
         />
-        {/* // [ ]  replace w/ DatePicker */}
+        {/* //// Date */}
         <FormField
           control={form.control}
           name="date"
@@ -111,34 +112,7 @@ export function NewEventForm({
             </FormItem>
           )}
         />
-
-        {/* // [ ] Attendees needs to be a dropdown */}
-
-        <FormField
-          control={form.control}
-          name="groupId"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Group: </FormLabel>
-              <Select {...field} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a Group" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent className="bg-input text-primary-foreground">
-                  {groupOptions.map((group) => (
-                    <SelectItem key={group.id} value={group.id}>
-                      {group.group_type}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
+        {/* //// Location */}
         <FormField
           control={form.control}
           name="location"
@@ -152,6 +126,86 @@ export function NewEventForm({
             </FormItem>
           )}
         />
+        {/* //// Group */}
+        <FormField
+          control={form.control}
+          name="groupId"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Group: </FormLabel>
+              <Select {...field} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a Group" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent className="bg-input text-primary-foreground">
+                  {/* //// map over groups */}
+                  {groups.map((group) => (
+                    <SelectItem key={group.id} value={group.id}>
+                      {group.group_type}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* //// Semester */}
+        <FormField
+          control={form.control}
+          name="semesterId"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Semester: </FormLabel>
+              <Select {...field} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a Semester" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent className="bg-input text-primary-foreground">
+                  {/* //// map over semesters */}
+                  {semesters.map((semester) => (
+                    <SelectItem key={semester.id} value={semester.id}>
+                      {semester.semester_name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* //// Year */}
+        <FormField
+          control={form.control}
+          name="yearId"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Year: </FormLabel>
+              <Select {...field} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a Year" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent className="bg-input text-primary-foreground">
+                  {/* //// map over years */}
+                  {years.map((year) => (
+                    <SelectItem key={year.id} value={year.id}>
+                      {year.year}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="w-full mt-8">
           SAVE
         </Button>
