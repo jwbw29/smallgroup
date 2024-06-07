@@ -21,7 +21,6 @@ A website for small groups to use to easily access each other's information and 
 
 ![Login](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/login.png?raw=true)
 ![Home](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/homeScreen.png?raw=true)
-https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/schedule.png?raw=true
 ![Schedule](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/schedule.png?raw=true)
 ![Roster Collapsed](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/rosterCollapsed.png?raw=true)
 ![Roster Expanded](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/rosterExpanded.png?raw=true)
