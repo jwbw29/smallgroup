@@ -19,7 +19,7 @@ A website for small groups to use to easily access each other's information and 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=Coming+Soon)
+![Login Page](login.png)
 
 ## Roadmap
 
