@@ -19,7 +19,7 @@ A website for small groups to use to easily access each other's information and 
 
 ## Screenshots
 
-![Login Page](login.png)
+![Login Page](https://github.com/jwbw29/smallgroup/blob/main/public/screenshots/login.png?raw=true)
 
 ## Roadmap
 
